@@ -492,16 +492,41 @@ code {
 	font-size:106%;
 }
 
+.contenido ol, .contenido ul {
+	width:80%;
+	max-width:650px;
+	font-family:'Roboto Condensed', sans-serif;
+	font-weight:400;
+	color:#888;
+	line-height:1.5em;
+	font-size:106%;
+	padding:0px;
+	margin: 32px;
+}
+
+.contenido ol li, .contenido ul li{
+	margin-bottom: 20px;
+	display: list-item;
+}
+
+.contenido ol li:last-of-type, .contenido ul li:last-of-type {
+	margin-bottom: 0px;
+}
+
 .contenido blockquote {
+	margin: 0px;
+}
+
+.contenido blockquote p{
 	color:#DE5141;
-	width:93.5%;
+	width:84%;
 	max-width:650px;
 	margin-left:0px;
-	text-align:center;
-	font-size:147%;
+	text-align:left;
+	font-size:130%;
 	letter-spacing:0.018em;
 	font-style:italic;
-	margin:100px 0px 40px;
+	margin:32px 0px 32px 0px;
 }
 
 .contenido blockquote.quote:before {
