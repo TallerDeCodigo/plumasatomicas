@@ -129,6 +129,9 @@
 
 
 	require_once('inc/pages.php');
+
+
+	require_once('Tax-meta-class/Tax-meta-class.php');
 	
 	
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
@@ -262,3 +265,49 @@
 		}
 		return FALSE;
 	}
+
+
+
+
+
+/*
+Plugin Name: Demo Tax meta class
+Plugin URI: https://en.bainternet.info
+Description: Tax meta class usage demo
+Version: 2.1.0
+Author: Bainternet, Ohad Raz
+Author URI: https://en.bainternet.info
+*/
+
+
+//include the main class file
+
+if (is_admin()){
+  /* 
+   * prefix of meta keys, optional
+   */
+  $prefix = 'wp_';
+  /* 
+   * configure your meta box
+   */
+  $config = array(
+    'id' => 'demo_meta_box',          // meta box id, unique per meta box
+    'title' => 'Demo Meta Box',          // meta box title
+    'pages' => array('opinologo'),        // taxonomy name, accept categories, post_tag and custom taxonomies
+    'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
+    'fields' => array(),            // list of meta fields (can be added by field arrays)
+    'local_images' => false,          // Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => true          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+  );
+  
+  $my_meta =  new Tax_Meta_Class($config);
+  
+
+  //$my_meta->addColor($prefix.'color_field_id',array('name'=> __('My Color ','tax-meta')));
+  //Image field
+  $my_meta->addImage($prefix.'image_field_id',array('name'=> __('My Image ','tax-meta')));
+  
+  
+ 
+  $my_meta->Finish();
+}
