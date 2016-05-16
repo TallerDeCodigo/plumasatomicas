@@ -3,10 +3,10 @@
 	the_post();
 	$terms = wp_get_post_terms( $post->ID, "opinologo");
 	$opinologo = $terms[0];
-	$grade = get_profile_grade($opinologo->ID);
+	$grade = get_profile_grade($opinologo->term_id);
 
-	$res_x = 50+$grade[x]*25;
-	$res_y = 50+$grade[y]*25;
+	$res_x = 50+$grade['x']*25;
+	$res_y = 50+$grade['y']*25;
 ?>
 <section id="post-sec">
 	<div class="wrapper-special">
