@@ -1,4 +1,15 @@
-<?php get_header(); ?>
+<?php 
+	get_header();
+	the_post();
+	$terms = wp_get_post_terms( $post->ID, "opinologo");
+	$opinologo = $terms[0];
+	file_put_contents(
+		'/logs/php.log',
+		var_export( $opinologo, true ) . PHP_EOL,
+		FILE_APPEND
+	);
+
+?>
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido whatthefact">
@@ -12,12 +23,12 @@
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="imagen-post"><img src="<?php echo THEMEPATH; ?>images/1.png"></div>
-			<h2>Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna.</h2>
-			<p>Aliquam erat volutpat. Morbi in leo tempus, pellentesque ligula at, porta sem. Maecenas dignissim, tellus a malesuada lacinia, nunc tortor accumsan dui, et rhoncus ipsum ante fermentum est. Donec sagittis facilisis ipsum, in consectetur lorem egestas vitae. Maecenas pharetra, lacus vel sodales maximus, magna massa lobortis augue, accumsan sagittis velit erat a purus. Proin erat nunc, convallis pellentesque convallis placerat, faucibus eget nunc. Morbi pellentesque nec ante non mattis. Maecenas eget facilisis nulla. Donec eu condimentum diam, ornare pharetra sapien. Donec pharetra sapien vel lectus tempor fringilla. Donec pharetra sapien vel lectus tempor fringilla.</p>
+			<div class="imagen-post"><?php echo the_post_thumbnail('large'); ?></div>
+			<!-- <h2>Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna.</h2> -->
+			<?php the_content(); ?>
 			<div class="separador"><span>PERFIL</span></div>
 			<div class="prefil" style="text-align:center">
-				<div class="who"><div></div><br><span>LOREM IPSUM DOLOR SIT</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam magna non erat semper aliquam magna non erat semper.</span></div>
+				<div class="who"><div></div><br><span><?php echo $opinologo->name; ?></span><span><?php echo $opinologo->description; ?></span></div>
 				<div class="postura"><div><img src="<?php echo THEMEPATH; ?>images/postura.svg"><img src="<?php echo THEMEPATH; ?>images/over.svg"></div><span>PROGRESISTA</span></div>
 			</div>
 			<div class="separador"><span>FACT CHECKER</span></div>

@@ -8,6 +8,7 @@
 	add_action('add_meta_boxes', function(){
 
 		add_meta_box( 'columna_info_general', 'Información general de la columna', 'show_columna_info_general', 'what-the-fact', 'side', 'high' );
+		add_meta_box( 'columna_cuestionario', 'Calificación de la columna', 'show_columna_cuestionario', 'what-the-fact', 'normal', 'high' );
 		add_meta_box( 'fact_checker', 'Fact checker', 'show_fact_checker', 'what-the-fact', 'advanced', 'high' );
 
 	});
@@ -71,6 +72,72 @@
 	}
 
 
+	function show_columna_cuestionario($post){
+		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', true);
+			$is_sel_social_p1_minus 	= ($social_axis_p1 == '-1' ) 	? 'checked' : '';
+			$is_sel_social_p1_neutral 	= ($social_axis_p1 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p1_plus 		= ($social_axis_p1 == '1' ) 	? 'checked' : '';
+
+		$social_axis_p2 	= get_post_meta($post->ID, 'social_axis_p2', TRUE);
+			$is_sel_social_p2_minus 	= ($social_axis_p2 == '-1' ) 	? 'checked' : '';
+			$is_sel_social_p2_neutral 	= ($social_axis_p2 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p2_plus 		= ($social_axis_p2 == '1' ) 	? 'checked' : '';
+
+		$social_axis_p3 	= get_post_meta($post->ID, 'social_axis_p3', TRUE);
+			$is_sel_social_p3_minus 	= ($social_axis_p3 == '-1' ) 	? 'checked' : '';
+			$is_sel_social_p3_neutral 	= ($social_axis_p3 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p3_plus 		= ($social_axis_p3 == '1' ) 	? 'checked' : '';
+		
+		$economic_axis_p1 	= get_post_meta($post->ID, 'economic_axis_p1', TRUE);
+			$is_sel_economic_p1_minus 	= ($economic_axis_p1 == '-1' ) 	? 'checked' : '';
+			$is_sel_economic_p1_neutral = ($economic_axis_p1 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p1_plus 	= ($economic_axis_p1 == '1' ) 	? 'checked' : '';
+		
+		$economic_axis_p2 	= get_post_meta($post->ID, 'economic_axis_p2', TRUE);
+			$is_sel_economic_p2_minus 	= ($economic_axis_p2 == '-1' ) 	? 'checked' : '';
+			$is_sel_economic_p2_neutral = ($economic_axis_p2 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p2_plus 	= ($economic_axis_p2 == '1' ) 	? 'checked' : '';
+		
+		$economic_axis_p3 	= get_post_meta($post->ID, 'economic_axis_p3', TRUE);
+			$is_sel_economic_p3_minus 	= ($economic_axis_p3 == '-1' ) 	? 'checked' : '';
+			$is_sel_economic_p3_neutral = ($economic_axis_p3 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p3_plus 	= ($economic_axis_p3 == '1' ) 	? 'checked' : '';
+
+		wp_nonce_field(__FILE__, 'column_questions_nonce');
+
+		echo <<<HTML
+			<h3>Derechos sociales</h3>
+			<p>Derechos civiles (enfocados a las libertades negativas).</p>
+			<input type="radio" name="social_axis_p1" value="-1" {$is_sel_social_p1_minus} >No&nbsp;
+			<input type="radio" name="social_axis_p1" value="0"  {$is_sel_social_p1_neutral} >N/A&nbsp;
+			<input type="radio" name="social_axis_p1" value="1"  {$is_sel_social_p1_plus} >Si<br>
+			<p>Derechos sociales (enfocados a las libertades positivas).</p>
+			<input type="radio" name="social_axis_p2" value="-1" {$is_sel_social_p2_minus} >No&nbsp;
+			<input type="radio" name="social_axis_p2" value="0"  {$is_sel_social_p2_neutral} >N/A&nbsp;
+			<input type="radio" name="social_axis_p2" value="1" {$is_sel_social_p2_plus} >Si<br>
+			<p>Derechos políticos (enfocados a la relación del individuo y organizaciones sociales frente al Estado).</p>
+			<input type="radio" name="social_axis_p3" value="-1" {$is_sel_social_p3_minus} >No&nbsp;
+			<input type="radio" name="social_axis_p3" value="0"  {$is_sel_social_p3_neutral} >N/A&nbsp;
+			<input type="radio" name="social_axis_p3" value="1"  {$is_sel_social_p3_plus} >Si<br>
+
+			<h3>Economía</h3>
+			<p>Obtención y administración del patrimonio</p>
+			<input type="radio" name="economic_axis_p1" value="-1" {$is_sel_economic_p1_minus} >No&nbsp;
+			<input type="radio" name="economic_axis_p1" value="0" {$is_sel_economic_p1_neutral}  >N/A&nbsp;
+			<input type="radio" name="economic_axis_p1" value="1" {$is_sel_economic_p1_plus} >Si<br>
+			<p>Volumen de recaudación estatal y financiamiento de bienestar social</p>
+			<input type="radio" name="economic_axis_p2" value="-1" {$is_sel_economic_p2_minus} >No&nbsp;
+			<input type="radio" name="economic_axis_p2" value="0" {$is_sel_economic_p2_neutral} >N/A&nbsp;
+			<input type="radio" name="economic_axis_p2" value="1" {$is_sel_economic_p2_plus} >Si<br>
+			<p>Relación entre mercados</p>
+			<input type="radio" name="economic_axis_p3" value="-1" {$is_sel_economic_p3_minus} >No&nbsp;
+			<input type="radio" name="economic_axis_p3" value="0"  {$is_sel_economic_p3_neutral} >N/A&nbsp;
+			<input type="radio" name="economic_axis_p3" value="1"  {$is_sel_economic_p3_plus} >Si<br>
+
+HTML;
+	}
+
+
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
 
@@ -98,11 +165,23 @@
 			update_post_meta($post_id, 'source_url_columna', $_POST['source_url_columna']);
 		}
 
+
 		if ( isset($_POST['argumento_uno']) and check_admin_referer(__FILE__, 'fact_checker_nonce') ){
 			update_post_meta($post_id, 'argumento_uno', $_POST['argumento_uno']);
 			update_post_meta($post_id, 'argumento_dos', $_POST['argumento_dos']);
 			update_post_meta($post_id, 'calif_argumento_uno', $_POST['calif_argumento_uno']);
 			update_post_meta($post_id, 'calif_argumento_dos', $_POST['calif_argumento_dos']);
+		}
+
+		if (check_admin_referer(__FILE__, 'column_questions_nonce') ){
+			/*** Save questions ***/
+			update_post_meta($post_id, 'social_axis_p1', $_POST['social_axis_p1']);
+			update_post_meta($post_id, 'social_axis_p2', $_POST['social_axis_p2']);
+			update_post_meta($post_id, 'social_axis_p3', $_POST['social_axis_p3']);
+			update_post_meta($post_id, 'economic_axis_p1', $_POST['economic_axis_p1']);
+			update_post_meta($post_id, 'economic_axis_p2', $_POST['economic_axis_p2']);
+			update_post_meta($post_id, 'economic_axis_p3', $_POST['economic_axis_p3']);
+
 		}
 
 

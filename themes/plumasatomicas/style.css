@@ -453,8 +453,8 @@ code {
 
 .imagen-post img {
 	position:absolute;
-	height:100%;
-	width:auto;
+	width:100%;
+	height:auto;
     top:-9999px;
     bottom:-9999px;
     left:-9999px;
