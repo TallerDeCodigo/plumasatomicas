@@ -313,15 +313,22 @@
 	 * Get grade by column
 	 * @param $opinologo
 	 */
-	function get_profile_grade($opinologo){
-
+	function get_profile_grade($opinologo = NULL){
+		
 		$global = array();
 		$args = array(
-					'post_type' 	=> 'what-the-fact',
-					'opinologo'		=>	$opinologo,
-					'post_status' 	=> 'publish',
+					'post_type' => 'what-the-fact',
+					'tax_query' => 	array(
+										array(
+										'taxonomy' => 'opinologo',
+										'field' => 'term_id',
+										'terms' => $opinologo
+										)
+									),
+					'post_status' => 'publish',
 					'posts_per_page' => -1,
 				);
+
 		$posts = get_posts( $args );
 
 		foreach ($posts as $columna) {
