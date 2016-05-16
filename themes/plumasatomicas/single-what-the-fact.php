@@ -32,7 +32,7 @@
 				<div class="postura">
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
-						<div class="pointer" style="<?php echo 'left: '.$res_x-5.'%;'.'top: '.$res_y-5.'%;' ?>"></div>
+						<div class="pointer" style="<?php echo 'left: '.$res_x-5.'%;'.'top: '.$res_y-5.'%;'; ?>"></div>
 					</div><span>PROGRESISTA</span>
 				</div>
 			</div>

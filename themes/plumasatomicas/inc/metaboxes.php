@@ -76,7 +76,7 @@
 
 
 	function show_columna_cuestionario($post){
-		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', true);
+		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', TRUE);
 			$is_sel_social_p1_minus 	= ($social_axis_p1 == '-1' ) 	? 'checked' : '';
 			$is_sel_social_p1_neutral 	= ($social_axis_p1 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_social_p1_plus 		= ($social_axis_p1 == '1' ) 	? 'checked' : '';
