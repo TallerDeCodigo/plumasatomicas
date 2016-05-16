@@ -1,9 +1,17 @@
-<?php get_header(); ?>
+<?php get_header(); 
+	$opinologo_slug = (isset($_GET['u'])) ? $_GET['u'] : null;
+	if($opinologo_slug){
+		$opinologo_term = get_term_by( "slug", $opinologo_slug, "opinologo" );
+		$opinologo_name = $opinologo_term->name;
+		$opinologo_ID 	= $opinologo_term->ID;
+		$opinologo_post_count 	= $opinologo_term->count;
+	}
+
+?>
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido">
-			<code>#HASHTAG</code><br>
-			<h1><?php the_title(); ?></h1>
+			<h1><?php echo $opinologo_name; ?></h1>
 			<nav>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
@@ -12,7 +20,7 @@
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="imagen-post"><?php echo the_post_thumbnail('large'); ?></div>
+			<div class="imagen-post"><img src="<?php echo THEMEPATH; ?>images/1.png"></div>
 			<h2>Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna.</h2>
 			<p>Aliquam erat volutpat. Morbi in leo tempus, pellentesque ligula at, porta sem. Maecenas dignissim, tellus a malesuada lacinia, nunc tortor accumsan dui, et rhoncus ipsum ante fermentum est. Donec sagittis facilisis ipsum, in consectetur lorem egestas vitae. Maecenas pharetra, lacus vel sodales maximus, magna massa lobortis augue, accumsan sagittis velit erat a purus. Proin erat nunc, convallis pellentesque convallis placerat, faucibus eget nunc. Morbi pellentesque nec ante non mattis. Maecenas eget facilisis nulla. Donec eu condimentum diam, ornare pharetra sapien. Donec pharetra sapien vel lectus tempor fringilla. Donec pharetra sapien vel lectus tempor fringilla.</p>
 			<div class="separador"><span>PERFIL</span></div>
