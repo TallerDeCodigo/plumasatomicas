@@ -662,6 +662,7 @@ code {
 	width:240px;
 	height:240px;
 	margin-bottom:15px;
+	overflow:hidden;
 }
 
 .postura div img {

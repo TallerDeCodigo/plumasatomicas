@@ -3,8 +3,14 @@
 	the_post();
 	$terms = wp_get_post_terms( $post->ID, "opinologo");
 	$opinologo = $terms[0];
-	$res_x = 50;
-	$res_y = 50;
+	$grade = get_profile_grade($opinologo->ID);
+	file_put_contents(
+		'/logs/php.log',
+		var_export( $grade, true ) . PHP_EOL,
+		FILE_APPEND
+	);
+	$res_x = 50+$grade[x]*25;
+	$res_y = 50+$grade[y]*25;
 ?>
 <section id="post-sec">
 	<div class="wrapper-special">
@@ -33,8 +39,8 @@
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
-					</div><span>PROGRESISTA</span>
-				</div>
+					</div><!-- <span>PROGRESISTA</span>
+ -->				</div>
 			</div>
 			<div class="separador"><span>FACT CHECKER</span></div>
 			<blockquote class="quote">Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna”<br><span>– LOREM IPSUM DOLOR SIT AMET</span></blockquote>
