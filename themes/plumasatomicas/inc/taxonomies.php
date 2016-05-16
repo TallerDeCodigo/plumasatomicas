@@ -9,18 +9,18 @@
 	function custom_taxonomies_callback(){
 
 		// AUTORES
-		/*if( ! taxonomy_exists('autores')){
+		if( ! taxonomy_exists('opinologos')){
 
 			$labels = array(
-				'name'              => 'Autores',
-				'singular_name'     => 'Autor',
+				'name'              => 'Opinólogos',
+				'singular_name'     => 'Opinólogo',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Autor',
-				'update_item'       => 'Actualizar Autor',
-				'add_new_item'      => 'Nuevo Autor',
-				'new_item_name'     => 'Nombre Nuevo Autor',
-				'menu_name'         => 'Autores'
+				'edit_item'         => 'Editar Opinólogo',
+				'update_item'       => 'Actualizar Opinólogo',
+				'add_new_item'      => 'Nuevo Opinólogo',
+				'new_item_name'     => 'Nombre Nuevo Opinólogo',
+				'menu_name'         => 'Opinólogos'
 			);
 
 			$args = array(
@@ -30,11 +30,11 @@
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'autores' ),
+				'rewrite'           => array( 'slug' => 'opinologos' ),
 			);
 
-			register_taxonomy( 'autor', 'libro', $args );
-		}*/
+			register_taxonomy( 'opinologo', 'what-the-fact', $args );
+		}
 		
 		
 		// TERMS

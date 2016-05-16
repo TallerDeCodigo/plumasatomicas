@@ -7,19 +7,19 @@
 	add_action('init', function(){
 
 
-		// NOTICIAS
-		/*$labels = array(
-			'name'          => 'Noticias',
-			'singular_name' => 'Noticia',
-			'add_new'       => 'Nueva Noticia',
-			'add_new_item'  => 'Nueva Noticia',
-			'edit_item'     => 'Editar Noticia',
-			'new_item'      => 'Nueva Noticia',
+		// COLUMNAS
+		$labels = array(
+			'name'          => 'What the facts',
+			'singular_name' => 'What the fact',
+			'add_new'       => 'Nueva What the fact',
+			'add_new_item'  => 'Nueva What the fact',
+			'edit_item'     => 'Editar What the fact',
+			'new_item'      => 'Nuevo What the fact',
 			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Noticia',
-			'search_items'  => 'Buscar Noticia',
-			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Noticias'
+			'view_item'     => 'Ver What the fact',
+			'search_items'  => 'Buscar What the fact',
+			'not_found'     => 'No se encontró',
+			'menu_name'     => 'What the facts'
 		);
 
 		$args = array(
@@ -29,7 +29,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'noticias' ),
+			'rewrite'            => array( 'slug' => 'what-the-fact' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -37,6 +37,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'noticia', $args );*/
+		register_post_type( 'what-the-fact', $args );
 
 	});
