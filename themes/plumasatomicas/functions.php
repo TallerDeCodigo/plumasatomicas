@@ -267,8 +267,16 @@
 	}
 
 
+	function get_column_grade($post_id){
+		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', TRUE);
+		$social_axis_p2 	= get_post_meta($post->ID, 'social_axis_p2', TRUE);
+		$social_axis_p3 	= get_post_meta($post->ID, 'social_axis_p3', TRUE);
+		$economic_axis_p1 	= get_post_meta($post->ID, 'economic_axis_p1', TRUE);
+		$economic_axis_p2 	= get_post_meta($post->ID, 'economic_axis_p2', TRUE);
+		$economic_axis_p3 	= get_post_meta($post->ID, 'economic_axis_p3', TRUE);
+		
 
-
+	}
 
 /*
 Plugin Name: Demo Tax meta class
