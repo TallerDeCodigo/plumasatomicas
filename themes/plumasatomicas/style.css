@@ -613,6 +613,21 @@ code {
 	margin:30px 0px 20px;
 }
 
+.postura>div{
+	position: relative!important;
+}
+
+.postura .pointer{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	display: block;
+	background-color: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
 .who div {
 	width:128px;
 	height:128px;

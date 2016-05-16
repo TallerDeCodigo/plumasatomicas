@@ -23,6 +23,7 @@
 		$nombre_columna = get_post_meta($post->ID, 'nombre_columna', true);
 		$source_columna = get_post_meta($post->ID, 'source_columna', true);
 		$source_url_columna = get_post_meta($post->ID, 'source_url_columna', true);
+		$global_grade 	= get_post_meta($post->ID, 'global_grade', true);
 		wp_nonce_field(__FILE__, 'info_general_nonce');
 
 		echo "<label>Fecha de publicación de la columna:</label>";
@@ -36,38 +37,40 @@
 		echo "<br /><br />";
 		echo "<label>URL de la nota:</label>";
 		echo "<input type='text' class='widefat' id='source_url_columna' name='source_url_columna' value='$source_url_columna'/>";
+		echo "<label>Calificación generada:</label>";
+		echo "<input type='text' class='widefat' id='global_grade' name='global_grade' value='$global_grade'/>";
 	}
 
 
 	function show_columna_cuestionario($post){
 		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', true);
 			$is_sel_social_p1_minus 	= ($social_axis_p1 == '-1' ) 	? 'checked' : '';
-			$is_sel_social_p1_neutral 	= ($social_axis_p1 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p1_neutral 	= ($social_axis_p1 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_social_p1_plus 		= ($social_axis_p1 == '1' ) 	? 'checked' : '';
 
 		$social_axis_p2 	= get_post_meta($post->ID, 'social_axis_p2', TRUE);
 			$is_sel_social_p2_minus 	= ($social_axis_p2 == '-1' ) 	? 'checked' : '';
-			$is_sel_social_p2_neutral 	= ($social_axis_p2 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p2_neutral 	= ($social_axis_p2 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_social_p2_plus 		= ($social_axis_p2 == '1' ) 	? 'checked' : '';
 
 		$social_axis_p3 	= get_post_meta($post->ID, 'social_axis_p3', TRUE);
 			$is_sel_social_p3_minus 	= ($social_axis_p3 == '-1' ) 	? 'checked' : '';
-			$is_sel_social_p3_neutral 	= ($social_axis_p3 == '0' ) 	? 'checked' : '';
+			$is_sel_social_p3_neutral 	= ($social_axis_p3 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_social_p3_plus 		= ($social_axis_p3 == '1' ) 	? 'checked' : '';
 		
 		$economic_axis_p1 	= get_post_meta($post->ID, 'economic_axis_p1', TRUE);
 			$is_sel_economic_p1_minus 	= ($economic_axis_p1 == '-1' ) 	? 'checked' : '';
-			$is_sel_economic_p1_neutral = ($economic_axis_p1 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p1_neutral = ($economic_axis_p1 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_economic_p1_plus 	= ($economic_axis_p1 == '1' ) 	? 'checked' : '';
 		
 		$economic_axis_p2 	= get_post_meta($post->ID, 'economic_axis_p2', TRUE);
 			$is_sel_economic_p2_minus 	= ($economic_axis_p2 == '-1' ) 	? 'checked' : '';
-			$is_sel_economic_p2_neutral = ($economic_axis_p2 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p2_neutral = ($economic_axis_p2 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_economic_p2_plus 	= ($economic_axis_p2 == '1' ) 	? 'checked' : '';
 		
 		$economic_axis_p3 	= get_post_meta($post->ID, 'economic_axis_p3', TRUE);
 			$is_sel_economic_p3_minus 	= ($economic_axis_p3 == '-1' ) 	? 'checked' : '';
-			$is_sel_economic_p3_neutral = ($economic_axis_p3 == '0' ) 	? 'checked' : '';
+			$is_sel_economic_p3_neutral = ($economic_axis_p3 == '0' OR $social_axis_p1 == '' ) 	? 'checked' : '';
 			$is_sel_economic_p3_plus 	= ($economic_axis_p3 == '1' ) 	? 'checked' : '';
 
 		wp_nonce_field(__FILE__, 'column_questions_nonce');
