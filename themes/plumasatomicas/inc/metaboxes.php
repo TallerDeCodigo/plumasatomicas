@@ -176,7 +176,7 @@ HTML;
 			update_post_meta($post_id, 'calif_argumento_dos', $_POST['calif_argumento_dos']);
 		}
 
-		if (check_admin_referer(__FILE__, 'column_questions_nonce') ){
+		if ( isset($_POST['social_axis_p1']) and check_admin_referer(__FILE__, 'column_questions_nonce') ){
 			/*** Save questions ***/
 			update_post_meta($post_id, 'social_axis_p1', $_POST['social_axis_p1']);
 			update_post_meta($post_id, 'social_axis_p2', $_POST['social_axis_p2']);
