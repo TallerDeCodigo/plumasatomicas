@@ -278,9 +278,9 @@
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p1', TRUE);
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p2', TRUE);
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p3', TRUE);
-		$array_califs['economic'][] 	= get_post_meta($post_id, 'economic_axis_p1', TRUE);
+		$array_califs['economic'][] = get_post_meta($post_id, 'economic_axis_p1', TRUE);
 		$array_califs['economic'][]	= get_post_meta($post_id, 'economic_axis_p2', TRUE);
-		$array_califs['economic'][] 	= get_post_meta($post_id, 'economic_axis_p3', TRUE);
+		$array_califs['economic'][] = get_post_meta($post_id, 'economic_axis_p3', TRUE);
 
 		/** Loop through social grade **/
 		foreach ($array_califs['social'] as $social_bits) {
@@ -290,7 +290,7 @@
 		}
 		/** Loop through economic grade **/
 		foreach ($array_califs['economic'] as $economic_bits) {
-			if($social_bits != 0)
+			if($economic_bits != 0)
 				$count_elems ++;
 			$acum_economic += $economic_bits;
 		}
