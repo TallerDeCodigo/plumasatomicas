@@ -22,7 +22,11 @@
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="imagen-post"><?php echo the_post_thumbnail('large'); ?></div>
+			<?php if(has_post_thumbnail($post->ID)){ ?>
+				<div class="imagen-post">
+					<?php echo the_post_thumbnail('large'); ?>
+				</div>
+			<?php } ?>
 			<!-- <h2>Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna.</h2> -->
 			<?php the_content(); ?>
 			<div class="separador"><span>PERFIL</span></div>
@@ -30,9 +34,9 @@
 				<div class="who">
 					<div>
 						<?php 
-							if(get_term_meta(357, 'wp_image_field_id', true)){
+							if(get_term_meta($opinologo->term_id, 'wp_image_field_id', true)){
 
-								$opinologo_img = get_term_meta(357, 'wp_image_field_id', true);
+								$opinologo_img = get_term_meta($opinologo->term_id, 'wp_image_field_id', true);
 								echo '<img src="'.$opinologo_img['url'].'">';
 								
 							} else {
