@@ -30,9 +30,11 @@
 				<div class="who">
 					<div>
 						<?php 
-							if(get_tax_meta($opinologo->term_id,'image_field_id', true)){
-								$opinologo_img = get_tax_meta($opinologo->term_id,'image_field_id', true);
-								echo '<img src="'.$opinologo_img.'">';
+							if(get_term_meta(357, 'wp_image_field_id', true)){
+
+								$opinologo_img = get_term_meta(357, 'wp_image_field_id', true);
+								echo '<img src="'.$opinologo_img['url'].'">';
+								
 							} else {
 								echo 'nothing really';
 							}
