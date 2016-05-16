@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section id="post-sec">
 	<div class="wrapper-special">
-		<div class="contenido">
+		<div class="contenido whatthefact">
 			<code>#HASHTAG</code><br>
 			<h1><?php the_title(); ?></h1>
 			<nav>
