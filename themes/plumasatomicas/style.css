@@ -551,6 +551,41 @@ code {
 	font-size:80%;
 }
 
+/*** WHAT THE FACT ***/
+.whatthefact blockquote {
+	color:#DE5141;
+	width:93.5%;
+	max-width:650px;
+	margin-left:0px;
+	text-align:center;
+	font-size:147%;
+	letter-spacing:0.018em;
+	font-style:italic;
+	margin:100px 0px 40px;
+}
+
+.whatthefact blockquote.quote:before {
+	position:absolute;
+	left:50%;
+	top:-55px;
+	margin-left:-16px;
+	content:url(images/quote.png);
+}
+
+.whatthefact blockquote.fact:before {
+	position:absolute;
+	left:50%;
+	top:-55px;
+	margin-left:-16px;
+	content:url(images/fact.png);
+}
+
+.whatthefact blockquote span {
+	font-family:'TradeGothic18';
+	font-style:normal;
+	font-size:80%;
+}
+
 .separador {
 	font-size:80%;
 	width:93.5%;
@@ -1701,3 +1736,9 @@ header {
 }
 
 }
+
+
+
+
+
+
