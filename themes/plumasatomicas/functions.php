@@ -268,17 +268,70 @@
 
 	/*
 	 * Get grade by column
-	 *
+	 * @param $post_id
 	 */
-	function get_column_grade($post_id){
-		$social_axis_p1 	= get_post_meta($post->ID, 'social_axis_p1', TRUE);
-		$social_axis_p2 	= get_post_meta($post->ID, 'social_axis_p2', TRUE);
-		$social_axis_p3 	= get_post_meta($post->ID, 'social_axis_p3', TRUE);
-		$economic_axis_p1 	= get_post_meta($post->ID, 'economic_axis_p1', TRUE);
-		$economic_axis_p2 	= get_post_meta($post->ID, 'economic_axis_p2', TRUE);
-		$economic_axis_p3 	= get_post_meta($post->ID, 'economic_axis_p3', TRUE);
-		
+	function get_column_grade($post_id = NULL){
+		$array_califs = array();
+		$calif = array();
+		$factor = 1;
+		$count_elems = 0;
+		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p1', TRUE);
+		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p2', TRUE);
+		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p3', TRUE);
+		$array_califs['economic'][] 	= get_post_meta($post_id, 'economic_axis_p1', TRUE);
+		$array_califs['economic'][]	= get_post_meta($post_id, 'economic_axis_p2', TRUE);
+		$array_califs['economic'][] 	= get_post_meta($post_id, 'economic_axis_p3', TRUE);
 
+		/** Loop through social grade **/
+		foreach ($array_califs['social'] as $social_bits) {
+			if($social_bits != 0)
+				$count_elems ++;
+			$acum_social += $social_bits;
+		}
+		/** Loop through economic grade **/
+		foreach ($array_califs['economic'] as $economic_bits) {
+			if($social_bits != 0)
+				$count_elems ++;
+			$acum_economic += $economic_bits;
+		}
+		if($count_elems == 1){
+			$factor = 0.5;
+		}else if($count_elems == 0){
+			$factor = 0.25;
+		}
+
+		$calif[x] = $acum_social * $factor;
+		$calif[y] = $acum_economic * $factor;
+
+		return $calif;
+	}
+
+	// $grade = get_column_grade(376172);
+	
+
+	 /*
+	 * Get grade by column
+	 * @param $opinologo
+	 */
+	function get_profile_grade($opinologo){
+
+		$global = array();
+		$args = array(
+					'post_type' 	=> 'what-the-fact',
+					'opinologo'		=>	$opinologo,
+					'post_status' 	=> 'publish',
+					'posts_per_page' => -1,
+				);
+		$posts = get_posts( $args );
+
+		foreach ($posts as $columna) {
+			$partial_grade = get_column_grade($columna->ID);
+			$global[x] += $partial_grade[x]; 
+			$global[y] += $partial_grade[y]; 
+		}
+		$global[x] = $global[x]/count($posts);
+		$global[y] = $global[y]/count($posts);
+		return $global;
 	}
 
 /*
