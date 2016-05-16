@@ -3,12 +3,8 @@
 	the_post();
 	$terms = wp_get_post_terms( $post->ID, "opinologo");
 	$opinologo = $terms[0];
-	file_put_contents(
-		'/logs/php.log',
-		var_export( $opinologo, true ) . PHP_EOL,
-		FILE_APPEND
-	);
-
+	$res_x = 50;
+	$res_y = 50;
 ?>
 <section id="post-sec">
 	<div class="wrapper-special">
@@ -28,8 +24,17 @@
 			<?php the_content(); ?>
 			<div class="separador"><span>PERFIL</span></div>
 			<div class="prefil" style="text-align:center">
-				<div class="who"><div></div><br><span><?php echo $opinologo->name; ?></span><span><?php echo $opinologo->description; ?></span></div>
-				<div class="postura"><div><img src="<?php echo THEMEPATH; ?>images/postura.svg"><img src="<?php echo THEMEPATH; ?>images/over.svg"></div><span>PROGRESISTA</span></div>
+				<div class="who">
+					<div></div><br>
+					<span><?php echo $opinologo->name; ?></span>
+					<span><?php echo $opinologo->description; ?></span>
+				</div>
+				<div class="postura">
+					<div>
+						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
+						<div class="pointer" style="<?php echo 'left: '.$res_x-5.'%;'.'top: '.$res_y-5.'%;' ?>"></div>
+					</div><span>PROGRESISTA</span>
+				</div>
 			</div>
 			<div class="separador"><span>FACT CHECKER</span></div>
 			<blockquote class="quote">Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna”<br><span>– LOREM IPSUM DOLOR SIT AMET</span></blockquote>
