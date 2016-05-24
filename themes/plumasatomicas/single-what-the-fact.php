@@ -8,6 +8,10 @@
 	$res_x = 50+$grade[x]*25;
 	$res_y = 50+$grade[y]*25;
 
+	$x_axis_name = ($grade[x] <= -1.5 AND $grade[x] >= -1) ? "Progresista" : "Centro";
+	$x_axis_name = ($grade[x] >=  1.5) ? "Conservador" : $x_axis_name;
+	$y_axis_name = ($grade[y] >=  1.5) ? "Totalitario" : "";
+	$y_axis_name = ($grade[y] <= -1.5) ? "Liberal"     : $y_axis_name;
 ?>
 <section id="post-sec">
 	<div class="wrapper-special">
@@ -51,8 +55,9 @@
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
-					</div><!-- <span>PROGRESISTA</span>
- -->				</div>
+					</div>
+					<span><?php echo $x_axis_name."-".$y_axis_name; ?></span>
+				</div>
 			</div>
 			<div class="separador">
 				<span>FACT CHECKER</span>

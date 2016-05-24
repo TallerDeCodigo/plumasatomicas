@@ -676,6 +676,7 @@ code {
 .postura span {
 	font-size:125%;
 	color:#85AAA2;
+	text-transform:uppercase;
 }
 
 .question {
