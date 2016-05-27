@@ -58,17 +58,17 @@
 
 
 
-	/*add_action( 'after_setup_theme', function () {
+	// add_action( 'after_setup_theme', function () {
 		
-		$frontPage = get_page_by_path('home', OBJECT);
-		$blogPage  = get_page_by_path('blog', OBJECT);
+	// 	$frontPage = get_page_by_path('home', OBJECT);
+	// 	$blogPage  = get_page_by_path('blog', OBJECT);
 		
-		if ( $frontPage AND $blogPage ){
-			update_option('show_on_front', 'page');
-			update_option('page_on_front', $frontPage->ID);
-			update_option('page_for_posts', $blogPage->ID);
-		}
-	});*/
+	// 	if ( $frontPage AND $blogPage ){
+	// 		update_option('show_on_front', 'page');
+	// 		update_option('page_on_front', $frontPage->ID);
+	// 		update_option('page_for_posts', $blogPage->ID);
+	// 	}
+	// });
 
 
 
@@ -147,6 +147,15 @@
 
 	});
 
+// TITLE LIMIT ///////////////////////////////////////////////////////////////////////
+
+
+function the_title_limit($length, $replacer = '...') {
+ $string = the_title('','',FALSE);
+ if(strlen($string) > $length)
+ $string = (preg_match('/^(.*)\W.*$/', substr($string, 0, $length+1), $matches) ? $matches[1] : substr($string, 0, $length)) . $replacer;
+ echo $string;
+}
 
 
 // THE EXECRPT FORMAT AND LENGTH /////////////////////////////////////////////////////

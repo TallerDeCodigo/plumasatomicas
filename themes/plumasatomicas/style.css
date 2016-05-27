@@ -242,6 +242,10 @@ footer a {
 	margin-bottom:-8px;
 }
 
+#shower span {text-transform: uppercase;}
+#shower span a {text-decoration: none; color: inherit;}
+.new span a {text-decoration: none; color: inherit; margin: 0px!important; text-transform: uppercase;}
+
 #shower img {
 	position:absolute;
     top:-9999px;

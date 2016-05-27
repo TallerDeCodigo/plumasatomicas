@@ -49,7 +49,7 @@
 			<div class="wrapper normal">
 				<nav class="menu">
 					<div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
-					<a href="#"><img id="header-logo" width="289" height="56" src="<?php echo THEMEPATH; ?>images/logo.svg"></a>
+					<a href="<?php echo site_url(); ?>"><img id="header-logo" width="289" height="56" src="<?php echo THEMEPATH; ?>images/logo.svg"></a>
 				</nav>
 				<nav class="social">
 					<div class="searchbar">
