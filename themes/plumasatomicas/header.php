@@ -20,10 +20,10 @@
 			<div class="bkgpa"></div>
 			<div class="menu1">
 				<a href="#">EXTRA EXTRA!</a>
-				<a href="#">PANFLETOS</a>
-				<a href="#">ARTILLERÍA PESADA</a>
+				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
+				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
 				<a href="#">CARD STACK</a>
-				<a href="#">VIDEO</a>
+				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom">
 					<a href="#">PLUMAS</a>
 					<a href="#">MANIFIESTO</a>
@@ -33,10 +33,10 @@
 			</div>
 			<div class="menu2">
 				<a href="#">EXTRA<br>EXTRA!</a>
-				<a class="oneline" href="#">PANFLETOS</a>
-				<a href="#">ARTILLERÍA<br>PESADA</a>
+				<a class="oneline" href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
+				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA<br>PESADA</a>
 				<a href="#">CARD STACK</a>
-				<a href="#">VIDEO</a>
+				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom1">
 					<a href="#">PLUMAS</a>
 					<a href="#">MANIFIESTO</a>
@@ -57,10 +57,10 @@
 						<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
 					</div>
 					<a href="#"><img id="header-search" src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
-					<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"></a>
-					<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/tw.png"></a>
-					<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/yt.png"></a>
-					<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/in.png"></a>
+					<a class="socc" href="https://www.facebook.com/Plumasatomicas/" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"></a>
+					<a class="socc" href="https://twitter.com/plumasatomicas" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/tw.png"></a>
+					<!-- <a class="socc" href="#" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/yt.png"></a> -->
+					<a class="socc" href="https://www.instagram.com/plumasatomicas/" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/in.png"></a>
 				</nav>
 			</div>
 		</header>

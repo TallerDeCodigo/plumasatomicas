@@ -7,19 +7,19 @@
 	add_action('init', function(){
 
 
-		// COLUMNAS
+		// WHADAFACT
 		$labels = array(
-			'name'          => 'What the facts',
-			'singular_name' => 'What the fact',
-			'add_new'       => 'Nueva What the fact',
-			'add_new_item'  => 'Nueva What the fact',
-			'edit_item'     => 'Editar What the fact',
-			'new_item'      => 'Nuevo What the fact',
+			'name'          => 'Wadafacts',
+			'singular_name' => 'Wadafact',
+			'add_new'       => 'Nueva Wadafact',
+			'add_new_item'  => 'Nueva Wadafact',
+			'edit_item'     => 'Editar Wadafact',
+			'new_item'      => 'Nuevo Wadafact',
 			'all_items'     => 'Todas',
-			'view_item'     => 'Ver What the fact',
-			'search_items'  => 'Buscar What the fact',
+			'view_item'     => 'Ver Wadafact',
+			'search_items'  => 'Buscar Wadafact',
 			'not_found'     => 'No se encontró',
-			'menu_name'     => 'What the facts'
+			'menu_name'     => 'Wadafact'
 		);
 
 		$args = array(
@@ -29,7 +29,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'what-the-fact' ),
+			'rewrite'            => array( 'slug' => 'wadafact' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -37,6 +37,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'what-the-fact', $args );
+		register_post_type( 'wadafact', $args );
 
 	});
