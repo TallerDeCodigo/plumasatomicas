@@ -1,7 +1,7 @@
 <?php get_header();
 	$stack_id = isset($_GET['id']) ? $_GET['id'] : NULL;
 	$stack_info = fetch_stack($stack_id);
-
+git
  ?>
 
 	<header>
@@ -101,11 +101,7 @@
 			</div>
 		<?php
 			foreach ($stack_info->pool as $pool_index => $each_pool_object) :
-			file_put_contents(
-			 	'/logs/php.log',
-			 	var_export( $each_pool_object, true ) . PHP_EOL,
-			 	FILE_APPEND
-			 ); ?>
+			 ?>
 		    <div class="slide">
 		    	<div class="card-container">
 				<div id="res-cont" class="wrapper normal">
