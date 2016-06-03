@@ -390,4 +390,154 @@ if (is_admin()){
   
  
   $my_meta->Finish();
+
+  /* 
+   * configure your meta box
+   */
+  $config = array(
+    'id' => 'card_meta_box',          // meta box id, unique per meta box
+    'title' => 'Card Meta Box',          // meta box title
+    'pages' => array('stack'),        // taxonomy name, accept categories, post_tag and custom taxonomies
+    'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
+    'fields' => array(),            // list of meta fields (can be added by field arrays)
+    'local_images' => false,          // Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => true          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+  );
+  
+  $my_card_meta =  new Tax_Meta_Class($config);
+  
+
+  $my_card_meta->addImage($prefix.'image_card',array('name'=> __('My Card Image ','tax-meta')));
+ 
+  $my_card_meta->Finish();
+
 }
+
+
+	/**
+	 * Get hashtag(s) from article taxonomies
+	 * @param Integer $post_id
+	 * @param String $taxonomy
+	 * @param Integer $number Defaults to 1
+	 * @return String/ Array
+	 */
+	function get_hashtag($post_id = NULL, $taxonomy = NULL, $integer = 1){
+
+
+	}
+
+
+	/**
+	 * Get a limited set of stacks Stack
+	 * @param Integer $stack_id
+	 * @return Array
+	 */
+	function fetch_stacks( $limit = 3 ){
+		$return_array = array();
+		$all_stacks = get_terms('stack', array(
+							    'orderby' 		=> 'term_id',
+							    'hide_empty' 	=> false,
+							    'number' 		=> $limit,
+							) 
+						);
+		foreach ($all_stacks as $stack) {
+			$stack_img = get_term_meta($stack->term_id, 'wp_image_card', true);
+
+			$return_array[] = (object) array(
+									"ID" 	=> $stack->term_id,
+									"name" 	=> $stack->name,
+									"slug" 	=> $stack->slug,
+									"description" 	=> $stack->description,
+									"card_count" 	=> $stack->count,
+									"thumb" 		=> ($stack_img) ? $stack_img['url'] : NULL,
+									"permalink" 	=> site_url("card-stack?id={$stack->ID}")
+								);
+		}
+		return $return_array;
+	}
+	
+	/**
+	 * Get Stack
+	 * @param Integer $stack_id
+	 * @return String/ Array
+	 */
+	function fetch_stack( $stack_id = NULL ){
+
+
+	}
+
+	/**
+	 * Get Card from Stack
+	 * @param Integer $card_index
+	 * @param Integer $stack_id
+	 * @return String/ Array
+	 */
+	function fetch_card( $card_index = 0, $stack_id = NULL ){
+
+
+	}
+
+	/**
+	 * Get other columns from same columnist
+	 * @param Integer $columnist
+	 * @param Integer $limit
+	 * @param Integer $exclude
+	 * @return String/ Array
+	 */
+	function fetch_by_same_columnist( $columnist = NULL, $limit = 5, $exclude = NULL){
+
+		$args = array(
+						"post_type" 		=> 	"wadafact",
+						"post_status" 		=>	"publish",
+						'tax_query' 		=> 	array(
+													array(
+													'taxonomy' 	=> 'opinologo',
+													'field' 	=> 'term_id',
+													'terms' 	=> $columnist
+													)
+												),
+						"posts_per_page" 	=>	$limit,
+						"post__not_in"		=>  $exclude
+					);
+		$posts = get_posts($args);
+		return $posts;
+	}
+
+
+	/**
+	 * Fetch columnists for archive
+	 * @param Integer $limit
+	 * @param Integer $offset
+	 * @return String/ Array
+	 */
+	function fetch_columnists( $limit = 4, $offset = 0){
+		$terms = get_terms( array(
+		    'taxonomy' => 'post_tag',
+		    'hide_empty' => false,
+		) );
+		$args = array(
+					"post_type" 	=> 	"post",
+					"post_status" 	=>	"publish",
+					"orderby" 		=>	"rand",
+					"posts_per_page" => $limit,
+				);
+		$randomness = get_posts($args);
+		return $randomness;
+	}
+
+	/**
+	 * Fetch some random news
+	 * @param Integer $limit
+	 * @return String/ Array
+	 */
+	function fetch_some_random_news( $limit = 4){
+
+		$args = array(
+					"post_type" 	=> 	"post",
+					"post_status" 	=>	"publish",
+					"orderby" 		=>	"rand",
+					"posts_per_page" => $limit,
+				);
+		$randomness = get_posts($args);
+		return $randomness;
+	}

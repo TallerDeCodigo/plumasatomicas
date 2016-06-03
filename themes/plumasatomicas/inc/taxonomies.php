@@ -33,7 +33,64 @@
 				'rewrite'           => array( 'slug' => 'opinologos' ),
 			);
 
-			register_taxonomy( 'opinologo', 'what-the-fact', $args );
+			register_taxonomy( 'opinologo', 'wadafact', $args );
+		}
+
+		// STACK
+		if( ! taxonomy_exists('stack')){
+
+			$labels = array(
+				'name'              => 'Stack',
+				'singular_name'     => 'Stack',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Stack',
+				'update_item'       => 'Actualizar Stack',
+				'add_new_item'      => 'Nuevo Stack',
+				'new_item_name'     => 'Nombre Nuevo Stack',
+				'menu_name'         => 'Stack'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'stack' ),
+			);
+
+			register_taxonomy( 'stack', 'cards', $args );
+		}
+		
+
+		// Curated Hashtag
+		if( ! taxonomy_exists('hashtag')){
+
+			$labels = array(
+				'name'              => 'Hash',
+				'singular_name'     => 'Hash',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Hash',
+				'update_item'       => 'Actualizar Hash',
+				'add_new_item'      => 'Nuevo Hash',
+				'new_item_name'     => 'Nombre Nuevo Hash',
+				'menu_name'         => 'Hash'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'hashtag' ),
+			);
+
+			register_taxonomy( 'hashtag', 'post', $args );
 		}
 		
 		

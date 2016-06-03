@@ -16,12 +16,21 @@
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=280268005468566";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div class="oversc">
 			<div class="bkgpa"></div>
 			<div class="menu1">
 				<a href="#">EXTRA EXTRA!</a>
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
+				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
 				<a href="#">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom">
@@ -35,6 +44,7 @@
 				<a href="#">EXTRA<br>EXTRA!</a>
 				<a class="oneline" href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA<br>PESADA</a>
+				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
 				<a href="#">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom1">

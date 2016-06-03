@@ -15,11 +15,13 @@
 		<div class="wrapper wide">
 			<div class="new big">
 				<?php
-					$tags = wp_get_post_tags($post->ID);
-					//foreach($tags as $tag):
-				?>
-				<code>#HASHTAG</code>
-				<?php // endforeach; ?>
+					$hash = wp_get_post_terms($post->ID, "hashtag");
+					if(!empty($hash))
+					foreach($hash as $tag): ?>
+
+					<code><?php echo "#".$tag->name; ?></code>
+				<?php  
+					endforeach; ?>
 				<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 			</div>
 		<?php endforeach; wp_reset_query(); ?>
@@ -37,7 +39,15 @@
 					
 				?>
 				<div class="new small">
-					<code>#HASHTAG</code><br>
+					<?php
+						$hash = wp_get_post_terms($post->ID, "hashtag");
+						if(!empty($hash))
+						foreach($hash as $tag): ?>
+
+						<code><?php echo "#".$tag->name; ?></code>
+					<?php  
+						endforeach; ?>
+					<br>
 					<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 				</div>
 				<?php endforeach; wp_reset_query(); ?>
@@ -55,9 +65,8 @@
 					);
 
 				$small = get_posts($args);
-				foreach($small as $post): setup_postdata($post);
-				
-			?>
+				foreach($small as $post): setup_postdata($post); ?>
+
 				<div class="new small">
 					<code>#HASHTAG</code><br>
 					<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
@@ -68,28 +77,25 @@
 		<div class="wrapper normal">
 			<div class="adver size4" style="margin:50px 0px -10px">
 		</div>
-			<a class="ficha-link" href="#">
-				<div>
-					
-				</div>
-				<span>Lorem ipsum dolor sit amet co</span><br>
-				<span>123 FICHAS</span>
-			</a>
-			<a class="ficha-link" href="#">
-				<div></div>
-				<span>Lorem ipsum dolor sit amet co</span><br>
-				<span>123 FICHAS</span>
-			</a>
-			<a class="ficha-link" href="#">
-				<div></div>
-				<span>Lorem ipsum dolor sit amet co</span><br>
-				<span>123 FICHAS</span>
-			</a>
-			<a id="last" class="ficha-link" href="#">
-				<div></div>
-				<span>Lorem ipsum dolor sit amet co</span><br>
-				<span>123 FICHAS</span>
-			</a>
+
+		<?php
+			$stacks = fetch_stacks(3);
+
+			foreach ($stacks as $each_stack) : ?>
+			 
+				<a class="ficha-link" href="<?php echo $each_stack->permalink; ?>">
+					<div>
+					<?php if($each_stack->thumb): ?>
+						<img src="<?php echo $each_stack->thumb; ?>" alt="<?php $each_stack->name; ?>">
+					<?php else: ?>
+						<img src="<?php echo THEMEPATH; ?>images/placeholder_stack.png" alt="Image not available">
+					<?php endif; ?>
+					</div>
+					<span><?php echo $each_stack->name; ?></span><br>
+					<span><?php echo $each_stack->card_count; ?> FICHAS</span>
+				</a>
+		<?php
+			endforeach; ?>
 		</div>
 	</section>
 	<section>
@@ -110,7 +116,7 @@
 				?>
 				<a class="side-link" href="#">
 					<div></div>
-					<span><?php the_title_limit( 45, '...'); ?></span>
+					<span><?php the_title_limit( 35, '...'); ?></span>
 				</a>
 				<?php endforeach; wp_reset_query(); ?>
 			</div>

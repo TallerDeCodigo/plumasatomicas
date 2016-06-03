@@ -7,9 +7,9 @@
 
 	add_action('add_meta_boxes', function(){
 
-		add_meta_box( 'columna_info_general', 'Información general de la columna', 'show_columna_info_general', 'what-the-fact', 'side', 'high' );
-		add_meta_box( 'columna_cuestionario', 'Calificación de la columna', 'show_columna_cuestionario', 'what-the-fact', 'normal', 'high' );
-		add_meta_box( 'fact_checker', 'Fact checker', 'show_fact_checker', 'what-the-fact', 'advanced', 'high' );
+		add_meta_box( 'columna_info_general', 'Información general de la columna', 'show_columna_info_general', 'wadafact', 'side', 'high' );
+		add_meta_box( 'columna_cuestionario', 'Calificación de la columna', 'show_columna_cuestionario', 'wadafact', 'normal', 'high' );
+		add_meta_box( 'fact_checker', 'Fact checker', 'show_fact_checker', 'wadafact', 'advanced', 'high' );
 
 	});
 
