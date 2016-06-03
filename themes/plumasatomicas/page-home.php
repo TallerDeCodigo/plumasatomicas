@@ -108,27 +108,8 @@
 	</section>
 	<section>
 		<div class="wrapper normal">
-			<div id="sidebar-left">
-				<?php 
-					$args = array(
-						'post_type' => 'post',
-						'posts_per_page' => 10,
-						'offset' => 9
-					);
-
-					$side_posts = get_posts($args);
-					
-					foreach($side_posts as $post): setup_postdata($post);
-					
-					
-				?>
-				<a class="side-link" href="#">
-					<div></div>
-					<span><?php the_title_limit( 35, '...'); ?></span>
-				</a>
-				<?php endforeach; wp_reset_query(); ?>
-			</div>
-			<div id="home-content">
+			<?php get_template_part("sidebar", "breaking"); ?>
+			<div id="home-content" class="home_curated">
 				<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -139,18 +120,28 @@
 					$posts = get_posts($args);
 					$count = 0;
 					foreach($posts as $post): setup_postdata($post);
-					$count ++;
-					
-				?>
+					$count ++; ?>
 
 				<?php if($count == 1){ ?>
 				<a id="grandot" class="post topp" href="<?php the_permalink(); ?>">
-					<div></div>
+					<div class="thumb_container">
+					<?php
+						if(has_post_thumbnail($post->ID)){
+							$thumb = get_the_post_thumbnail_url($post->ID, "large");
+							echo "<img src='{$thumb}'>";
+						} ?>
+					</div>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } else { ?>
 				<a class="post mini" href="<?php the_permalink(); ?>">
-					<div></div>
+					<div class="thumb_container">
+					<?php
+						if(has_post_thumbnail($post->ID)){
+							$thumb = get_the_post_thumbnail_url($post->ID, "large");
+							echo "<img src='{$thumb}'>";
+						} ?>
+					</div>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } endforeach; wp_reset_query(); ?>

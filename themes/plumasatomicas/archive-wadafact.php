@@ -10,10 +10,11 @@
 			foreach ($columnists as $each_columnist):
 				$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
 				echo <<<HTML
-				<a href="#" class="who-archive who">
+				<a href="" class="who-archive who">
 					<div class="thumb_container">
 						$thumb_formatted
-					</div><br>
+					</div>
+					<br>
 					<span>$each_columnist->name</span>
 					<span>$each_columnist->bio</span>
 					<span>$each_columnist->position</span>
@@ -21,11 +22,7 @@
 HTML;
 			endforeach;
 			?>
-			
-			<?php
 
-
-			?>
 			<div class="separador"></div>
 			<!-- <nav class="archii">
 				<a class="arrow leftside" href="#"><img src="images/arrow.svg"></a>

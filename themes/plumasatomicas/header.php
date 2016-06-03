@@ -31,7 +31,7 @@
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
 				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
-				<a href="#">CARD STACK</a>
+				<a href="<?php echo site_url("stacks"); ?>">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom">
 					<a href="#">PLUMAS</a>

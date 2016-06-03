@@ -1486,6 +1486,8 @@ code {font-family:"TradeGothic20";background:#F7DEA0;color:#3F3F3F;padding:6px 6
 #home-content a.mini:nth-of-type(even) {margin-right:4%;
 }
 
+.home_curated .post.mini{vertical-align:top;}
+
 
 .topp {width:100%;margin-left:0px;
 }
@@ -3652,7 +3654,7 @@ footer span {
 }
 
 #shower, #post-sec, #fichas-men {
-	margin-top:99px;
+	margin-top:76px;
 }
 
 #news-out {
@@ -3870,7 +3872,12 @@ header {
 
 }
 
-.archivo {width:100%; text-align:center!important; margin-bottom:20px;}
+.archivo {width:65%; text-align:center!important; margin-bottom:20px;}
+.archivo.half { text-align:center!important; margin-bottom:20px; padding-top:0;}
+.archivo.news h1{text-align:left;font-size:3rem;}
+.archivo.news .post>span{font-size:2.6rem;text-align:left;}
+.archivo.news .post>.excerpt{font-size:1.4rem;text-align:left; width: auto;}
+
 .who-archive {position:relative; width:33%; min-width:260px; vertical-align:top; text-align:center; margin:30px 0px 20px;}
 .who-archive div {width:128px; height:128px; border-radius:50%; background:#DCDCDC; overflow:hidden;}
 .who-archive span {width:100%;}
@@ -3887,7 +3894,8 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 @media (min-width:685px) {
 	.columna {width:93.5%; height:170px;}
 	.columna div {position:absolute; left:0px; top:0px; width:300px; height:170px; background:#DCDCDC; overflow:hidden;}
-	.columna span {margin-left:310px;}
+	.columna span,
+	.columna .excerpt {margin-left:310px;}
 }
 
 @media (max-width:684px) {
