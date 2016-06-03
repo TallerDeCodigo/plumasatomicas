@@ -68,7 +68,15 @@
 				foreach($small as $post): setup_postdata($post); ?>
 
 				<div class="new small">
-					<code>#HASHTAG</code><br>
+					<?php
+						$hash = wp_get_post_terms($post->ID, "hashtag");
+						if(!empty($hash))
+						foreach($hash as $tag): ?>
+
+						<code><?php echo "#".$tag->name; ?></code>
+					<?php  
+						endforeach; ?>
+					<br>
 					<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 				</div>
 			<?php endforeach; wp_reset_query(); ?>
@@ -84,7 +92,7 @@
 			foreach ($stacks as $each_stack) : ?>
 			 
 				<a class="ficha-link" href="<?php echo $each_stack->permalink; ?>">
-					<div>
+					<div class="thumb_container">
 					<?php if($each_stack->thumb): ?>
 						<img src="<?php echo $each_stack->thumb; ?>" alt="<?php $each_stack->name; ?>">
 					<?php else: ?>

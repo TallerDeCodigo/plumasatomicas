@@ -33,7 +33,7 @@
 							echo '<img src="'.$opinologo_img['url'].'">';
 							
 						} else {
-							echo 'nothing really';
+							echo '';
 						}
 					?>
 				</div><br>

@@ -450,7 +450,7 @@ if (is_admin()){
 									"description" 	=> $stack->description,
 									"card_count" 	=> $stack->count,
 									"thumb" 		=> ($stack_img) ? $stack_img['url'] : NULL,
-									"permalink" 	=> site_url("card-stack?id={$stack->ID}")
+									"permalink" 	=> site_url("card-stack?id={$stack->term_id}")
 								);
 		}
 		return $return_array;
@@ -463,18 +463,62 @@ if (is_admin()){
 	 */
 	function fetch_stack( $stack_id = NULL ){
 
+		$stack = get_term_by("id", $stack_id, "stack");
+		$cards =  fetch_cards($stack_id);
+		$stack_img = get_term_meta($stack->term_id, 'wp_image_card', true);
+
+		$final_stack = array(
+							"stack_id" 		=> $stack->term_id,
+							"stack_name" 	=> $stack->name,
+							"stack_slug" 	=> $stack->slug,
+							"stack_description" => $stack->description,
+							"stack_thumb" 	=> ($stack_img) ? $stack_img['url'] : NULL,
+							"card_count" 	=> $stack->count,
+						);
+		$final_stack = array_merge($final_stack, $cards);
+		return (object) $final_stack;
+		
 
 	}
 
 	/**
-	 * Get Card from Stack
-	 * @param Integer $card_index
+	 * Get Cards for Stack
 	 * @param Integer $stack_id
 	 * @return String/ Array
 	 */
-	function fetch_card( $card_index = 0, $stack_id = NULL ){
+	function fetch_cards( $stack_id = NULL ){
+		$final_cards = array();
+		$final_index = array();
+		$args = array(
+						"post_type" 		=> 	"cards",
+						"post_status" 		=>	"publish",
+						"orderby" 			=>	"date",
+						'tax_query' 		=> 	array(
+													array(
+													'taxonomy' 	=> 'stack',
+													'field' 	=> 'term_id',
+													'terms' 	=> $stack_id
+													)
+												),
+						"posts_per_page" 	=>	-1
+					);
+		$cards = get_posts( $args );
 
-
+		foreach ($cards as $index => $each_card) {
+			$final_index[] = array(
+									"index" 		=> $index,
+									"name" 			=> $each_card->post_title,
+									);
+			$final_cards[] = array(
+									"ID" 			=> $each_card->ID,
+									"index" 		=> $index,
+									"name" 			=> $each_card->post_title,
+									"content_raw" 	=> $each_card->post_content,
+									"content" 		=> wpautop($each_card->post_content),
+									"thumb" 		=> get_the_post_thumbnail( $each_card->ID, "large" ),
+								);
+		}
+		return array("pool" => $final_cards, "index" => $final_index);
 	}
 
 	/**
@@ -511,18 +555,24 @@ if (is_admin()){
 	 * @return String/ Array
 	 */
 	function fetch_columnists( $limit = 4, $offset = 0){
-		$terms = get_terms( array(
-		    'taxonomy' => 'post_tag',
-		    'hide_empty' => false,
-		) );
-		$args = array(
-					"post_type" 	=> 	"post",
-					"post_status" 	=>	"publish",
-					"orderby" 		=>	"rand",
-					"posts_per_page" => $limit,
-				);
-		$randomness = get_posts($args);
-		return $randomness;
+		$final_array = array();
+		$columnists = get_terms( array(
+						    'taxonomy' => 'opinologo',
+						    'orderby' => 'name',
+						    'hide_empty' => false,
+						) );
+		foreach ($columnists as $each_guy) {
+			$opinologo_img = get_term_meta($each_guy->term_id, 'wp_image_field_id', true);
+			$opinologo_img = !empty($opinologo_img) ? $opinologo_img['url'] : "";
+			$final_array[] = (object) array(
+										"ID" 		=> 	$each_guy->term_id,
+										"name" 		=> 	$each_guy->name,
+										"thumb" 	=>	$opinologo_img,
+										"bio" 		=>	$each_guy->description,
+										"position" 	=> 	"",
+									);
+		}
+		return $final_array;
 	}
 
 	/**
