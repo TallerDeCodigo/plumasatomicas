@@ -3,14 +3,16 @@
 <section style="margin:120px 0px 15px 0px;">
 	<div class="wrapper normal">
 		<h1>ARCHIVO</h1>
+		<div class="separador"></div>
 		<div class="archivo">
 
 		<?php
 			$columnists = fetch_columnists();
 			foreach ($columnists as $each_columnist):
 				$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
+				$permalink = site_url("opinologos/".$each_columnist->slug);
 				echo <<<HTML
-				<a href="" class="who-archive who">
+				<a href="$permalink" class="who-archive who">
 					<div class="thumb_container">
 						$thumb_formatted
 					</div>
@@ -23,7 +25,6 @@ HTML;
 			endforeach;
 			?>
 
-			<div class="separador"></div>
 			<!-- <nav class="archii">
 				<a class="arrow leftside" href="#"><img src="images/arrow.svg"></a>
 				<a class="arrow rightside" href="#"><img src="images/arrow.svg"></a>

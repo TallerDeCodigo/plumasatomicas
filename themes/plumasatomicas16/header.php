@@ -27,7 +27,7 @@
 		<div class="oversc">
 			<div class="bkgpa"></div>
 			<div class="menu1">
-				<a href="#">EXTRA EXTRA!</a>
+				<a href="<?php echo site_url('archive'); ?>">EXTRA EXTRA!</a>
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
 				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
@@ -41,11 +41,11 @@
 				</div>
 			</div>
 			<div class="menu2">
-				<a href="#">EXTRA<br>EXTRA!</a>
-				<a class="oneline" href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
-				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA<br>PESADA</a>
+				<a href="<?php echo site_url('archive'); ?>">EXTRA EXTRA!</a>
+				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
+				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
 				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
-				<a href="#">CARD STACK</a>
+				<a href="<?php echo site_url("stacks"); ?>">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom1">
 					<a href="#">PLUMAS</a>

@@ -322,16 +322,16 @@ function the_title_limit($length, $replacer = '...') {
 	 * Get grade by column
 	 * @param $opinologo
 	 */
-	function get_profile_grade($opinologo = NULL){
+	function get_profile_grade($opinologo_id = NULL){
 		
 		$global = array();
 		$args = array(
-					'post_type' => 'what-the-fact',
+					'post_type' => 'wadafact',
 					'tax_query' => 	array(
 										array(
-										'taxonomy' => 'opinologo',
-										'field' => 'term_id',
-										'terms' => $opinologo
+										'taxonomy' 	=> 'opinologo',
+										'field' 	=> 'term_id',
+										'terms' 	=> $opinologo_id
 										)
 									),
 					'post_status' => 'publish',
@@ -339,7 +339,7 @@ function the_title_limit($length, $replacer = '...') {
 				);
 
 		$posts = get_posts( $args );
-
+		
 		foreach ($posts as $columna) {
 			$partial_grade = get_column_grade($columna->ID);
 			$global[x] += $partial_grade[x]; 
@@ -567,6 +567,7 @@ if (is_admin()){
 			$final_array[] = (object) array(
 										"ID" 		=> 	$each_guy->term_id,
 										"name" 		=> 	$each_guy->name,
+										"slug" 		=> 	$each_guy->slug,
 										"thumb" 	=>	$opinologo_img,
 										"bio" 		=>	$each_guy->description,
 										"position" 	=> 	"",

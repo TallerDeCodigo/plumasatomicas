@@ -31,6 +31,18 @@
 			wp_insert_post( $page, true );
 		}
 
+		// Manifesto
+		if( ! get_page_by_path('manifesto') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Manifesto',
+				'post_name'   => 'manifesto',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
 		// Blog archive
 		if( ! get_page_by_path('archive') ){
 			$page = array(
