@@ -494,8 +494,10 @@ code {
 	font-weight:400;
 	color:#888;
 	line-height:1.5em;
-	font-size:106%;
+	font-size:95%;
 }
+
+.contenido .post.mini{vertical-align: top;}
 
 .contenido ol, .contenido ul {
 	width:80%;
@@ -563,15 +565,17 @@ code {
 
 
 .whatthefact blockquote {
-	color:#DE5141;
+	color:#3F3F3F;
 	width:93.5%;
 	max-width:650px;
 	margin-left:0px;
 	text-align:center;
-	font-size:147%;
+	font-size:97%;
 	letter-spacing:0.018em;
 	font-style:italic;
-	margin:100px 0px 40px;
+	margin: 80px 0px 40px;
+    font-family: 'TradeGothic18';
+    line-height: 2.5rem;
 }
 
 .whatthefact blockquote.quote:before {
@@ -594,6 +598,8 @@ code {
 	font-family:'TradeGothic18';
 	font-style:normal;
 	font-size:80%;
+	text-transform: uppercase;
+    margin: 2rem 0 0 0;
 }
 
 .separador {
