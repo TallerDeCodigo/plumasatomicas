@@ -4,11 +4,7 @@
 	$terms = wp_get_post_terms( $post->ID, "opinologo");
 	$opinologo = $terms[0];
 	$grade = get_profile_grade($opinologo->term_id);
-	file_put_contents(
-		'/logs/php.log',
-		var_export( $grade, true ) . PHP_EOL,
-		FILE_APPEND
-	);
+	
 	$res_x = 50+$grade[x]*25;
 	$res_y = 50+$grade[y]*25;
 
