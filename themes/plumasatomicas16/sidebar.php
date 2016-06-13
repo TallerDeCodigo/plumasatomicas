@@ -23,7 +23,7 @@ HTML;
 		
 		foreach($side_posts as $post): 
 			setup_postdata($post); ?>
-			<a class="side-link" href="#">
+			<a class="side-link" href="<?php the_permalink(); ?>">
 				<div class="thumb_container">
 				<?php
 					if(has_post_thumbnail($post->ID)){

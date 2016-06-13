@@ -3,14 +3,15 @@
 	$opinologo = get_the_terms($post->ID, 'opinologo');
 	$opinologo = !empty($opinologo) ? $opinologo[0] : NULL;
 	$grade = get_profile_grade($opinologo->term_id);
-
+	
 	$res_x = 50+$grade[x]*25;
 	$res_y = 50+$grade[y]*25;
 
-	$x_axis_name = ($grade[x] <= -1.5 AND $grade[x] >= -1) ? "Progresista" : "Centro";
-	$x_axis_name = ($grade[x] >=  1.5) ? "Conservador" : $x_axis_name;
-	$y_axis_name = ($grade[y] >=  1.5) ? "Totalitario" : "";
-	$y_axis_name = ($grade[y] <= -1.5) ? "Liberal"     : $y_axis_name; ?>
+	$x_axis_name = ($grade[x] <= -0.75) ? "Progresista" : "Centro";
+	$x_axis_name = ($grade[x] >=  0.75) ? "Conservador" : $x_axis_name;
+	$y_axis_name = ($grade[y] >=  0.5) ? "Totalitario" : "Centro";
+	$y_axis_name = ($grade[y] <= -0.5) ? "Liberal"     : $y_axis_name;
+?>
 
 <section style="margin:120px 0px 15px 0px;">
 	<div class="wrapper-special">
@@ -25,10 +26,11 @@
 							echo '<img src="'.$opinologo_img['url'].'">';
 							
 						} else {
-							echo 'nothing really';
+							echo '';
 						}
 					?>
 				</div><br>
+				<span><a href="<?php echo site_url("opinologos/".$opinologo->slug); ?>"><?php echo $opinologo->name; ?></a></span>
 				<span><?php echo $opinologo->description; ?></span>
 			</div>
 			<div class="postura">

@@ -476,7 +476,7 @@ if (is_admin()){
 							"card_count" 	=> $stack->count,
 						);
 		$final_stack = array_merge($final_stack, $cards);
-		return (object) $final_stack;
+		return $final_stack;
 		
 
 	}
