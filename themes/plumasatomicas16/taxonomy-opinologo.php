@@ -30,7 +30,7 @@
 						}
 					?>
 				</div><br>
-				<span><?php echo $opinologo->name; ?></span>
+				<!-- <span><?php echo $opinologo->name; ?></span> -->
 				<span><?php echo $opinologo->description; ?></span>
 			</div>
 			<div class="postura">

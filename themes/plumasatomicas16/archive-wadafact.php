@@ -17,6 +17,8 @@
 		<?php
 				$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
 				$permalink = site_url("opinologos/".$each_columnist->slug);
+				$bio = $each_columnist->bio;
+				$bio_chica = substr($bio ,0, 140).'<br />...ver más';
 				echo <<<HTML
 				<a href="$permalink" class="who-archive who">
 					<div class="thumb_container">
@@ -24,7 +26,7 @@
 					</div>
 					<br>
 					<span>$each_columnist->name</span>
-					<span>$each_columnist->bio</span>
+					<span>$bio_chica</span>
 					<span>$each_columnist->position</span>
 				</a>
 HTML;
