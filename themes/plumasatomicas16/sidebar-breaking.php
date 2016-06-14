@@ -20,7 +20,7 @@
 				echo "<img src='{$thumb}'>";
 			} ?>
 		</div>
-		<span><?php the_title_limit( 35, '...'); ?></span>
+		<span><?php the_title_limit( 60, '...'); ?></span>
 	</a>
 	<?php endforeach; wp_reset_query(); ?>
 </aside>

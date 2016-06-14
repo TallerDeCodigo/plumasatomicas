@@ -566,13 +566,13 @@ code {
 /*** WHAT THE FACT ***/
 
 .wadafact { max-width: 640px; margin: 0 15%;}
-.opinologo_columnista {width: 50%; float:left;}
+.opinologo_columnista {width: 50%; float:left; min-height: 470px;}
 .opinologo_columnista .thumb_container{width: 155px; height: 155px;}
 .wadafact .logo_wada {width: 100%; margin-bottom: 32px;}
 .wadafact .logo_wada img{float: left;}
 .wadafact .logo_wada h3{float: left; font-size: 26px; margin-top: 20px; font-weight: normal; text-transform: uppercase; color:#3f3f3f;}
 
-.titulo_post_opinologo {font-size: 85%;}
+.titulo_post_opinologo {font-size: 65%; margin-left: 330px!important;}
 
 .whatthefact blockquote {
 	color:#3F3F3F;
@@ -633,6 +633,15 @@ code {
 
 .who, .postura {
 	position:relative;
+	width:47%;
+	min-width:260px;
+	vertical-align:bottom;
+	text-align:center;
+	margin:30px 0px 20px;
+}
+
+.postura_link {
+	position:relative!important;
 	width:47%;
 	min-width:260px;
 	vertical-align:bottom;
@@ -922,11 +931,15 @@ ol li a {
 
 .descrip {
 	float:right;
-	background:#FFF;
+	background:#FaFaFa;
 	width:66%;
 	text-align:center;
 	box-shadow:0px 0px 5px #111;
 }
+
+#prueba-stack .descrip a {color: #000; text-decoration: underline; } 
+
+#prueba-stack .descrip img {width: 100%; height: auto; margin-bottom: 32px;} 
 
 .list h1 {
 	font-size:175%;
@@ -1791,6 +1804,13 @@ header {
 .searchbar {
 	right:1px;
 }
+
+/*** WADAFACT MÓVIL ***/ 
+
+.opinologo_columnista {width: 100%!important; float:none!important; min-height: 220px!important;}
+.opinologo_columnista .bio_columnista {display: none!important;}
+.wadafact .logo_wada {text-align: center; margin-bottom: 0px!important}
+.wadafact .logo_wada img {float: none!important}
 
 }
 

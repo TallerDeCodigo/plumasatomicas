@@ -6,7 +6,7 @@
 
 			<div class="logo_wada clearfix">
 				<img src="<?php echo THEMEPATH; ?>/images/wadafact_logo.png">
-				<h3>¿Cómo medimos el discurso político?</h3>
+				<h3><a href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">¿Cómo medimos el discurso político?</a></h3>
 			</div>
 		<?php
 			$columnists = fetch_columnists();
@@ -26,7 +26,7 @@
 					</div>
 					<br>
 					<span>$each_columnist->name</span>
-					<span>$bio_chica</span>
+					<span class="bio_columnista">$bio_chica</span>
 					<span>$each_columnist->position</span>
 				</a>
 HTML;
