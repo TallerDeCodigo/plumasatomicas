@@ -572,6 +572,8 @@ code {
 .wadafact .logo_wada img{float: left;}
 .wadafact .logo_wada h3{float: left; font-size: 26px; margin-top: 20px; font-weight: normal; text-transform: uppercase; color:#3f3f3f;}
 
+.titulo_post_opinologo {font-size: 85%;}
+
 .whatthefact blockquote {
 	color:#3F3F3F;
 	width:93.5%;
@@ -605,9 +607,10 @@ code {
 .whatthefact blockquote span {
 	font-family:'TradeGothic18';
 	font-style:normal;
-	font-size:80%;
+	font-size:110%;
 	text-transform: uppercase;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
+    font-weight: bolder;
 }
 
 .separador {
@@ -1565,7 +1568,7 @@ footer span {
 	top:33px;
 }
 
-#fichas-men {
+#shower, #post-sec, #fichas-men {
 	margin-top:76px;
 
 }
@@ -1575,7 +1578,7 @@ footer span {
 
 }
 
-#shower, #post-sec, #fichas-men span.titulo_stacks {text-transform: uppercase;}
+#shower, #post-sec, #fichas-men span.titulo_stacks {}
 #news-out {
 	display:none;
 }
@@ -1790,6 +1793,7 @@ header {
 }
 
 }
+
 
 .archivo { text-align:center!important; margin-bottom:20px;}
 .archivo.half {width:65%; text-align:center!important; margin-bottom:20px; padding-top:0;}

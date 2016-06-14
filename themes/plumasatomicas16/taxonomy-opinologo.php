@@ -60,7 +60,7 @@
 						<div class="thumb_container">
 							$thumb_formatted
 						</div>
-						<span>$post->post_title</span>
+						<span class="titulo_post_opinologo">$post->post_title</span>
 					</a>
 HTML;
 				endwhile; endif; ?>

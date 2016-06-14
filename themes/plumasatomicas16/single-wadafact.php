@@ -19,7 +19,7 @@
 			<h1><?php the_title(); ?></h1>
 		<?php if(has_post_thumbnail($post->ID)){ ?>
 			<div class="imagen-post">
-				<?php echo the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail($post->ID, 'full'); ?>
 			</div>
 		<?php } ?>
 		<?php the_content(); ?>
@@ -70,13 +70,15 @@
 				<?php
 				$by_same_guy = fetch_by_same_columnist($opinologo->term_id, 3, array($post->ID));
 				foreach ($by_same_guy as $each_column):
+					$permalink = get_the_permalink($each_column->ID);
 					$same_thumb = (has_post_thumbnail($each_column->ID)) ? get_the_post_thumbnail($each_column->ID, "medium") : "";
+					
 					echo <<<HTML
-					<a class="post columna" href="#">
+					<a class="post columna" href="$permalink">	
 						<div class="thumb_container">
 							$same_thumb
 						</div>
-						<span>$each_column->post_title</span>
+						<span class="titulo_post_opinologo">$each_column->post_title</span>
 					</a>
 HTML;
 				endforeach; ?>
@@ -97,9 +99,10 @@ HTML;
 				<?php 
 				$some_news = fetch_some_random_news();
 				foreach ($some_news as $random_news):
+					$permalink = get_the_permalink($random_news->ID);
 					$random_thumb = (has_post_thumbnail($random_news->ID)) ? get_the_post_thumbnail($random_news->ID, "medium") : "";
 				echo <<<HTML
-					<a class="post mini" href="#">
+					<a class="post mini" href="$permalink">
 						<div class="thumb_container">$random_thumb</div>
 						<span>$random_news->post_title</span>
 					</a>
