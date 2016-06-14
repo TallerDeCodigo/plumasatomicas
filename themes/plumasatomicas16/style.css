@@ -647,6 +647,12 @@ code {
 	vertical-align:bottom;
 	text-align:center;
 	margin:30px 0px 20px;
+	opacity: .7;
+}
+
+.postura_link:hover {
+	opacity: 1;
+	cursor: pointer;
 }
 
 .postura>div{
@@ -1853,8 +1859,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .longr h1 {width:100%; max-width:710px; margin-top:25px;}
 .longr p {width:100%; max-width:710px;}
 .longr p:first-of-type {margin-top:60px;}
-.longr p:last-of-type {margin-bottom:100px;}
-
+.longr p strong {color:#000;}
 @media (max-width: 999px) and (min-width: 685px){
 	.longr {width: 100%; max-width:710px;}
 }
