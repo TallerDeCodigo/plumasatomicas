@@ -450,7 +450,7 @@ if (is_admin()){
 									"description" 	=> $stack->description,
 									"card_count" 	=> $stack->count,
 									"thumb" 		=> ($stack_img) ? $stack_img['url'] : NULL,
-									"permalink" 	=> site_url("card-stack?id={$stack->term_id}")
+									"permalink" 	=> site_url("stack/"."$stack->slug")
 								);
 		}
 		return $return_array;

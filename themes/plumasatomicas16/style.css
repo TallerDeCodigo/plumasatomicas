@@ -88,7 +88,7 @@ h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
 /*** GENERAL ***/
 
 body {
-	background:#FFF;
+	background:#fafafa;
 	margin:0;
 	padding:0;
 	font-family:"TradeGothic20";
@@ -360,7 +360,7 @@ code {
 
 .side-link span {
 	margin-left:80px;
-	font-size:120%;
+	font-size:105%;
 	padding:10px 0px;
 }
 
@@ -425,6 +425,8 @@ code {
 	padding-top:45px;
 	text-align:left;
 }
+
+.contenido a {text-decoration: underline;}
 
 .sidebar {
 	background:#EEEEEE;
@@ -495,6 +497,7 @@ code {
 	color:#888;
 	line-height:1.5em;
 	font-size:95%;
+	text-align: left!important;
 }
 
 .contenido .post.mini{vertical-align: top;}
@@ -522,6 +525,7 @@ code {
 
 .contenido blockquote {
 	margin: 0px;
+	text-align: left!important;
 }
 
 .contenido blockquote p{
@@ -530,10 +534,11 @@ code {
 	max-width:650px;
 	margin-left:0px;
 	text-align:left;
-	font-size:130%;
+	font-size:115%;
 	letter-spacing:0.018em;
 	font-style:italic;
 	margin:32px 0px 32px 0px;
+	text-align: left!important;
 }
 
 .contenido blockquote.quote:before {
@@ -559,10 +564,13 @@ code {
 }
 
 /*** WHAT THE FACT ***/
-.whatthefact {
-	
-}
 
+.wadafact { max-width: 640px; margin: 0 15%;}
+.opinologo_columnista {width: 50%; float:left;}
+.opinologo_columnista .thumb_container{width: 155px; height: 155px;}
+.wadafact .logo_wada {width: 100%; margin-bottom: 32px;}
+.wadafact .logo_wada img{float: left;}
+.wadafact .logo_wada h3{float: left; font-size: 26px; margin-top: 20px; font-weight: normal; text-transform: uppercase; color:#3f3f3f;}
 
 .whatthefact blockquote {
 	color:#3F3F3F;
@@ -1557,10 +1565,17 @@ footer span {
 	top:33px;
 }
 
-#shower, #post-sec, #fichas-men {
+#fichas-men {
 	margin-top:76px;
+
 }
 
+#fichas-men img{
+	position: absolute;
+
+}
+
+#shower, #post-sec, #fichas-men span.titulo_stacks {text-transform: uppercase;}
 #news-out {
 	display:none;
 }
@@ -1784,7 +1799,7 @@ header {
 
 .who-archive {position:relative; width:33%; min-width:260px; vertical-align:top; text-align:center; margin:30px 0px 20px;}
 .who-archive div {width:128px; height:128px; border-radius:50%; background:#DCDCDC; overflow:hidden;}
-.who-archive span {width:100%;}
+.who-archive span {width:100%; line-height: 150%;}
 .who-archive span:nth-of-type(1) {font-size:125%; margin:19px 0px 9px;}
 .who-archive span:nth-of-type(2) {font-family:'Roboto Condensed', sans-serif; font-weight:400; color:#888; font-size:90%; margin-bottom:3px;}
 .who-archive span:nth-of-type(3) {font-size:125%; color:#85AAA2; margin-top:15px;}
@@ -1819,6 +1834,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 @media (max-width: 999px) and (min-width: 685px){
 	.longr {width: 100%; max-width:710px;}
 }
+
 
 
 

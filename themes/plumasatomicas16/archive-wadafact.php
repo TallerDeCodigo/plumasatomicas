@@ -2,13 +2,19 @@
 	get_header(); ?>
 <section style="margin:120px 0px 15px 0px;">
 	<div class="wrapper normal">
-		<h1>WADAFACT</h1>
-		<div class="separador"></div>
-		<div class="archivo">
+		<div class="archivo wadafact clearfix">
 
+			<div class="logo_wada clearfix">
+				<img src="<?php echo THEMEPATH; ?>/images/wadafact_logo.png">
+				<h3>¿Cómo medimos el discurso político?</h3>
+			</div>
 		<?php
 			$columnists = fetch_columnists();
 			foreach ($columnists as $each_columnist):
+		?>
+
+		<div class="opinologo_columnista">
+		<?php
 				$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
 				$permalink = site_url("opinologos/".$each_columnist->slug);
 				echo <<<HTML
@@ -22,8 +28,12 @@
 					<span>$each_columnist->position</span>
 				</a>
 HTML;
-			endforeach;
-			?>
+
+		?>
+
+		</div>
+		<?php endforeach; ?>
+
 
 			<!-- <nav class="archii">
 				<a class="arrow leftside" href="#"><img src="images/arrow.svg"></a>

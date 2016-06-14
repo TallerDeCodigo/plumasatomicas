@@ -13,7 +13,7 @@
 	$y_axis_name = ($grade[y] <= -0.5) ? "Liberal"     : $y_axis_name;
 ?>
 
-<section style="margin:120px 0px 15px 0px;">
+<section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido">
 			<h1><?php echo $opinologo->name; ?></h1>
@@ -30,7 +30,7 @@
 						}
 					?>
 				</div><br>
-				<span><a href="<?php echo site_url("opinologos/".$opinologo->slug); ?>"><?php echo $opinologo->name; ?></a></span>
+				<span><?php echo $opinologo->name; ?></span>
 				<span><?php echo $opinologo->description; ?></span>
 			</div>
 			<div class="postura">
@@ -73,9 +73,7 @@ HTML;
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="comments">
-				<div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
-			</div>
+			
 			<div class="adver size3"></div>
 			<div id="dissappear" class="mini-wrapper">
 			<?php 
