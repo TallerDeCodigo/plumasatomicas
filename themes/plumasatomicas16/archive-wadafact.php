@@ -2,7 +2,7 @@
 	get_header(); ?>
 <section style="margin:120px 0px 15px 0px;">
 	<div class="wrapper normal">
-		<h1>ARCHIVO</h1>
+		<h1>WADAFACT</h1>
 		<div class="separador"></div>
 		<div class="archivo">
 

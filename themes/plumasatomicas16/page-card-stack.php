@@ -4,27 +4,7 @@
 
  ?>
 
-	<header>
-		<div class="wrapper normal">
-			<nav class="menu">
-				<div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
-				<a href="#"><img id="header-logo" width="289" height="56" src="<?php echo THEMEPATH; ?>images/logo.svg"></a>
-			</nav>
-			<nav class="social">
-				<div class="searchbar">
-					<form action="<?php echo site_url(); ?>" method="GET">
-						<input type="text" value="Búsqueda" name="s">
-					</form>
-					<a><img src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
-				</div>
-				<a><img id="header-search" src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
-				<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"></a>
-				<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/tw.png"></a>
-				<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/yt.png"></a>
-				<a class="socc" href="#"><img src="<?php echo THEMEPATH; ?>images/header/in.png"></a>
-			</nav>
-		</div>
-	</header>
+	
 	<div id="ficha-icon" style="display:none"><a><img src="<?php echo THEMEPATH; ?>images/ficha-icon2.png"></a></div>
 	<div id="menu-resp">
 	<div class="wrap-resp">

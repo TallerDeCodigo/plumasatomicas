@@ -12,7 +12,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body class="<?php if(is_home()){ echo 'index'; } ?>">
+	<body class="<?php if(is_home()){ echo 'index'; } ?>" id="<?php if(is_page('card-stack')){ echo 'cardss'; } ?>">
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
