@@ -40,6 +40,30 @@
 					</div>
 					<span><?php echo $x_axis_name."-".$y_axis_name; ?></span>
 			</div></a>
+			<div class="chart">
+				<div class="chart-col">
+					<div class="ch-item">
+						VERDADERO
+						<div class="ver1"></div>
+					</div>
+					<div class="ch-item">
+						MAYORITARIAMENTE VERDADERO
+						<div class="ver2"></div>
+					</div>
+					<div class="ch-item">
+						VERDADES DESCONTEXTUALIZADAS
+						<div class="desc"></div>
+					</div>
+					<div class="ch-item">
+						FALSO
+						<div class="fal1"></div>
+					</div>
+					<div class="ch-item">
+						ESCANDALOSAMENTE FALSO
+						<div class="fal2"></div>
+					</div>
+				</div>
+			</div>
 			<nav>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>

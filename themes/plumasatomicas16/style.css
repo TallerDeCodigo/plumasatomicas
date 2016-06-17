@@ -859,21 +859,21 @@ code {
     opacity:0.3;
 }
 
-.section {
+/*.section {
 	padding:99px 0px 0px 0px;
-}
+}*/
 
 .cell {
 	width:48.5%;
 	color:#FFF;
 	vertical-align:top;
 	margin:60px 0px;
+	margin-top:-750px!important;
 }
 
-.cell:first-of-type {
+/*.cell:first-of-type {
 	margin-right:3%;
-	height:672px;
-}
+}*/
 
 #lalista {
 	border:1px solid #FFF;
@@ -945,7 +945,9 @@ ol li a {
 
 #prueba-stack .descrip a {color: #000; text-decoration: underline; } 
 
-#prueba-stack .descrip img {width: 100%; height: auto; margin-bottom: 32px;} 
+#prueba-stack .descrip img {width:100%; height:auto;}
+
+#prueba-stack .descrip p img {margin-bottom:32px;} 
 
 .list h1 {
 	font-size:175%;
@@ -1852,7 +1854,6 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 	.columna div {width:100%; height:170px; background:#DCDCDC; overflow:hidden;}
 }
 
-
 /* LONG.HTML */
 
 .centrado {text-align:center!important;}
@@ -1864,8 +1865,32 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 	.longr {width: 100%; max-width:710px;}
 }
 
+/* EMBEDED INSTA, TWITTER Y YOUTUBE */
+
+.descrip .instagram-media {width:90%!important; left:5%!important;}
+.descrip iframe.twitter-tweet {position:relative!important; display:inline-block!important; width:90%!important; max-width:500px!important; min-width:200px!important;}
+@media (min-width: 685px) {
+	.descrip .fluid-width-video-wrapper {width:90%!important;}
+}
+
+/* CHART EN COLUMNA.HTML */
+
+.chart {width:90%; margin:35px 0px 60px 0px;text-align:right; color:#545454;}
+.chart-col {width:50%;padding-left:10px;border-left:1px solid #545454;}
+.ch-item {width:100%;margin:10px 0px;text-align:left; padding-top:5px;}
+.ch-item div {position:absolute; right:100%; top:0px; height:100%; margin-right:11px;}
+.ver1 {width:60%; background:#49a9a5;}
+.ver2 {width:80%; background:#9bd2c0;}
+.desc {width:100%; background:#f4c1a9;}
+.fal1 {width:60%; background:#e77da8;}
+.fal2 {width:40%; background:#dd5e6f;}
 
 
+/* CAMBIOS EN STACKS */
+
+#resumen {margin-top:-24px!important;}
+
+.slide:not(:nth-of-type(1)) {padding-top:99px!important;}
 
 
 

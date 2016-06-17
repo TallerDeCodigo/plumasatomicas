@@ -34,9 +34,9 @@
 	<img id="resumen-bkg" src="<?php echo $stack_info['stack_thumb']; ?>">
 	<div id="fullpage">
 		<div id="prueba-stack" class="section">
-		    <div class="slide">
+		    <div id="elmenu" class="slide">
 		    	<div class="card-container">
-					<div id="res-cont" class="wrapper normal">
+					<div class="wrapper normal">
 						<div class="cell">
 							<h1><?php echo $stack_info['stack_name']; ?></h1>
 							<nav>
@@ -86,7 +86,7 @@
 			 ?>
 		    <div class="slide">
 		    	<div class="card-container">
-				<div id="res-cont" class="wrapper normal">
+				<div class="wrapper normal">
 					<div class="single descrip">
 						<div class="miheader">
 							<span>FICHA <b><?php echo $pool_index+1; ?> de <?php echo $stack_info['card_count']; ?></b></span>
