@@ -941,6 +941,7 @@ ol li a {
 	width:66%;
 	text-align:center;
 	box-shadow:0px 0px 5px #111;
+	margin-bottom: 150px;
 }
 
 #prueba-stack .descrip a {color: #000; text-decoration: underline; } 
@@ -1554,7 +1555,7 @@ ol li a {
 }
 
 .single {
-	margin:30px 0px;
+	margin:30px 0px 150px;
 }
 
 }
