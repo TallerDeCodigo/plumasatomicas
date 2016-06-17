@@ -34,10 +34,10 @@
 	<img id="resumen-bkg" src="<?php echo $stack_info['stack_thumb']; ?>">
 	<div id="fullpage">
 		<div id="prueba-stack" class="section">
-		    <div id="elmenu" class="slide">
+		    <div class="slide">
 		    	<div class="card-container">
-					<div class="wrapper normal">
-						<div class="cell">
+					<div id="elmenu" class="wrapper normal">
+						<div class="nuevocell">
 							<h1><?php echo $stack_info['stack_name']; ?></h1>
 							<nav>
 								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
@@ -47,7 +47,7 @@
 							<p><?php echo $stack_info['stack_description']; ?></p>
 							<a id="start-btn" class="fp-controlArrow fp-next">EMPEZAR</a>
 						</div>
-						<div id="lalista" class="cell">
+						<div id="lalista" class="nuevocell">
 							<ol class="fp-slidesNav">
 								<li style="display:none"><a>null</a></li>
 							<?php
@@ -59,7 +59,7 @@
 							</ol>
 						</div>
 						<div id="resp-main">
-							<h1><?php echo $stack_info['name']; ?></h1>
+							<h1><?php echo $stack_info['stack_name']; ?></h1>
 							<nav>
 								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>

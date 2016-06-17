@@ -98,10 +98,10 @@ $(window).on("load resize",function(){
         $("#big-image").css("width", "101%");
         $("#big-image").css("height", "auto");
     }
-    var resumen = alto-164;
+    var resumen = alto-100;
     var descrip = $('.descrip').height();
     resumen = resumen + "px" ;
-    //$("#resumen").css("min-height", resumen);
+    $("#elmenu").css("min-height", resumen);
     $("#resumen-bkg").css("height", "101%");
     $("#resumen-bkg").css("width", "auto");
     var resimg = $('#resumen-bkg').width();
