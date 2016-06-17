@@ -12,7 +12,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body class="<?php if(is_home()){ echo 'index'; } ?>" id="<?php if(is_page('card-stack')){ echo 'cardss'; } ?>">
+	<body class="<?php if(is_home()){ echo 'index'; } ?>" id="<?php if(is_tax('stack')){ echo 'cardss'; } ?>">
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
@@ -41,13 +41,15 @@
 				</div>
 			</div>
 			<div class="menu2">
+				<h4>SECCIONES</h4><br>
 				<a href="<?php echo site_url('archive'); ?>">EXTRA EXTRA!</a>
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
-				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
+				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a><br>
 				<a href="<?php echo site_url("wadafact"); ?>">Wadafact</a>
 				<a href="<?php echo site_url("card-stacks"); ?>">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom1">
+					<h4>ACERCA DE</h4><br>
 					<a href="#">PLUMAS</a>
 					<a href="#">MANIFIESTO</a>
 					<a href="#">CONTACTO</a>

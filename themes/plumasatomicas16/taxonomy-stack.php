@@ -7,7 +7,7 @@
  ?>
 
 	
-	<div id="ficha-icon" style="display:none"><a><img src="<?php echo THEMEPATH; ?>images/ficha-icon2.png"></a></div>
+	<div id="ficha-icon"><a><img src="<?php echo THEMEPATH; ?>images/ficha-icon2.png"></a></div>
 	<div id="menu-resp">
 	<div class="wrap-resp">
 		<h1><?php echo $stack_info['stack_name']; ?></h1>

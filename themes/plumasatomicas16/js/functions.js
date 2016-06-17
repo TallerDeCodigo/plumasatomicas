@@ -101,7 +101,6 @@ $(window).on("load resize",function(){
     var resumen = alto-100;
     var descrip = $('.descrip').height();
     resumen = resumen + "px" ;
-    $("#elmenu").css("min-height", resumen);
     $("#resumen-bkg").css("height", "101%");
     $("#resumen-bkg").css("width", "auto");
     var resimg = $('#resumen-bkg').width();
@@ -134,9 +133,13 @@ $(window).on("load resize",function(){
 });
 
 $(window).on("resize",function(){
-    if ($("body").is("#cardss")) {
-        location.reload();
-    }
+    // if ($("body").is("#cardss")) {
+    //     $( document.body ).trigger({
+    //         type: 'keypress',
+    //         which: 37,
+    //         keyCode: 37
+    //     });
+    // }
 });
 
 
@@ -3404,6 +3407,10 @@ $(document).ready(function() {
             }
             setTimeout(function() {$('.slimScrollBar').animate({"opacity":"0.5"}, 100);}, 1000);
 
+        },
+        'afterResize': function(a,b,c,d,e){
+          // console.log("resize");
+          // FP.moveSlideLeft();
         }
     });
 

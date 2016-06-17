@@ -1335,18 +1335,23 @@ ol li a {
 }
 
 .menu2 {
-	width:70%;
-	min-width:840px;
-	max-width:1000px;
-	font-size:215%;
+	width:100%;
+	font-size:150%;
 	text-align:center;
 	vertical-align:top;
-	margin-top:50px;
 	height:100%;
 	display:none;
+	border-top:2px solid #757575;
+}
+
+.menu2 h4 {
+	color:#F7DEA0;
+	margin-top:80px;
+	font-size:150%;
 }
 
 .menu2 a {
+	font-family:'Roboto Condensed', sans-serif;
 	color:#FFF;
 	margin:50px;
 	text-shadow:0px 0px 3px 3px #000;
@@ -1355,15 +1360,15 @@ ol li a {
 }
 
 .bottom1 {
-	position:absolute;
 	width:100%;
-	bottom:100px;
 	left:0px;
+	border-top:2px solid #757575;
+	margin-top:50px;
 }
 
 .bottom1 a {
 	color:#FFF;
-	margin:18px;
+	margin:50px 22px;
 }
 
 .oneline {
@@ -1890,7 +1895,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 /* CAMBIOS EN STACKS */
 
-#resumen {margin-top:-24px!important;}
+#resumen {margin-top:-23px!important;}
 
 .slide {vertical-align:top!important;}
 
@@ -1898,3 +1903,14 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 p strong {color: #606060;}
 
+#cardss {font-size:20px!important;}
+
+@media (max-width:999px) {
+	.list {display:none;}
+	#ficha-icon {display:block;}
+}
+
+@media (min-width:1000px) {
+	.list {display:block;}
+	#ficha-icon {display:none;}
+}
