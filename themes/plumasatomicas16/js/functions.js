@@ -3408,7 +3408,8 @@ $(document).ready(function() {
     });
 
 });
-
+    
+     $(".descrip").fitVids();
 
 	});
 

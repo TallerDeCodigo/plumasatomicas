@@ -1647,7 +1647,7 @@ footer span {
 }
 
 .single {
-	margin:30px 0px;
+	margin:30px 0px 150px;
 }
 
 #menu-resp {
@@ -1871,7 +1871,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .descrip .instagram-media {width:90%!important; left:5%!important;}
 .descrip iframe.twitter-tweet {position:relative!important; display:inline-block!important; width:90%!important; max-width:500px!important; min-width:200px!important;}
 @media (min-width: 685px) {
-	.descrip .fluid-width-video-wrapper {width:90%!important;}
+	
 }
 
 /* CHART EN COLUMNA.HTML */
@@ -1893,5 +1893,6 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 .slide:not(:nth-of-type(1)) {padding-top:99px!important;}
 
+.twitter-tweet {margin: 0 auto!important;}
 
 
