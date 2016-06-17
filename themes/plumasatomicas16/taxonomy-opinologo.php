@@ -19,7 +19,7 @@
 
 <section id="post-sec">
 	<div class="wrapper-special">
-		<div class="contenido">
+		<div class="contenido opinologo">
 			<h1><?php echo $opinologo->name; ?></h1>
 			<div class="who">
 				<div>

@@ -42,6 +42,15 @@
 $(window).on("load resize",function(){
     var ancho = document.documentElement.clientWidth;
     var alto = document.documentElement.clientHeight;
+    if (alto < 783) {
+      $("#list-container").css("height", alto-400+"px");
+      $('#up-btn').css("bottom",alto-432+"px");
+    } else {
+      $("#list-container").css("height", "383px");
+      $('#up-btn').css("bottom","349px");
+    }
+
+    console.log($('#list-container').height());
     if (ancho <= 685) {
         $(".oversc").css("top", "69px");
         var altover = alto-69 + "px";
