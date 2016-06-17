@@ -493,6 +493,7 @@ if (is_admin()){
 						"post_type" 		=> 	"cards",
 						"post_status" 		=>	"publish",
 						"orderby" 			=>	"date",
+						"order"				=>	"ASC",
 						'tax_query' 		=> 	array(
 													array(
 													'taxonomy' 	=> 'stack',
