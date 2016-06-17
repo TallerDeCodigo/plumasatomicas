@@ -350,6 +350,86 @@ function the_title_limit($length, $replacer = '...') {
 		return $global;
 	}
 
+
+	 /*
+	 * Get truthfulness by column
+	 * @param $opinologo
+	 */
+	function get_profile_truthfulness($opinologo_id = NULL){
+		
+		$global = array();
+		$args = array(
+					'post_type' => 'wadafact',
+					'tax_query' => 	array(
+										array(
+										'taxonomy' 	=> 'opinologo',
+										'field' 	=> 'term_id',
+										'terms' 	=> $opinologo_id
+										)
+									),
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+				);
+
+		$posts = get_posts( $args );
+		
+		$verdadero 						= 0;
+		$mayoritariamente_verdadero 	= 0;
+		$verdades_descontextualizadas 	= 0;
+		$falso 							= 0;
+		$escandalosamente_falso 		= 0;
+
+		foreach ($posts as $columna) {
+
+			$fact_uno = get_post_meta($columna->ID, 'calif_argumento_uno', true);
+			$fact_dos = get_post_meta($columna->ID, 'calif_argumento_dos', true);
+			if($fact_uno == 'verdadero'){
+				$verdadero ++;
+			}
+			if($fact_uno == 'mayoritariamente_verdadero'){
+				$mayoritariamente_verdadero ++;
+			}
+			if($fact_uno == 'verdades_descontextualizadas'){
+				$verdades_descontextualizadas ++;
+			}
+			if($fact_uno == 'falso'){
+				$falso ++;
+			}
+			if($fact_uno == 'escandalosamente_falso'){
+				$escandalosamente_falso ++;
+			}
+
+			if($fact_dos == 'verdadero'){
+				$verdadero ++;
+			}
+			if($fact_dos == 'mayoritariamente_verdadero'){
+				$mayoritariamente_verdadero ++;
+			}
+			if($fact_dos == 'verdades_descontextualizadas'){
+				$verdades_descontextualizadas ++;
+			}
+			if($fact_dos == 'falso'){
+				$falso ++;
+			}
+			if($fact_dos == 'escandalosamente_falso'){
+				$escandalosamente_falso ++;
+			}
+		}
+
+		$count = count($posts) * 2;
+		//echo 'cova'.$verdadero;
+
+		return array(
+			'verdadero' 					=> ($verdadero / $count) * 100,
+			'mayoritariamente_verdadero' 	=> ($mayoritariamente_verdadero / $count) * 100,
+			'verdades_descontextualizadas' 	=> ($verdades_descontextualizadas / $count) * 100,
+			'falso'							=> ($falso / $count) * 100,
+			'escandalosamente_falso' 		=> ($escandalosamente_falso / $count) * 100,
+			);
+	}
+
+
+
 /*
 Plugin Name: Demo Tax meta class
 Plugin URI: https://en.bainternet.info

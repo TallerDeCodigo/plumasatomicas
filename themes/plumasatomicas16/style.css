@@ -1899,6 +1899,9 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 .twitter-tweet {margin: 0 auto!important;}
 
+a.chart_checker {opacity: 0.7}
+a.chart_checker:hover {opacity: 1}
+
 p strong {color: #606060;}
 
 #cardss {font-size:20px!important;}

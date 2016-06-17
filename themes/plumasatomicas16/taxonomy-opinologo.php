@@ -3,7 +3,11 @@
 	$opinologo = get_the_terms($post->ID, 'opinologo');
 	$opinologo = !empty($opinologo) ? $opinologo[0] : NULL;
 	$grade = get_profile_grade($opinologo->term_id);
-	
+	$truthfulness = get_profile_truthfulness($opinologo->term_id);
+
+	extract($truthfulness);
+
+
 	$res_x = 50+$grade[x]*25;
 	$res_y = 50+$grade[y]*25;
 
@@ -40,30 +44,33 @@
 					</div><br>
 					<span><?php echo $x_axis_name."-".$y_axis_name; ?></span>
 			</div></a>
+			
+			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 			<div class="chart">
 				<div class="chart-col">
 					<div class="ch-item">
 						VERDADERO
-						<div class="ver1"></div>
+						<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
 						MAYORITARIAMENTE VERDADERO
-						<div class="ver2"></div>
+						<div class="ver2" style="width: <?php echo $mayoritariamente_verdadero; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
 						VERDADES DESCONTEXTUALIZADAS
-						<div class="desc"></div>
+						<div class="desc" style="width: <?php echo $verdades_descontextualizadas; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
 						FALSO
-						<div class="fal1"></div>
+						<div class="fal1" style="width: <?php echo $falso; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
 						ESCANDALOSAMENTE FALSO
-						<div class="fal2"></div>
+						<div class="fal2" style="width: <?php echo $escandalosamente_falso; ?>%!important"></div>
 					</div>
 				</div>
 			</div>
+			</a>
 			<nav>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
