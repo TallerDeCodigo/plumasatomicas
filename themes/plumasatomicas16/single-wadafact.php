@@ -45,16 +45,16 @@
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
 					</div>
-					<span><?php echo $x_axis_name."-".$y_axis_name; ?></span>
+					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
 			<div class="separador">
 				<span>FACT CHECKER</span>
 			</div>
-			<blockquote class="quote"><?php echo get_post_meta($post->ID, 'argumento_uno', true); ?><br>
+			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_uno', true); ?><br>
 				<span><?php echo get_post_meta($post->ID, 'calif_argumento_uno', true); ?></span>
 			</blockquote>
 			
-			<blockquote class="quote"><?php echo get_post_meta($post->ID, 'argumento_dos', true); ?><br>
+			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_dos', true); ?><br>
 				<span><?php echo get_post_meta($post->ID, 'calif_argumento_dos', true); ?></span>
 			</blockquote>
 			<nav>

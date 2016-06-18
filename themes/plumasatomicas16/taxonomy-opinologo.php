@@ -42,7 +42,7 @@
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
 					</div><br>
-					<span><?php echo $x_axis_name."-".$y_axis_name; ?></span>
+					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
 			
 			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
