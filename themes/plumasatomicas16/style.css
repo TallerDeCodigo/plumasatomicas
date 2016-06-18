@@ -565,6 +565,8 @@ code {
 
 /*** WHAT THE FACT ***/
 
+
+
 .wadafact { max-width: 640px; margin: 0 15%;}
 .opinologo_columnista {width: 50%; float:left; min-height: 470px;}
 .opinologo_columnista .thumb_container{width: 155px; height: 155px;}
@@ -579,7 +581,7 @@ code {
 	width:93.5%;
 	max-width:650px;
 	margin-left:0px;
-	text-align:center;
+	text-align:center!important;
 	font-size:97%;
 	letter-spacing:0.018em;
 	font-style:italic;
@@ -607,10 +609,11 @@ code {
 .whatthefact blockquote span {
 	font-family:'TradeGothic18';
 	font-style:normal;
-	font-size:110%;
+	font-size:150%;
 	text-transform: uppercase;
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-weight: bolder;
+    color: #d43b33;
 }
 
 .separador {
@@ -1923,5 +1926,7 @@ p strong {color: #606060;}
 }
 
 .opinologo h1 {text-align:center;}
+
+
 
 .list h1 a {color:inherit;}

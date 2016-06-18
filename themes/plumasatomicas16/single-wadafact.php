@@ -50,11 +50,11 @@
 			<div class="separador">
 				<span>FACT CHECKER</span>
 			</div>
-			<blockquote class="quote"><?php echo get_post_meta($post->ID, 'argumento_uno', true); ?><br>
+			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_uno', true); ?><br>
 				<span><?php echo get_post_meta($post->ID, 'calif_argumento_uno', true); ?></span>
 			</blockquote>
 			
-			<blockquote class="quote"><?php echo get_post_meta($post->ID, 'argumento_dos', true); ?><br>
+			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_dos', true); ?><br>
 				<span><?php echo get_post_meta($post->ID, 'calif_argumento_dos', true); ?></span>
 			</blockquote>
 			<nav>
