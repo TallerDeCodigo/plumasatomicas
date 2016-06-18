@@ -68,6 +68,7 @@
 						ESCANDALOSAMENTE FALSO
 						<div class="fal2" style="width: <?php echo $escandalosamente_falso; ?>%!important"></div>
 					</div>
+					<div class="chart-anim"></div>
 				</div>
 			</div>
 			</a>

@@ -1878,6 +1878,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 .chart {width:90%; margin:35px 0px 60px 0px;text-align:right; color:#545454;}
 .chart-col {width:50%;padding-left:10px;border-left:1px solid #545454;}
+.chart-anim {position:absolute;width:0%;height:100%;top:0px;left:-100%; background:#FFF; margin-left:-1px;-webkit-animation:ungrow 2s linear 0s;-moz-animation:ungrow 2s linear 0s;animation:ungrow 2s linear 0s;}
 .ch-item {width:100%;margin:10px 0px;text-align:left; padding-top:5px;}
 .ch-item div {position:absolute; right:100%; top:0px; height:100%; margin-right:11px;}
 .ver1 {width:60%; background:#275eb6;}
@@ -1925,3 +1926,35 @@ p strong {color: #606060;}
 .opinologo h1 {text-align:center;}
 
 .list h1 a {color:inherit;}
+
+.pointer {-webkit-animation:grow 2s ease-in-out 0s;-moz-animation:grow 2s ease-in-out 0s;animation:grow 2s ease-in-out 0s;}
+
+@-webkit-keyframes grow {
+    from {-webkit-transform:scale(0);}
+    to {-webkit-transform:scale(1);}
+}
+
+@-moz-keyframes grow {
+    from {-moz-transform:scale(0);}
+    to {-moz-transform:scale(1);}
+}
+
+@keyframes grow {
+    from {transform:scale(0);}
+    to {transform:scale(1);}
+}
+
+@-webkit-keyframes ungrow {
+    from {width:100%;}
+    to {width:0%;}
+}
+
+@-moz-keyframes ungrow {
+    from {width:100%;}
+    to {width:0%;}
+}
+
+@keyframes ungrow {
+    from {width:100%;}
+    to {width:0%;}
+}
