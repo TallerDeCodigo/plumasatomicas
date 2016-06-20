@@ -49,23 +49,23 @@
 			<div class="chart">
 				<div class="chart-col">
 					<div class="ch-item">
-						VERDADERO
+						VERDADERO <?php echo round($verdadero); ?>%
 						<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
-						MAYORITARIAMENTE VERDADERO
+						MAYORITARIAMENTE VERDADERO <?php echo round($mayoritariamente_verdadero); ?>%
 						<div class="ver2" style="width: <?php echo $mayoritariamente_verdadero; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
-						VERDADES DESCONTEXTUALIZADAS
+						VERDADES DESCONTEXTUALIZADAS <?php echo round($verdades_descontextualizadas); ?>%
 						<div class="desc" style="width: <?php echo $verdades_descontextualizadas; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
-						FALSO
+						FALSO <?php echo round($falso); ?>%
 						<div class="fal1" style="width: <?php echo $falso; ?>%!important"></div>
 					</div>
 					<div class="ch-item">
-						ESCANDALOSAMENTE FALSO
+						ESCANDALOSAMENTE FALSO <?php echo round($escandalosamente_falso); ?>%
 						<div class="fal2" style="width: <?php echo $escandalosamente_falso; ?>%!important"></div>
 					</div>
 					<div class="chart-anim"></div>
