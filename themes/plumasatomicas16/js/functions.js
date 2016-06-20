@@ -174,6 +174,7 @@ $(window).load(function(){
 
         $('#nav-icon3').click(function(){
             $("#nav-icon3").toggleClass('open');
+            $("body").toggleClass('fixeddd');
             var anchohead1 = document.documentElement.clientWidth;
             if (anchohead1 < 900 ) {
                 if ($('.oversc').css('display') != 'none') {
