@@ -331,7 +331,7 @@ code {
 	content:url(images/ficha-icon.png);
 }
 
-.thumb_container>img{width: 100%; height: auto; display: block; margin:0;}
+.thumb_container>img{width: 100%; height:auto; display:block; margin:0;}
 
 #sidebar-left {
 	width:30%;
@@ -789,6 +789,10 @@ code {
 
 /* Fichas */
 
+.ficha-main{
+	background:#303030;
+}
+
 .ficha-main div {
 	position:absolute;
 	left:0px;
@@ -798,16 +802,14 @@ code {
 	box-shadow: inset 0px -125px 300px -103px #000;
 }
 
-.ficha-main div img {
+.ficha-main img {
 	position:absolute;
-	width:101%;
-	height:auto;
     top:-9999px;
     bottom:-9999px;
     left:-9999px;
     right:-9999px;
     margin:auto;
-    z-index:-1;
+    opacity:0.6;
 }
 
 .ficha-main span:nth-of-type(1) {
@@ -1417,6 +1419,7 @@ ol li a {
 
 .ficha-main {
 	width:100%;
+	height:535px;
 	border:1px solid #000;
 	border-radius:5px;
 	text-align:left;
@@ -1424,6 +1427,11 @@ ol li a {
 	box-shadow:0 3px 3px -3px #000;
 	margin:60px 0px 15px;
 	max-width:950px;
+}
+
+.ficha-main img {
+	width:102%;
+	height:auto;
 }
 
 #last {
@@ -1604,6 +1612,7 @@ footer span {
 
 }
 
+
 #shower, #post-sec, #fichas-men span.titulo_stacks {}
 #news-out {
 	display:none;
@@ -1640,6 +1649,11 @@ footer span {
 	text-align:left;
 	overflow:hidden;
 	margin:0px 0px 15px;
+}
+
+.ficha-main img {
+	width:auto;
+	height:102%;
 }
 
 .descrip {
@@ -1761,8 +1775,12 @@ header {
 	height:360px;
 }
 
-#post-sec, #fichas-men {
+#post-sec {
 	margin-top:69px;
+}
+
+#fichas-men {
+	margin-top:46px;
 }
 
 .news-container {
@@ -1967,7 +1985,7 @@ p strong {color: #606060;}
     100% {width:0%;}
 }
 
-.fixeddd {position:fixed!important;}
+.fixeddd {position:fixed!important;width:100%;}
 
 .list h1 a {color:inherit;}
 

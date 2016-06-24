@@ -49,8 +49,6 @@ $(window).on("load resize",function(){
       $("#list-container").css("height", "383px");
       $('#up-btn').css("bottom","349px");
     }
-
-    console.log($('#list-container').height());
     if (ancho <= 685) {
         $(".oversc").css("top", "69px");
         var altover = alto-69 + "px";
@@ -125,19 +123,49 @@ $(window).on("load resize",function(){
     } else {
         $("#grandot").removeClass("mini").addClass("topp");
     }
+    var proporciona = $(".ficha-main").width();
+    var proporcionb = $(".ficha-main").height();
+    var proporcion = (proporciona*535)/950;
+    var imagena = $(".ficha-main img").width();
+    var imagenb = $(".ficha-main img").height();
     if (ancho > 999 ) {
         $(".ficha-main").css("height", "535px");
+        if (imagenb < 535 && imagena > proporciona ) {
+          $(".ficha-main img").css("height", "102%");
+          $(".ficha-main img").css("width", "auto");
+        } else {
+          $(".ficha-main img").css("width", "102%");
+          $(".ficha-main img").css("height", "auto");
+          var checkb = $(".ficha-main img").height();
+          if (checkb < 535) {
+            $(".ficha-main img").css("height", "102%");
+            $(".ficha-main img").css("width", "auto");
+          }
+        }
     } else {
-        var proporcion = $(".ficha-main").width();
-        proporcion = (proporcion*535)/950;
         if (proporcion > 360) {
             proporcion = proporcion + "px";
             $(".ficha-main").css("height", proporcion);
         } else {
             $(".ficha-main").css("height", "360px");
-            $(".ficha-main img").css("height", "101%");
-            $(".ficha-main img").css("width", "auto");
         }
+        if (imagena < proporciona && imagenb > proporcionb ) {
+          $(".ficha-main img").css("width", "102%");
+          $(".ficha-main img").css("height", "auto");
+          console.log("menor");
+        } else {
+          $(".ficha-main img").css("height", "102%");
+          $(".ficha-main img").css("width", "auto");
+          var checka = $(".ficha-main img").width();
+          if (checka < proporciona) {
+            $(".ficha-main img").css("width", "102%");
+            $(".ficha-main img").css("height", "auto");
+          }
+        }
+    }
+    console.log(proporcionb+" "+imagenb);
+    if (proporcionb > imagenb ) {
+      
     }
 });
 
