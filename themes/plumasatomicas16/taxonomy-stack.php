@@ -124,7 +124,7 @@
 			endforeach; ?>
 		   
 			<div class="single list" style="display:none">
-				<h1><a href="#"><?php echo $stack_info['stack_name']; ?></a></h1>
+				<h1><a href="<?php echo $stack_info['permalink']; ?>"><?php echo $stack_info['stack_name']; ?></a></h1>
 				<nav>
 					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>

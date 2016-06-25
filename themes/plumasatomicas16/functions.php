@@ -554,6 +554,7 @@ if (is_admin()){
 							"stack_description" => $stack->description,
 							"stack_thumb" 	=> ($stack_img) ? $stack_img['url'] : NULL,
 							"card_count" 	=> $stack->count,
+							"permalink" 	=> site_url("stack/"."$stack->slug")
 						);
 		$final_stack = array_merge($final_stack, $cards);
 		return $final_stack;
