@@ -10,7 +10,7 @@ msgstr ""
 "X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: Stable (latest release)\n"
 
-#: class.akismet-admin.php:793
+#: class.akismet-admin.php:802
 msgid "Please check your <a href=\"%s\">Akismet configuration</a> and contact your web host if problems persist."
 msgstr "Por favor revisa tu <a href=\"%s\">Configuración de Akismet</a> y llama a tu patrocinador de la red si el problema persiste."
 
@@ -122,7 +122,7 @@ msgstr "Mostrar comentarios aprobados"
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
-#: class.akismet-admin.php:463
+#: class.akismet-admin.php:472
 msgid "Awaiting spam check"
 msgstr "Esperando la verificación de correo no deseado"
 
@@ -141,7 +141,7 @@ msgstr[0] "<strong class=\"count\">%1$s mensaje spam</strong> bloqueado por <str
 msgstr[1] "<strong class=\"count\">%1$s mensajes de spam</strong> bloqueados por <strong>Akismet</strong>"
 
 #: class.akismet-admin.php:86 class.akismet-admin.php:209
-#: class.akismet-admin.php:609 views/config.php:56 views/stats.php:2
+#: class.akismet-admin.php:618 views/config.php:56 views/stats.php:2
 msgid "Settings"
 msgstr "Configuración"
 
@@ -155,11 +155,11 @@ msgid_plural "<a href=\"%1$s\">Akismet</a> has protected your site from %2$s spa
 msgstr[0] "<a href=\"%1$s\">Akismet</a> ha protegido su sitio de %2$s comentario de spam hasta ahora."
 msgstr[1] "<a href=\"%1$s\">Akismet</a> ha protegido su sitio de %2$s comentarios de spam hasta ahora."
 
-#: class.akismet-admin.php:467
+#: class.akismet-admin.php:476
 msgid "Flagged as spam by Akismet"
 msgstr "Marcado como spam por Akismet"
 
-#: class.akismet-admin.php:487
+#: class.akismet-admin.php:496
 msgid "History"
 msgstr "Historial"
 
@@ -168,44 +168,44 @@ msgctxt "comments"
 msgid "Spam"
 msgstr "Spam"
 
-#: class.akismet-admin.php:469
+#: class.akismet-admin.php:478
 msgid "Cleared by Akismet"
 msgstr "Borrado por Akismet"
 
-#: class.akismet-admin.php:503
+#: class.akismet-admin.php:512
 msgid "%s approved"
 msgid_plural "%s approved"
 msgstr[0] "%s aprobado"
 msgstr[1] "%s aprobados"
 
-#: class.akismet-admin.php:563
+#: class.akismet-admin.php:572
 msgid "Akismet caught this comment as spam during an automatic retry."
 msgstr "Akismet ha realizado una revisión automática y considera que este comentario es spam."
 
-#: class.akismet-admin.php:583
+#: class.akismet-admin.php:592
 msgid "Comment status was changed to %s"
 msgstr "El estado del comentario se cambió a %s"
 
-#: class.akismet-admin.php:566
+#: class.akismet-admin.php:575
 msgid "Akismet cleared this comment during an automatic retry."
 msgstr "Akismet borró este comentario durante una revisión automática."
 
-#: class.akismet-admin.php:487 class.akismet-admin.php:495
+#: class.akismet-admin.php:496 class.akismet-admin.php:504
 msgid "View comment history"
 msgstr "Ver historial de comentarios"
 
-#. #-#-#-#-#  tmp-akismet.pot (Akismet 3.1.10)  #-#-#-#-#
+#. #-#-#-#-#  tmp-akismet.pot (Akismet 3.1.11)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:93 class.akismet-admin.php:95
-#: class.akismet-admin.php:850 views/config.php:3
+#: class.akismet-admin.php:859 views/config.php:3
 msgid "Akismet"
 msgstr "Akismet"
 
-#: class.akismet-admin.php:473
+#: class.akismet-admin.php:482
 msgid "Flagged as spam by %s"
 msgstr "Marcado como spam por %s"
 
-#: class.akismet-admin.php:475
+#: class.akismet-admin.php:484
 msgid "Un-spammed by %s"
 msgstr "Desmarcado como spam por %s"
 
@@ -225,7 +225,7 @@ msgstr "Estadísticas de Akismet"
 msgid "Check for Spam"
 msgstr "Comprobar la lista de spam"
 
-#: class.akismet-admin.php:597
+#: class.akismet-admin.php:606
 msgid "%s ago"
 msgstr "hace %s"
 
