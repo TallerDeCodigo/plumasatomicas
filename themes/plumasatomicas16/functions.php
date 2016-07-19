@@ -142,7 +142,14 @@
 	add_action( 'pre_get_posts', function($query){
 
 		if ( $query->is_main_query() and ! is_admin() ) {
-
+			if(is_tax("opinologo")){
+				file_put_contents(
+					'/logs/php.log',
+					var_export( "Is tax", true ) . PHP_EOL,
+					FILE_APPEND
+				);
+				$query->set('post_type', 'wadafact');
+			}
 		}
 		return $query;
 
