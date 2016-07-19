@@ -566,15 +566,22 @@ code {
 /*** WHAT THE FACT ***/
 
 
-
-.wadafact { max-width: 640px; margin: 0 15%;}
-.opinologo_columnista {width: 50%; float:left; min-height: 470px;}
+.wadafact { max-width: 920px; margin: 0 4%;}
+.opinologo_columnista {width: 33%; float:left; min-height: 470px;}
 .opinologo_columnista .thumb_container{width: 155px; height: 155px;}
 .wadafact .logo_wada {width: 100%; margin-bottom: 32px;}
 .wadafact .logo_wada img{float: left;}
 .wadafact .logo_wada h3{float: left; font-size: 26px; margin-top: 20px; font-weight: normal; text-transform: uppercase; color:#3f3f3f;}
 
 .titulo_post_opinologo {font-size: 65%; margin-left: 330px!important;}
+
+.cycle-pager{}
+.cycle-pager span{color: #dadada; font-size: 3rem; letter-spacing: 3px; cursor: pointer;}
+.cycle-pager span.cycle-pager-active{color: #d43b33;}
+
+.mini-wrapper.full{
+	
+}
 
 .whatthefact blockquote {
 	color:#3F3F3F;

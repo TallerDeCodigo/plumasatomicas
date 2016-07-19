@@ -3456,6 +3456,13 @@ $(document).ready(function() {
     
      $(".descrip").fitVids();
 
+     /*** Cycle columnists slider ***/
+     $('.columnists_slider').cycle({
+                                fx: 'scrollHorz',
+                                paused: true,
+                                slides: '> .slider_page'
+                            });
+
 	});
 
 })(jQuery);

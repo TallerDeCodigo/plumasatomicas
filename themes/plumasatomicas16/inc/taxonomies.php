@@ -92,6 +92,62 @@
 
 			register_taxonomy( 'hashtag', 'post', $args );
 		}
+
+		// Wadafact tema
+		if( ! taxonomy_exists('tema')){
+
+			$labels = array(
+				'name'              => 'Tema',
+				'singular_name'     => 'Tema',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Tema',
+				'update_item'       => 'Actualizar Tema',
+				'add_new_item'      => 'Nuevo Tema',
+				'new_item_name'     => 'Nombre Nuevo Tema',
+				'menu_name'         => 'Tema'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'tema' ),
+			);
+
+			register_taxonomy( 'tema', 'wadafact', $args );
+		}
+
+		// Wadafact personaje
+		if( ! taxonomy_exists('personaje')){
+
+			$labels = array(
+				'name'              => 'Personaje',
+				'singular_name'     => 'Personaje',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Personaje',
+				'update_item'       => 'Actualizar Personaje',
+				'add_new_item'      => 'Nuevo Personaje',
+				'new_item_name'     => 'Nombre Nuevo Personaje',
+				'menu_name'         => 'Personaje'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'personaje' ),
+			);
+
+			register_taxonomy( 'personaje', 'wadafact', $args );
+		}
 		
 		
 		// TERMS

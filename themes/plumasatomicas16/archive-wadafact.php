@@ -8,49 +8,59 @@
 				<img src="<?php echo THEMEPATH; ?>/images/wadafact_logo.png">
 				<h3><a href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">¿Cómo medimos el discurso político?</a></h3>
 			</div>
+
+			<section class="columnists_slider">
 		<?php
+			$count = 0;
 			$columnists = fetch_columnists();
+			echo "<section class='slider_page'>";
 			foreach ($columnists as $each_columnist):
-		?>
+				$render_row = ( $count % 5 == 0 ) 	? TRUE 		: FALSE; ?>
 
-		<div class="opinologo_columnista">
-		<?php
-				$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
-				$permalink = site_url("opinologos/".$each_columnist->slug);
-				$bio = $each_columnist->bio;
-				$bio_chica = substr($bio ,0, 140).'<br />...ver más';
-				echo <<<HTML
-				<a href="$permalink" class="who-archive who">
-					<div class="thumb_container">
-						$thumb_formatted
-					</div>
-					<br>
-					<span>$each_columnist->name</span>
-					<span class="bio_columnista">$bio_chica</span>
-					<span>$each_columnist->position</span>
-				</a>
+				<article class="opinologo_columnista">
+				<?php
+						$thumb_formatted = ($each_columnist->thumb) ? "<img src='$each_columnist->thumb'>" : "";
+						$permalink = site_url("opinologos/".$each_columnist->slug);
+						$bio = $each_columnist->bio;
+						$bio_chica = substr($bio ,0, 140).'<br />...ver más';
+						echo <<<HTML
+						<a href="$permalink" class="who-archive who">
+							<div class="thumb_container">
+								$thumb_formatted
+							</div>
+							<br>
+							<span>$each_columnist->name</span>
+							<span class="bio_columnista">$bio_chica</span>
+							<span>$each_columnist->position</span>
+						</a>
 HTML;
+?>
+				</article>
+			<?php 
+				if( $count === count($columnists)-1 ){
+					echo "</section>";
+				}else if($render_row AND $count){
+					echo "</section><section class='slider_page'>";
+				}
+				$count++;
+			endforeach; ?>
+				<div class="cycle-pager"></div>
+			</section>
+			<div class="mini-wrapper full">
+				<?php 
+					$some_essays = fetch_some_essays();
+					foreach ($some_essays as $each_essay):
+						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
+					echo <<<HTML
+						<a class="post mini" href="#">
+							<div class="thumb_container">$random_thumb</div>
+							<span>$each_essay->post_title</span>
+						</a>
+HTML;
+					endforeach;
 
-		?>
-
-		</div>
-		<?php endforeach; ?>
-
-
-			<!-- <nav class="archii">
-				<a class="arrow leftside" href="#"><img src="images/arrow.svg"></a>
-				<a class="arrow rightside" href="#"><img src="images/arrow.svg"></a>
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#">7</a>
-				<a href="#">8</a>
-				<a href="#">9</a>
-			</nav> -->
-		</div>
+			?>
+			</div>
 	</div>
 </section>
 

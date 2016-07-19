@@ -615,11 +615,11 @@ if (is_admin()){
 		$args = array(
 						"post_type" 		=> 	"wadafact",
 						"post_status" 		=>	"publish",
-						'tax_query' 		=> 	array(
+						"tax_query" 		=> 	array(
 													array(
-													'taxonomy' 	=> 'opinologo',
-													'field' 	=> 'term_id',
-													'terms' 	=> $columnist
+													"taxonomy" 	=> "opinologo",
+													"field" 	=> "term_id",
+													"terms" 	=> $columnist
 													)
 												),
 						"posts_per_page" 	=>	$limit,
@@ -639,13 +639,13 @@ if (is_admin()){
 	function fetch_columnists( $limit = 4, $offset = 0){
 		$final_array = array();
 		$columnists = get_terms( array(
-						    'taxonomy' => 'opinologo',
-						    'orderby' => 'name',
-						    'hide_empty' => false,
+						    "taxonomy" => "opinologo",
+						    "orderby" => "name",
+						    "hide_empty" => false,
 						) );
 		foreach ($columnists as $each_guy) {
-			$opinologo_img = get_term_meta($each_guy->term_id, 'wp_image_field_id', true);
-			$opinologo_img = !empty($opinologo_img) ? $opinologo_img['url'] : "";
+			$opinologo_img = get_term_meta($each_guy->term_id, "wp_image_field_id", true);
+			$opinologo_img = !empty($opinologo_img) ? $opinologo_img["url"] : "";
 			$final_array[] = (object) array(
 										"ID" 		=> 	$each_guy->term_id,
 										"name" 		=> 	$each_guy->name,
@@ -661,7 +661,7 @@ if (is_admin()){
 	/**
 	 * Fetch some random news
 	 * @param Integer $limit
-	 * @return String/ Array
+	 * @return Array $randomness
 	 */
 	function fetch_some_random_news( $limit = 4){
 
@@ -673,4 +673,29 @@ if (is_admin()){
 				);
 		$randomness = get_posts($args);
 		return $randomness;
+	}
+
+	/**
+	 * Fetch opinologo related essays
+	 * @param Integer $limit
+	 * @return Array $essays
+	 */
+	function fetch_some_essays($related_to = NULL, $limit = 4){
+
+		$args = array(
+					"post_type" 	=> 	"ensayo",
+					"post_status" 	=>	"publish",
+					"orderby" 		=>	"rand",
+					"posts_per_page" => $limit,
+				);
+		if($related_to)
+			$args["tax_query"] =  	array(
+											array(
+											'taxonomy' 	=> 'opinologo',
+											'field' 	=> 'term_id',
+											'terms' 	=> $related_to
+											)
+										);
+		$essays = get_posts($args);
+		return $essays;
 	}
