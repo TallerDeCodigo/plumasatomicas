@@ -10,12 +10,13 @@
 			</div>
 
 			<section class="columnists_slider">
+				<div class="cycle-pager"></div>
 		<?php
-			$count = 0;
+			$count = 1;
 			$columnists = fetch_columnists();
 			echo "<section class='slider_page'>";
 			foreach ($columnists as $each_columnist):
-				$render_row = ( $count % 5 == 0 ) 	? TRUE 		: FALSE; ?>
+				$render_row = ( $count % 6 == 0 ) 	? TRUE 	: FALSE; ?>
 
 				<article class="opinologo_columnista">
 				<?php
@@ -37,22 +38,23 @@ HTML;
 ?>
 				</article>
 			<?php 
-				if( $count === count($columnists)-1 ){
+				if( $count === count($columnists) ){
 					echo "</section>";
 				}else if($render_row AND $count){
 					echo "</section><section class='slider_page'>";
 				}
 				$count++;
 			endforeach; ?>
-				<div class="cycle-pager"></div>
 			</section>
-			<div class="mini-wrapper full">
+			<hr class="divider">
+			<div id="ensayo-wadafact" class="mini-wrapper full_three">
 				<?php 
-					$some_essays = fetch_some_essays();
+					$some_essays = fetch_some_essays(NULL, 6);
 					foreach ($some_essays as $each_essay):
 						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
+						$permalink = get_permalink();
 					echo <<<HTML
-						<a class="post mini" href="#">
+						<a class="post mini" href="$permalink">
 							<div class="thumb_container">$random_thumb</div>
 							<span>$each_essay->post_title</span>
 						</a>
@@ -61,6 +63,8 @@ HTML;
 
 			?>
 			</div>
+
+			<hr class="divider">
 	</div>
 </section>
 

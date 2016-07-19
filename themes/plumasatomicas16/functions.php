@@ -24,6 +24,7 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'chart', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js', array('jquery'), '2.1.6', true );
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -681,7 +682,6 @@ if (is_admin()){
 	 * @return Array $essays
 	 */
 	function fetch_some_essays($related_to = NULL, $limit = 4){
-
 		$args = array(
 					"post_type" 	=> 	"ensayo",
 					"post_status" 	=>	"publish",

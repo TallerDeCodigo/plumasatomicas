@@ -46,33 +46,71 @@
 			</div></a>
 			
 			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-			<div class="chart">
-				<div class="chart-col">
-					<div class="ch-item">
-						VERDADERO <?php echo round($verdadero); ?>%
-						<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
-					</div>
-					<div class="ch-item">
-						MAYORITARIAMENTE VERDADERO <?php echo round($mayoritariamente_verdadero); ?>%
-						<div class="ver2" style="width: <?php echo $mayoritariamente_verdadero; ?>%!important"></div>
-					</div>
-					<div class="ch-item">
-						VERDADES DESCONTEXTUALIZADAS <?php echo round($verdades_descontextualizadas); ?>%
-						<div class="desc" style="width: <?php echo $verdades_descontextualizadas; ?>%!important"></div>
-					</div>
-					<div class="ch-item">
-						FALSO <?php echo round($falso); ?>%
-						<div class="fal1" style="width: <?php echo $falso; ?>%!important"></div>
-					</div>
-					<div class="ch-item">
-						ESCANDALOSAMENTE FALSO <?php echo round($escandalosamente_falso); ?>%
-						<div class="fal2" style="width: <?php echo $escandalosamente_falso; ?>%!important"></div>
-					</div>
-					<div class="chart-anim"></div>
-				</div>
-			</div>
+				<section id="global_chart" class="unit_chart drop_shadow radius_2 blue">
+					<p class="dichos">Dichos <span>75</span></p>
+					<p class="hechos">Hechos <span>25</span></p>
+					<p class="centered">Hechos <br>vs <br>Dichos</p>
+					<section class="pie chart_container">
+						<canvas id="actual_piechart" class="actual_piechart"></canvas>
+					</section>
+				</section>
 			</a>
-			<nav>
+			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+				<section id="said_chart" class="unit_chart bar_right drop_shadow radius_2 green">
+					<p class="hechos">Hechos</p>
+					<section class="bar chart_container">
+						<div class="chart-col">
+							<div class="ch-item">
+								VERDADERO
+								<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
+							</div>
+							<div class="ch-item">
+								FALSO
+								<div class="fal1" style="width: <?php echo $falso; ?>%!important"></div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</a>
+			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+				<section id="fact_chart" class="unit_chart last bar_right drop_shadow radius_2 red">
+					<p class="dichos">Dichos</p>
+					<section class="bar chart_container">
+						<div class="chart-col">
+							<div class="ch-item">
+								VERDADERO
+								<div class="ver2" style="width: <?php echo $verdadero; ?>%!important"></div>
+							</div>
+							<div class="ch-item">
+								VERDADES DESCONTEXTUALIZADAS
+								<div class="verd2" style="width: <?php echo $verdadero; ?>%!important"></div>
+							</div>
+							<div class="ch-item">
+								FALSO
+								<div class="fal2" style="width: <?php echo $falso; ?>%!important"></div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</a>
+			
+			<div id="ensayo-wadafact" class="mini-wrapper full_two">
+				<?php 
+					$some_essays = fetch_some_essays($opinologo->term_id, 4);
+					foreach ($some_essays as $each_essay):
+						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
+						$permalink = get_permalink();
+					echo <<<HTML
+						<a class="post mini" href="$permalink">
+							<div class="thumb_container">$random_thumb</div>
+							<span>$each_essay->post_title</span>
+						</a>
+HTML;
+					endforeach;
+
+			?>
+			</div>
+			<nav class="share_bar">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
@@ -97,7 +135,7 @@
 HTML;
 				endwhile; endif; ?>
 			</div>
-			<nav>
+			<nav class="share_bar">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
