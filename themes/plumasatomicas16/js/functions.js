@@ -3455,7 +3455,6 @@ $(document).ready(function() {
 });
 		
 		$(".descrip").fitVids();
-
 		/*** Cycle columnists slider ***/
 		$('.columnists_slider').cycle( {
 											fx: 'scrollHorz',
@@ -3463,89 +3462,49 @@ $(document).ready(function() {
 											slides: '> .slider_page'
 										});
 
-		/*** Charts wadafact ***/
-		var ctx = $("#actual_piechart");
-		var data_dichos = $("#global_chart").find('.dichos span').text();
-		var data_hechos = $("#global_chart").find('.hechos span').text();
-		var data = {
-						labels: [
-							"Dichos",
-							"Hechos"
-						],
-						datasets: [
-							{
-								data: [data_dichos, data_hechos],
-								backgroundColor: [
-									"#FEFEFE",
-									"#C0EFFB"
-								],
-								hoverBackgroundColor: [
-									"#FEFEFE",
-									"#C0EFFB"
-								],
-								borderWidth: 0
-							}]
-					};
-		var options = 	{
-							responsive: true,
-							maintainAspectRatio: true,
-							cutoutPercentage:65,
-							tooltips: {
-								enabled: false
-							},
-							legend: {
-								display: false
-							}
+		if($('#actual_piechart').length){			
+
+			/*** Charts wadafact ***/
+			var ctx = $("#actual_piechart");
+			var data_dichos = $("#global_chart").find('.dichos span').text();
+			var data_hechos = $("#global_chart").find('.hechos span').text();
+			var data = {
+							labels: [
+								"Dichos",
+								"Hechos"
+							],
+							datasets: [
+								{
+									data: [data_dichos, data_hechos],
+									backgroundColor: [
+										"#FEFEFE",
+										"#C0EFFB"
+									],
+									hoverBackgroundColor: [
+										"#FEFEFE",
+										"#C0EFFB"
+									],
+									borderWidth: 0
+								}]
 						};
-		console.log(ctx);
-		var myDoughnutChart = new Chart(ctx, {
-				type: 'doughnut',
-				data: data,
-				options: options
-		});
-
-
-		var ctx = $("#actual_barchart");
-		var data_dichos = $("#said_chart").find('.verdadero span').text();
-		var data_hechos = $("#said_chart").find('.falso span').text();
-		var data = {
-						labels: [
-							"Dichos",
-							"Hechos"
-						],
-						datasets: [
-							{
-								data: [data_dichos, data_hechos],
-								backgroundColor: [
-									"#FEFEFE",
-									"#C0EFFB"
-								],
-								hoverBackgroundColor: [
-									"#FEFEFE",
-									"#C0EFFB"
-								],
-								borderWidth: 0
-							}]
-					};
-		var options = 	{
-							responsive: true,
-							maintainAspectRatio: true,
-							cutoutPercentage:65,
-							tooltips: {
-								enabled: false
-							},
-							legend: {
-								display: false
-							}
-						};
-		console.log(ctx);
-		var myDoughnutChart = new Chart(ctx, {
-				type: 'doughnut',
-				data: data,
-				options: options
-		});
-
-
+			var options = 	{
+								responsive: true,
+								maintainAspectRatio: true,
+								cutoutPercentage:65,
+								tooltips: {
+									enabled: false
+								},
+								legend: {
+									display: false
+								}
+							};
+			console.log(ctx);
+			var myDoughnutChart = new Chart(ctx, {
+					type: 'doughnut',
+					data: data,
+					options: options
+			});
+		}
 
 	});
 

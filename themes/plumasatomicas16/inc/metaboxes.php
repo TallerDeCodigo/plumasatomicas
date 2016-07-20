@@ -66,8 +66,9 @@
 			<br /><br />
 			<label>Calificación:  </label>
 			<select id='calif_argumento_uno' name='calif_argumento_uno'>
-			<option value='verdadero' $sel_uno_verdadero >Verdadero</option>
-			<option value='falso' $sel_uno_falso >Falso</option>
+				<option value=''>Selecciona un valor</option>
+				<option value='verdadero' $sel_uno_verdadero >Verdadero</option>
+				<option value='falso' $sel_uno_falso >Falso</option>
 			</select>
 			<br /><br />
 			<label>Hecho 2</label>
@@ -75,8 +76,9 @@
 			<br /><br />
 			<label>Calificación:  </label>
 			<select id='calif_argumento_dos' name='calif_argumento_dos'>
-			<option value='verdadero' $sel_dos_verdadero >Verdadero</option>
-			<option value='falso' $sel_dos_falso >Falso</option>
+				<option value=''>Selecciona un valor</option>
+				<option value='verdadero' $sel_dos_verdadero >Verdadero</option>
+				<option value='falso' $sel_dos_falso >Falso</option>
 			</select>
 
 			<h2><b>Dichos</b></h2>

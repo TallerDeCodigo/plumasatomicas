@@ -62,7 +62,7 @@
 						<div class="chart-col">
 							<div class="ch-item">
 								VERDADERO
-								<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
+								<div class="ver1 chart-anim" style="width: <?php echo $verdadero; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
 								FALSO
