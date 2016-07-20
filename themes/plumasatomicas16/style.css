@@ -1921,7 +1921,9 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 .chart {width:90%; margin:35px 0px 60px 0px;text-align:right; color:#d3f8f1;}
 .chart-col {width:100%;padding-left:10px;border-left:1px solid #d3f8f1; color: #d3f8f1;}
-.chart-anim {position:absolute;width:0%;height:100%;top:0px;left:-100%; background:#fafafa; margin-left:-1px;-webkit-animation:ungrow 2.5s linear 0s;-moz-animation:ungrow 2.5s linear 0s;animation:ungrow 2.5s linear 0s;}
+.chart-anim {position:absolute;width:0%;height:100%;top:0px;left:-100%; margin-left:-1px;-webkit-animation:ungrow 2.5s linear 0s;-moz-animation:ungrow 2.5s linear 0s;animation:ungrow 2.5s linear 0s;}
+.chart-anim.green {background:#28d8b3;}
+.chart-anim.red {background:#fa6b5b;}
 .ch-item {width:100%;margin:10px 0px;text-align:left; padding-top:5px;}
 .ch-item div {position:absolute; right:100%; top:0px; height:29px; margin-right:11px;}
 .ver1 {width:60%; background:#FFF;}
