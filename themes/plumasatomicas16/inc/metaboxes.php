@@ -45,33 +45,67 @@
 	function show_fact_checker($post){
 		$argumento_uno = get_post_meta($post->ID, 'argumento_uno', true);
 		$calif_argumento_uno = get_post_meta($post->ID, 'calif_argumento_uno', true);
+		$sel_uno_verdadero = selected( $calif_argumento_uno, 'verdadero', false);
+		$sel_uno_falso = selected( $calif_argumento_uno, 'falso', false);
 		$argumento_dos = get_post_meta($post->ID, 'argumento_dos', true);
 		$calif_argumento_dos = get_post_meta($post->ID, 'calif_argumento_dos', true);
+		$sel_dos_verdadero = selected( $calif_argumento_dos, 'verdadero', false);
+		$sel_dos_falso = selected( $calif_argumento_dos, 'falso', false);
+		$argumento_tres = get_post_meta($post->ID, 'argumento_tres', true);
+		$calif_argumento_tres = get_post_meta($post->ID, 'calif_argumento_dos', true);
+		$argumento_cuatro = get_post_meta($post->ID, 'argumento_cuatro', true);
+		$calif_argumento_cuatro = get_post_meta($post->ID, 'calif_argumento_dos', true);
+
 		wp_nonce_field(__FILE__, 'fact_checker_nonce');
 
-		echo "<label>Argumento 1:</label>";
-		echo "<textarea class='widefat' rows='4' cols='50' id='argumento_uno' name='argumento_uno' value='$argumento_uno'>".$argumento_uno."</textarea>";
-		echo "<br /><br />";
-		echo "<label>Calificación:  </label>";
-		echo "<select id='calif_argumento_uno' name='calif_argumento_uno'>";
-		echo "<option value='verdadero'".selected( $calif_argumento_uno, 'verdadero' ).">verdadero</option>";
-		echo "<option value='mayoritariamente_verdadero' ".selected( $calif_argumento_uno, 'mayoritariamente_verdadero' ).">Mayoritariamente verdadero</option>";
-		echo "<option value='verdades_descontextualizadas' ".selected( $calif_argumento_uno, 'verdades_descontextualizadas' ).">Verdades descontextualizadas</option>";
-		echo "<option value='falso'>Falso</option>";
-		echo "<option value='escandalosamente_falso' ".selected( $calif_argumento_uno, 'escandalosamente_falso' ).">Escandalosamente falso</option>";
-		echo "</select>";
-		echo "<br /><br />";
-		echo "<label>Argumento 2</label>";
-		echo "<textarea class='widefat' rows='4' cols='50' id='argumento_dos' name='argumento_dos' value='$argumento_dos'>".$argumento_dos."</textarea>";
-		echo "<br /><br />";
-		echo "<label>Calificación:  </label>";
-		echo "<select id='calif_argumento_dos' name='calif_argumento_dos'>";
-		echo "<option value='verdadero'".selected( $calif_argumento_dos, 'verdadero' ).">verdadero</option>";
-		echo "<option value='mayoritariamente_verdadero' ".selected( $calif_argumento_dos, 'mayoritariamente_verdadero' ).">Mayoritariamente verdadero</option>";
-		echo "<option value='verdades_descontextualizadas' ".selected( $calif_argumento_dos, 'verdades_descontextualizadas' ).">Verdades descontextualizadas</option>";
-		echo "<option value='falso'>Falso</option>";
-		echo "<option value='escandalosamente_falso' ".selected( $calif_argumento_dos, 'escandalosamente_falso' ).">Escandalosamente falso</option>";
-		echo "</select>";
+		echo <<<HTML
+
+			<h2><b>Hechos</b></h2>
+			<label>Hecho 1:</label>
+			<textarea class='widefat' rows='4' cols='50' id='argumento_uno' name='argumento_uno' value='$argumento_uno'>$argumento_uno</textarea>
+			<br /><br />
+			<label>Calificación:  </label>
+			<select id='calif_argumento_uno' name='calif_argumento_uno'>
+			<option value='verdadero' $sel_uno_verdadero >Verdadero</option>
+			<option value='falso' $sel_uno_falso >Falso</option>
+			</select>
+			<br /><br />
+			<label>Hecho 2</label>
+			<textarea class='widefat' rows='4' cols='50' id='argumento_dos' name='argumento_dos' value='$argumento_dos'>$argumento_dos</textarea>
+			<br /><br />
+			<label>Calificación:  </label>
+			<select id='calif_argumento_dos' name='calif_argumento_dos'>
+			<option value='verdadero' $sel_dos_verdadero >Verdadero</option>
+			<option value='falso' $sel_dos_falso >Falso</option>
+			</select>
+
+			<h2><b>Dichos</b></h2>
+			<label>Dicho 1</label>
+			<textarea class='widefat' rows='4' cols='50' id='argumento_tres' name='argumento_tres'>$argumento_tres</textarea>
+			<label>Link de apoyo</label>
+			<input type="text" name="link_dicho_1" class="widefat" value="$link_dicho_1">
+			<label>Calificación</label>
+			<select name="argumento_cuatro" id="argumento_cuatro">
+				<option value="">Selecciona un valor</option>
+				<option value="">Verdadero</option>
+				<option value="">Verdades descontextualizadas</option>
+				<option value="">Falso</option>
+			</select>
+			<br/><br/>
+
+			<label>Dicho 2</label>
+			<textarea class='widefat' rows='4' cols='50' id='argumento_cuatro' name='argumento_cuatro' value='$argumento_cuatro'>$argumento_cuatro</textarea>
+			<label>Link de apoyo</label>
+			<input type="text" name="link_dicho_2" class="widefat" value="$link_dicho_2">
+			<label>Calificación</label>
+			<select name="argumento_cuatro" id="argumento_cuatro">
+				<option value="">Selecciona un valor</option>
+				<option value="">Verdadero</option>
+				<option value="">Verdades descontextualizadas</option>
+				<option value="">Falso</option>
+			</select>
+			<br/><br/>
+HTML;
 	}
 
 

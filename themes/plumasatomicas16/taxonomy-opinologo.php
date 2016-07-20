@@ -118,7 +118,7 @@ HTML;
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="separador"></div>
+			<hr class="divider"></hr>
 			<div class="post-list">
 			<?php
 				if(have_posts()): while(have_posts()):

@@ -296,11 +296,11 @@ code {
 .ficha-link {
 	height:auto;
 	background:#FFF;
-	border:1px solid #000;
+	border:1px solid #cbcaca;
 	border-radius:5px;
 	text-align:left;
 	overflow:hidden;
-	box-shadow:0 3px 3px -3px #cbcaca;
+	box-shadow:0 3px 3px -3px #000;
 	vertical-align:top;
 }
 
