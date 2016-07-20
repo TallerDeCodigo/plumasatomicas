@@ -44,70 +44,89 @@
 
 	function show_fact_checker($post){
 		$argumento_uno = get_post_meta($post->ID, 'argumento_uno', true);
-		$calif_argumento_uno = get_post_meta($post->ID, 'calif_argumento_uno', true);
-		$sel_uno_verdadero = selected( $calif_argumento_uno, 'verdadero', false);
-		$sel_uno_falso = selected( $calif_argumento_uno, 'falso', false);
+			$calif_argumento_uno = get_post_meta($post->ID, 'calif_argumento_uno', true);
+			$sel_uno_verdadero = selected( $calif_argumento_uno, 'verdadero', false);
+			$sel_uno_falso = selected( $calif_argumento_uno, 'falso', false);
+			$link_hecho_1 = get_post_meta($post->ID, 'link_hecho_1', true);
+
 		$argumento_dos = get_post_meta($post->ID, 'argumento_dos', true);
-		$calif_argumento_dos = get_post_meta($post->ID, 'calif_argumento_dos', true);
-		$sel_dos_verdadero = selected( $calif_argumento_dos, 'verdadero', false);
-		$sel_dos_falso = selected( $calif_argumento_dos, 'falso', false);
+			$calif_argumento_dos = get_post_meta($post->ID, 'calif_argumento_dos', true);
+			$sel_dos_verdadero = selected( $calif_argumento_dos, 'verdadero', false);
+			$sel_dos_falso = selected( $calif_argumento_dos, 'falso', false);
+			$link_hecho_2 = get_post_meta($post->ID, 'link_hecho_2', true);
+
 		$argumento_tres = get_post_meta($post->ID, 'argumento_tres', true);
-		$calif_argumento_tres = get_post_meta($post->ID, 'calif_argumento_dos', true);
+			$calif_argumento_tres = get_post_meta($post->ID, 'calif_argumento_tres', true);
+			$sel_tres_verdadero = selected( $calif_argumento_tres, 'verdadero', false);
+			$sel_tres_descontextualizadas = selected( $calif_argumento_tres, 'verdades-descontextualizadas', false);
+			$sel_tres_falso = selected( $calif_argumento_tres, 'falso', false);
+			$link_dicho_1 = get_post_meta($post->ID, 'link_dicho_1', true);
+
 		$argumento_cuatro = get_post_meta($post->ID, 'argumento_cuatro', true);
-		$calif_argumento_cuatro = get_post_meta($post->ID, 'calif_argumento_dos', true);
+			$calif_argumento_tres = get_post_meta($post->ID, 'calif_argumento_cuatro', true);
+			$sel_cuatro_verdadero = selected( $calif_argumento_cuatro, 'verdadero', false);
+			$sel_cuatro_descontextualizadas = selected( $calif_argumento_cuatro, 'verdades-descontextualizadas', false);
+			$sel_cuatro_falso = selected( $calif_argumento_cuatro, 'falso', false);
+			$link_dicho_2 = get_post_meta($post->ID, 'link_dicho_2', true);
 
 		wp_nonce_field(__FILE__, 'fact_checker_nonce');
 
 		echo <<<HTML
 
-			<h2><b>Hechos</b></h2>
+			<h2 style="font-size: 1.5rem; display: block; text-align: center;"><b>Hechos</b></h2>
+			
 			<label>Hecho 1:</label>
 			<textarea class='widefat' rows='4' cols='50' id='argumento_uno' name='argumento_uno' value='$argumento_uno'>$argumento_uno</textarea>
-			<br /><br />
+			<label>Link de apoyo</label>
+			<input type="text" name="link_hecho_1" class="widefat" value="$link_hecho_1">
 			<label>Calificación:  </label>
 			<select id='calif_argumento_uno' name='calif_argumento_uno'>
 				<option value=''>Selecciona un valor</option>
 				<option value='verdadero' $sel_uno_verdadero >Verdadero</option>
 				<option value='falso' $sel_uno_falso >Falso</option>
 			</select>
-			<br /><br />
+			<br />
+	
 			<label>Hecho 2</label>
 			<textarea class='widefat' rows='4' cols='50' id='argumento_dos' name='argumento_dos' value='$argumento_dos'>$argumento_dos</textarea>
-			<br /><br />
+			<label>Link de apoyo</label>
+			<input type="text" name="link_hecho_2" class="widefat" value="$link_hecho_2">
 			<label>Calificación:  </label>
 			<select id='calif_argumento_dos' name='calif_argumento_dos'>
 				<option value=''>Selecciona un valor</option>
 				<option value='verdadero' $sel_dos_verdadero >Verdadero</option>
 				<option value='falso' $sel_dos_falso >Falso</option>
 			</select>
-
-			<h2><b>Dichos</b></h2>
+			<br /><br />
+			<h2 style="font-size: 1.5rem; display: block; text-align: center;"><b>Dichos</b></h2>
+			
 			<label>Dicho 1</label>
 			<textarea class='widefat' rows='4' cols='50' id='argumento_tres' name='argumento_tres'>$argumento_tres</textarea>
 			<label>Link de apoyo</label>
 			<input type="text" name="link_dicho_1" class="widefat" value="$link_dicho_1">
 			<label>Calificación</label>
-			<select name="argumento_cuatro" id="argumento_cuatro">
+			<select name="calif_argumento_tres" id="calif_argumento_tres">
 				<option value="">Selecciona un valor</option>
-				<option value="">Verdadero</option>
-				<option value="">Verdades descontextualizadas</option>
-				<option value="">Falso</option>
+				<option value="verdadero" $sel_tres_verdadero>Verdadero</option>
+				<option value="verdades-descontextualizadas" $sel_cuatro_descontextualizadas>Verdades descontextualizadas</option>
+				<option value="falso" $sel_tres_falso>Falso</option>
 			</select>
-			<br/><br/>
+			<br/>
 
 			<label>Dicho 2</label>
-			<textarea class='widefat' rows='4' cols='50' id='argumento_cuatro' name='argumento_cuatro' value='$argumento_cuatro'>$argumento_cuatro</textarea>
+			<textarea class='widefat' rows='4' cols='50' id='argumento_cuatro' name='argumento_cuatro'>$argumento_cuatro</textarea>
 			<label>Link de apoyo</label>
 			<input type="text" name="link_dicho_2" class="widefat" value="$link_dicho_2">
 			<label>Calificación</label>
-			<select name="argumento_cuatro" id="argumento_cuatro">
+			<select name="calif_argumento_cuatro" id="calif_argumento_cuatro">
 				<option value="">Selecciona un valor</option>
-				<option value="">Verdadero</option>
-				<option value="">Verdades descontextualizadas</option>
-				<option value="">Falso</option>
+				<option value="verdadero" $sel_cuatro_verdadero>Verdadero</option>
+				<option value="verdades-descontextualizadas" $sel_cuatro_descontextualizadas>Verdades descontextualizadas</option>
+				<option value="falso" $sel_cuatro_falso>Falso</option>
 			</select>
-			<br/><br/>
+			<br/>
 HTML;
+
 	}
 
 
@@ -205,11 +224,19 @@ HTML;
 		}
 
 
-		if ( isset($_POST['argumento_uno']) and check_admin_referer(__FILE__, 'fact_checker_nonce') ){
+		if ( check_admin_referer(__FILE__, 'fact_checker_nonce') ){
 			update_post_meta($post_id, 'argumento_uno', $_POST['argumento_uno']);
 			update_post_meta($post_id, 'argumento_dos', $_POST['argumento_dos']);
+			update_post_meta($post_id, 'argumento_tres', $_POST['argumento_tres']);
+			update_post_meta($post_id, 'argumento_cuatro', $_POST['argumento_cuatro']);
 			update_post_meta($post_id, 'calif_argumento_uno', $_POST['calif_argumento_uno']);
 			update_post_meta($post_id, 'calif_argumento_dos', $_POST['calif_argumento_dos']);
+			update_post_meta($post_id, 'calif_argumento_tres', $_POST['calif_argumento_tres']);
+			update_post_meta($post_id, 'calif_argumento_cuatro', $_POST['calif_argumento_cuatro']);
+			update_post_meta($post_id, 'link_hecho_1', $_POST['link_hecho_1']);
+			update_post_meta($post_id, 'link_hecho_2', $_POST['link_hecho_2']);
+			update_post_meta($post_id, 'link_dicho_1', $_POST['link_dicho_1']);
+			update_post_meta($post_id, 'link_dicho_2', $_POST['link_dicho_2']);
 		}
 
 		if ( isset($_POST['social_axis_p1']) and check_admin_referer(__FILE__, 'column_questions_nonce') ){
