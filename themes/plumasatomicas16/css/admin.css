@@ -1,0 +1,6 @@
+
+
+.little_box{ min-width: 234px; width: 31.5%; display: inline-block; vertical-align: top; margin: 0 0 1rem 0;}
+.little_box:nth-of-type(2),
+.little_box:nth-of-type(5){ margin: 0 1rem;}
+.little_box .group_radio{text-align: center;}

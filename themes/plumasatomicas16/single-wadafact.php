@@ -23,7 +23,9 @@
 			</div>
 		<?php } ?>
 		<?php the_content(); ?>
-
+			<div class="separador">
+				<span>PERFIL</span>
+			</div>
 			<div class="who">
 				<div>
 					<?php 
@@ -48,16 +50,74 @@
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
 			<div class="separador">
-				<span>FACT CHECKER</span>
+				<span>HECHOS</span>
 			</div>
-			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_uno', true); ?><br>
-				<span><?php echo get_post_meta($post->ID, 'calif_argumento_uno', true); ?></span>
-			</blockquote>
+		<?php
+			$hecho_1 = get_post_meta($post->ID, 'argumento_uno', true);
+			$hecho_1_link = get_post_meta($post->ID, 'link_hecho_1', true);
+			$hecho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_uno', true);
+			if($hecho_1 !== ""): ?>
+				<blockquote class="quote quote_opinologo fact <?php echo $hecho_1_calificacion; ?>"><?php echo $hecho_1; ?>
+					<br>
+					<span class="<?php echo "btn_".$hecho_1_calificacion; ?>"><?php echo $hecho_1_calificacion ?></span>
+					<?php if($hecho_1_link):?>
+						<a href="<?php echo $hecho_1_link; ?>"><span class="link">prueba</span></a>
+					<?php endif; ?>
+				</blockquote>
+		<?php
+			endif;
+
+			$hecho_2 = get_post_meta($post->ID, 'argumento_dos', true);
+			$hecho_2_link = get_post_meta($post->ID, 'link_hecho_2', true);
+			$hecho_2_calificacion = get_post_meta($post->ID, 'calif_argumento_dos', true);
+			if($hecho_2 !== ""): ?>
+				<blockquote class="quote quote_opinologo fact <?php echo $hecho_1_calificacion; ?>"><?php echo $hecho_2; ?>
+					<br>
+					<span class="<?php echo "btn_".$hecho_1_calificacion; ?>"><?php echo $hecho_2_calificacion ?></span>
+					<?php if($hecho_2_link):?>
+						<a href="<?php echo $hecho_2_link; ?>"><span class="link">prueba</span></a>
+					<?php endif; ?>
+				</blockquote>
+		<?php
+			endif; ?>
+				
+			<div class="separador">
+				<span>DICHOS</span>
+			</div>
+		<?php
+			$dicho_1 = get_post_meta($post->ID, 'argumento_tres', true);
+			$dicho_1_link = get_post_meta($post->ID, 'link_dicho_1', true);
+			$dicho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_tres', true);
+			if($dicho_1 !== ""): ?>
+				<blockquote class="quote quote_opinologo <?php echo $dicho_1_calificacion; ?>"><?php echo $dicho_1; ?>
+					<br>
+					<span class="<?php echo "btn_".$dicho_1_calificacion; ?>"><?php echo $dicho_1_calificacion ?></span>
+					<?php if($dicho_1_link):?>
+						<a href="<?php echo $dicho_1_link; ?>"><span class="link">prueba</span></a>
+					<?php endif; ?>
+				</blockquote>
+		<?php
+			endif; 
+			$dicho_2 = get_post_meta($post->ID, 'argumento_cuatro', true);
+			$dicho_2_link = get_post_meta($post->ID, 'link_dicho_2', true);
+			$dicho_2_calificacion = get_post_meta($post->ID, 'calif_argumento_tres', true);
+			if($dicho_2 !== ""): ?>
+				<blockquote class="quote quote_opinologo <?php echo $dicho_2_calificacion; ?>"><?php echo $dicho_2; ?>
+					<br>
+					<span class="<?php echo "btn_".$dicho_2_calificacion; ?>"><?php echo $dicho_2_calificacion ?></span>
+					<?php if($dicho_2_link):?>
+						<a href="<?php echo $dicho_2_link; ?>"><span class="link">prueba</span></a>
+					<?php endif; ?>
+				</blockquote>
+		<?php
+			endif; ?>
+
+		<!-- 	<div class="separador">
+				<span>ITERACIÓN</span>
+			</div> -->
 			
-			<blockquote class="quote quote_opinologo"><?php echo get_post_meta($post->ID, 'argumento_dos', true); ?><br>
-				<span><?php echo get_post_meta($post->ID, 'calif_argumento_dos', true); ?></span>
-			</blockquote>
-			<nav>
+			<hr class="divider"></hr>
+			<nav class="share_bar">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
@@ -65,7 +125,7 @@
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
 			</nav>
-			<div class="separador"></div>
+			<hr class="divider"></hr>
 			<div class="post-list">
 				<?php
 				$by_same_guy = fetch_by_same_columnist($opinologo->term_id, 3, array($post->ID));
@@ -83,7 +143,7 @@
 HTML;
 				endforeach; ?>
 			</div>
-			<nav>
+			<nav class="share_bar">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
 				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>

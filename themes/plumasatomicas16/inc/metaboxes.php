@@ -10,6 +10,7 @@
 		add_meta_box( 'columna_info_general', 'Información general de la columna', 'show_columna_info_general', 'wadafact', 'side', 'high' );
 		add_meta_box( 'columna_cuestionario', 'Calificación de la columna', 'show_columna_cuestionario', 'wadafact', 'normal', 'high' );
 		add_meta_box( 'fact_checker', 'Fact checker', 'show_fact_checker', 'wadafact', 'advanced', 'high' );
+		add_meta_box( 'iterations', 'Iteraciones', 'show_iterations', 'wadafact', 'advanced', 'high' );
 
 	});
 
@@ -61,6 +62,7 @@
 			$sel_tres_descontextualizadas = selected( $calif_argumento_tres, 'verdades-descontextualizadas', false);
 			$sel_tres_falso = selected( $calif_argumento_tres, 'falso', false);
 			$link_dicho_1 = get_post_meta($post->ID, 'link_dicho_1', true);
+			$comentario_dicho_1 = get_post_meta($post->ID, 'comentario_dicho_1', true);
 
 		$argumento_cuatro = get_post_meta($post->ID, 'argumento_cuatro', true);
 			$calif_argumento_tres = get_post_meta($post->ID, 'calif_argumento_cuatro', true);
@@ -68,6 +70,7 @@
 			$sel_cuatro_descontextualizadas = selected( $calif_argumento_cuatro, 'verdades-descontextualizadas', false);
 			$sel_cuatro_falso = selected( $calif_argumento_cuatro, 'falso', false);
 			$link_dicho_2 = get_post_meta($post->ID, 'link_dicho_2', true);
+			$comentario_dicho_2 = get_post_meta($post->ID, 'comentario_dicho_2', true);
 
 		wp_nonce_field(__FILE__, 'fact_checker_nonce');
 
@@ -104,6 +107,8 @@
 			<textarea class='widefat' rows='4' cols='50' id='argumento_tres' name='argumento_tres'>$argumento_tres</textarea>
 			<label>Link de apoyo</label>
 			<input type="text" name="link_dicho_1" class="widefat" value="$link_dicho_1">
+			<label>Comentario</label>
+			<input type="text" name="comentario_dicho_1" class="widefat" value="$comentario_dicho_1">
 			<label>Calificación</label>
 			<select name="calif_argumento_tres" id="calif_argumento_tres">
 				<option value="">Selecciona un valor</option>
@@ -117,6 +122,8 @@
 			<textarea class='widefat' rows='4' cols='50' id='argumento_cuatro' name='argumento_cuatro'>$argumento_cuatro</textarea>
 			<label>Link de apoyo</label>
 			<input type="text" name="link_dicho_2" class="widefat" value="$link_dicho_2">
+			<label>Comentario</label>
+			<input type="text" name="comentario_dicho_2" class="widefat" value="$comentario_dicho_2">
 			<label>Calificación</label>
 			<select name="calif_argumento_cuatro" id="calif_argumento_cuatro">
 				<option value="">Selecciona un valor</option>
@@ -125,6 +132,166 @@
 				<option value="falso" $sel_cuatro_falso>Falso</option>
 			</select>
 			<br/>
+HTML;
+
+	}
+
+	function show_iterations($post){
+		$iter_tema_1 	= get_post_meta($post->ID, 'iter_tema_1', true);
+			$iter_tema_adj_1 	= get_post_meta($post->ID, 'iter_tema_adj_1', true);
+			$value_tema_1 		= get_post_meta($post->ID, 'value_tema_1', true);
+
+		$iter_tema_2 	= get_post_meta($post->ID, 'iter_tema_2', true);
+			$iter_tema_adj_2 	= get_post_meta($post->ID, 'iter_tema_adj_2', true);
+			$value_tema_2 		= get_post_meta($post->ID, 'value_tema_2', true);
+
+		$iter_tema_3 	= get_post_meta($post->ID, 'iter_tema_3', true);
+			$iter_tema_adj_3 	= get_post_meta($post->ID, 'iter_tema_adj_3', true);
+			$value_tema_3 		= get_post_meta($post->ID, 'value_tema_3', true);
+
+		$iter_persona_1 	= get_post_meta($post->ID, 'iter_persona_1', true);
+			$iter_persona_adj_1 	= get_post_meta($post->ID, 'iter_persona_adj_1', true);
+			$value_persona_1 		= get_post_meta($post->ID, 'value_persona_1', true);
+
+		$iter_persona_2 	= get_post_meta($post->ID, 'iter_persona_2', true);
+			$iter_persona_adj_2 	= get_post_meta($post->ID, 'iter_persona_adj_2', true);
+			$value_persona_2 		= get_post_meta($post->ID, 'value_persona_2', true);
+
+		$iter_persona_3 	= get_post_meta($post->ID, 'iter_persona_3', true);
+			$iter_persona_adj_3 	= get_post_meta($post->ID, 'iter_persona_adj_3', true);
+			$value_persona_3 		= get_post_meta($post->ID, 'value_persona_3', true);
+
+		$temas = get_terms( array(
+							    'taxonomy' => 'tema',
+							    'hide_empty' => false,
+							) );
+		$personajes = get_terms( array(
+							    'taxonomy' => 'personaje',
+							    'hide_empty' => false,
+							) );
+
+		/** Build options for topic select control **/
+		$temas_options = "<option value='' >Selecciona uno</option>";
+		foreach ($temas as $index => $each_tema) {
+			$subindex = $index ++;
+			$selected = selected( ${"calif_persona_$subindex"}, $each_tema->term_id, false);
+			$temas_options .= "<option value='{$each_tema->term_id}' {$selected}>{$each_tema->name}</option>";
+		}
+
+		/** Build options for people select control **/
+		$personas_options = "<option value='' >Selecciona uno</option>";
+		foreach ($personajes as $index => $each_persona) {
+			$subindex = $index ++;
+			$selected = selected( ${"calif_persona_$subindex"}, $each_persona->term_id, false);
+			$personas_options .= "<option value='{$each_persona->term_id}' {$selected}>{$each_persona->name}</option>";
+		}
+
+		wp_nonce_field(__FILE__, 'iterations_nonce');
+
+		echo <<<HTML
+
+			<h2 style="font-size: 1.5rem; display: block; text-align: center;"><b>Temas</b></h2>
+			<article class="clone_metabox little_box" data-prefix="iter_tema_"> 
+				<label>Tema</label>
+				<select id="iter_tema_1" name="iter_tema_1" class="widefat">
+					$temas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_tema_adj_1" class="widefat" value="$iter_tema_adj_1">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_tema_1" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_tema_1" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			
+			<article class="clone_metabox little_box" data-prefix="iter_tema_"> 
+				<label>Tema</label>
+				<select id="iter_tema_2" name="iter_tema_2" class="widefat">
+					$temas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_tema_adj_2" class="widefat" value="$iter_tema_adj_2">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_tema_2" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_tema_2" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			
+			<article class="clone_metabox little_box" data-prefix="iter_tema_"> 
+				<label>Tema</label>
+				<select id="iter_tema_3" name="iter_tema_3" class="widefat">
+					$temas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_tema_adj_3" class="widefat" value="$iter_tema_adj_3">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_tema_3" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_tema_3" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			<br />
+			<br />
+
+			<h2 style="font-size: 1.5rem; display: block; text-align: center;"><b>Personajes</b></h2>
+			<article class="clone_metabox little_box" data-prefix="iter_persona_"> 
+				<label>Personaje</label>
+				<select id="iter_persona_1" name="iter_persona_1" class="widefat">
+					$personas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_persona_adj_1" class="widefat" value="$iter_persona_adj_1">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_persona_2" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_persona_2" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			
+			<article class="clone_metabox little_box" data-prefix="iter_persona_"> 
+				<label>Personaje</label>
+				<select id="iter_persona_2" name="iter_persona_2" class="widefat">
+					$personas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_persona_adj_2" class="widefat" value="$iter_persona_adj_2">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_persona_2" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_persona_2" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			
+			<article class="clone_metabox little_box" data-prefix="iter_persona_"> 
+				<label>Personaje</label>
+				<select id="iter_persona_3" name="iter_persona_3" class="widefat">
+					$personas_options
+				</select>
+				<label>Adjetivo(s)</label>
+				<input type="text" name="iter_persona_adj_3" class="widefat" value="$iter_persona_adj_3">
+				<label>Valoración:  </label>
+				<section class="group_radio">
+					<input type="radio" name="value_persona_3" value="positivo">
+					<label>Positivo</label>
+					<input type="radio" name="value_persona_3" value="negativo">
+					<label>Negativo</label>
+				</section>
+			</article>
+			<br/>
+			<br/>
+
 HTML;
 
 	}
@@ -237,6 +404,10 @@ HTML;
 			update_post_meta($post_id, 'link_hecho_2', $_POST['link_hecho_2']);
 			update_post_meta($post_id, 'link_dicho_1', $_POST['link_dicho_1']);
 			update_post_meta($post_id, 'link_dicho_2', $_POST['link_dicho_2']);
+		}
+
+		if ( check_admin_referer(__FILE__, 'iterations_nonce') ){
+			/*** Save iterations metabox ***/
 		}
 
 		if ( isset($_POST['social_axis_p1']) and check_admin_referer(__FILE__, 'column_questions_nonce') ){

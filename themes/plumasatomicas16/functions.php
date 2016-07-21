@@ -17,8 +17,6 @@
 
 // FRONT END SCRIPTS AND STYLES //////////////////////////////////////////////////////
 
-
-
 	add_action( 'wp_enqueue_scripts', function(){
 
 		// scripts
@@ -37,8 +35,6 @@
 
 
 // ADMIN SCRIPTS AND STYLES //////////////////////////////////////////////////////////
-
-
 
 	add_action( 'admin_enqueue_scripts', function(){
 
