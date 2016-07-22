@@ -49,13 +49,16 @@
 					</div>
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
+	<?php 
+		$hecho_1 = get_post_meta($post->ID, 'argumento_uno', true);
+		$hecho_1_link = get_post_meta($post->ID, 'link_hecho_1', true);
+		$hecho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_uno', true);
+		if($hecho_1 !== "" AND $hecho_2 !== ""): ?>	
 			<div class="separador">
 				<span>HECHOS</span>
 			</div>
 		<?php
-			$hecho_1 = get_post_meta($post->ID, 'argumento_uno', true);
-			$hecho_1_link = get_post_meta($post->ID, 'link_hecho_1', true);
-			$hecho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_uno', true);
+		endif;
 			if($hecho_1 !== ""): ?>
 				<blockquote class="quote quote_opinologo fact <?php echo $hecho_1_calificacion; ?>"><?php echo $hecho_1; ?>
 					<br>
@@ -80,14 +83,16 @@
 				</blockquote>
 		<?php
 			endif; ?>
-				
+	<?php 
+		$dicho_1 = get_post_meta($post->ID, 'argumento_tres', true);
+		$dicho_1_link = get_post_meta($post->ID, 'link_dicho_1', true);
+		$dicho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_tres', true);
+		if($dicho_1 !== "" AND $dicho_2 !== ""): ?>	
 			<div class="separador">
 				<span>DICHOS</span>
 			</div>
 		<?php
-			$dicho_1 = get_post_meta($post->ID, 'argumento_tres', true);
-			$dicho_1_link = get_post_meta($post->ID, 'link_dicho_1', true);
-			$dicho_1_calificacion = get_post_meta($post->ID, 'calif_argumento_tres', true);
+		endif;
 			if($dicho_1 !== ""): ?>
 				<blockquote class="quote quote_opinologo <?php echo $dicho_1_calificacion; ?>"><?php echo $dicho_1; ?>
 					<br>
@@ -118,7 +123,7 @@
 			
 			<hr class="divider"></hr>
 
-			<div class="addthis_sharing_toolbox"></div>
+			<div class="addthis_sharing_toolbox center"></div>
 
 			<hr class="divider"></hr>
 			<div class="post-list">
@@ -139,12 +144,18 @@ HTML;
 				endforeach; ?>
 			</div>
 			
-			<div class="addthis_sharing_toolbox"></div>
+			<div class="addthis_sharing_toolbox center"></div>
 
 			<div class="comments">
 				<div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
 			</div>
-			<div class="adver size3"></div>
+			
+			<!-- /9262827/plumasatomicas_728x90_sup -->
+			<div class="ad_space" id='div-gpt-ad-1465487084939-3' style='height:250px; width:970px;'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+				</script>
+			</div>
 			<div id="dissappear" class="mini-wrapper">
 				<?php 
 				$some_news = fetch_some_random_news();

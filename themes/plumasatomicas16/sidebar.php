@@ -1,7 +1,7 @@
 <div class="sidebar">
 	<div class="filler"></div>
 	<!-- /9262827/plumas_atomicas_300x600 -->
-	<div id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
+	<div class="ad_space" id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
 		</script>
@@ -17,7 +17,7 @@
 HTML;
 		endforeach; ?>
 	<!-- /9262827/plumasatomicas_300x250_int -->
-	<div id='div-gpt-ad-1465487084939-2'>
+	<div class="ad_space" id='div-gpt-ad-1465487084939-2'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
 		</script>
@@ -47,7 +47,7 @@ HTML;
 	<?php endforeach; wp_reset_query(); ?>
 	
 	<!-- /9262827/plumas_atomicas_300x600 -->
-	<div id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
+	<div class="ad_space" id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
 		</script>

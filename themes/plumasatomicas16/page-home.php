@@ -83,9 +83,9 @@
 			
 		</div>
 		<div class="wrapper normal">
-		<br>
+
 		<!-- /9262827/plumasatomicas_728x90_sup -->
-		<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
+		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
 			<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
 			</script>
@@ -163,9 +163,14 @@
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 			</div> -->
 		</div>
-		<!-- <div class="wrapper normal" style="text-align:center">
-			<div class="adver size4" style="margin:-20px 0px 60px"></div>
-		</div> -->
+		<div class="clearfix"></div>
+		<!-- /9262827/plumas_atomicas_970x90 -->
+		<div class="ad_space"  id='div-gpt-ad-1465487084939-4' style='height:250px; width:970px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-4'); });
+			</script>
+		</div>
+
 	</section>
 	
 	<?php get_footer(); ?>

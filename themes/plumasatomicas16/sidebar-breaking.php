@@ -1,11 +1,12 @@
 <aside id="sidebar-left">
 	<!-- /9262827/plumasatomicas_300x250_int -->
-	<div id='div-gpt-ad-1465487084939-2'>
+	<div class="ad_space" id='div-gpt-ad-1465487084939-2'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
 		</script>
 	</div>
-	<br>
+	<br/>
+	<br/>
 	<?php 
 		$args = array(
 			'post_type' => 'post',

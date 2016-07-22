@@ -58,6 +58,7 @@
 		    googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
 		    googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
 		    googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').addService(googletag.pubads());
+		    googletag.defineSlot('/9262827/plumasatomicas_970250_sup', [970, 250], 'div-gpt-ad-1465487084939-4').addService(googletag.pubads());
 		    googletag.pubads().enableSingleRequest();
 		    googletag.enableServices();
 		  });
@@ -105,8 +106,10 @@
 				</nav>
 				<nav class="social">
 					<div class="searchbar">
-						<input type="text" value="Búsqueda" onfocus="if(this.value == 'Búsqueda') { this.value = ''; }">
+					<form action="<?php echo site_url(); ?>" method="GET">
+						<input type="text" placeholder="Buscar" name="s">
 						<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
+					</form>
 					</div>
 					<a href="#"><img id="header-search" src="<?php echo THEMEPATH; ?>images/header/search.png"></a>
 					<a class="socc" href="https://www.facebook.com/Plumasatomicas/" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"></a>

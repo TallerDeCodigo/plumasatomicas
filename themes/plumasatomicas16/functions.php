@@ -285,6 +285,8 @@ function the_title_limit($length, $replacer = '...') {
 		$calif = array();
 		$factor = 1;
 		$count_elems = 0;
+		$count_social = 0;
+		$count_economic = 0;
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p1', TRUE);
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p2', TRUE);
 		$array_califs['social'][] 	= get_post_meta($post_id, 'social_axis_p3', TRUE);
@@ -294,14 +296,18 @@ function the_title_limit($length, $replacer = '...') {
 
 		/** Loop through social grade **/
 		foreach ($array_califs['social'] as $social_bits) {
-			if($social_bits != 0)
+			if($social_bits != 0){
 				$count_elems ++;
+				$count_social ++;
+			}
 			$acum_social += $social_bits;
 		}
 		/** Loop through economic grade **/
 		foreach ($array_califs['economic'] as $economic_bits) {
-			if($economic_bits != 0)
+			if($economic_bits != 0){
 				$count_elems ++;
+				$count_economic ++;
+			}
 			$acum_economic += $economic_bits;
 		}
 		if($count_elems == 1){
@@ -310,8 +316,8 @@ function the_title_limit($length, $replacer = '...') {
 			$factor = 0.25;
 		}
 
-		$calif[x] = $acum_social * $factor;
-		$calif[y] = $acum_economic * $factor;
+		$calif[x] = ($count_social) ? (($acum_social/$count_social) * $factor) : 0;
+		$calif[y] = ($count_economic) ? (($acum_economic/$count_economic) * $factor) : 0;
 
 		return $calif;
 	}
@@ -346,8 +352,11 @@ function the_title_limit($length, $replacer = '...') {
 			$global[x] += $partial_grade[x]; 
 			$global[y] += $partial_grade[y]; 
 		}
-		$global[x] = ($global[x]/count($posts) > 0) ? $global[x]/count($posts) : 0;
-		$global[y] = ($global[y]/count($posts) > 0) ? $global[y]/count($posts) : 0;
+
+		// $global[x] = ($global[x]/count($posts) > 0) ? $global[x]/count($posts) : 0;
+		// $global[y] = ($global[y]/count($posts) > 0) ? $global[y]/count($posts) : 0;
+		$global[x] = $global[x]/count($posts);
+		$global[y] = $global[y]/count($posts);
 		return $global;
 	}
 
@@ -390,73 +399,73 @@ function the_title_limit($length, $replacer = '...') {
 			$fact_cuatro 	   = get_post_meta($columna->ID, 'argumento_cuatro', true);
 			$fact_cuatro_calif = get_post_meta($columna->ID, 'calif_argumento_cuatro', true);
 			
-			/*** Dichos ***/
+			/*** Hechos ***/
 			if($fact_uno !== ""){
 				if($fact_uno_calif == 'verdadero'){
-					$dichos['verdadero'] ++;
-					$dichos_count++;
+					$hechos['verdadero'] ++;
+					$hechos_count++;
 				}else if($fact_uno_calif == 'falso'){
-					$dichos['falso'] ++;
-					$dichos_count++;
+					$hechos['falso'] ++;
+					$hechos_count++;
 				}	
 			}
 
 			if($fact_dos !== ""){
 				if($fact_dos_calif == 'verdadero'){
-					$dichos['verdadero'] ++;
-					$dichos_count++;
+					$hechos['verdadero'] ++;
+					$hechos_count++;
 				}else if($fact_dos_calif == 'falso'){
-					$dichos['falso'] ++;
-					$dichos_count++;
+					$hechos['falso'] ++;
+					$hechos_count++;
 				}
 			}
 
-			/*** Hechos ***/
+			/*** Dichos ***/
 			if($fact_tres !== ""){
 				if($fact_tres_calif == 'verdadero'){
-					$hechos['verdadero'] ++;
-					$hechos_count++;
+					$dichos['verdadero'] ++;
+					$dichos_count++;
 				}else if($fact_tres_calif == 'verdades-descontextualizadas'){
-					$hechos['verdades_descontextualizadas'] ++;
-					$hechos_count++;
+					$dichos['verdades_descontextualizadas'] ++;
+					$dichos_count++;
 				}else if($fact_tres_calif == 'falso'){
-					$hechos['falso'] ++;
-					$hechos_count++;
+					$dichos['falso'] ++;
+					$dichos_count++;
 				}
 			}
 			
 			if($fact_cuatro !== ""){
 				if($fact_cuatro_calif == 'verdadero'){
-					$hechos['verdadero'] ++;
-					$hechos_count++;
+					$dichos['verdadero'] ++;
+					$dichos_count++;
 				}else if($fact_cuatro_calif == 'verdades-descontextualizadas'){
-					$hechos['verdades_descontextualizadas'] ++;
-					$hechos_count++;
+					$dichos['verdades_descontextualizadas'] ++;
+					$dichos_count++;
 				}else if($fact_cuatro_calif == 'falso'){
-					$hechos['falso'] ++;
-					$hechos_count++;
+					$dichos['falso'] ++;
+					$dichos_count++;
 				}
 			}
 			
 		}
 
 		$count = count($posts) * 2;
-		$count_3 = count($posts) * 3;
+		$count_3 = count($posts) * 2;
 
 		return array(
-					"dichos" => array(
-										'verdadero' 					=> ($dichos['verdadero'] * 100 )/ $dichos_count,
-										'falso'							=> ($dichos['falso'] * 100 )/ $dichos_count
-									),
-					"dichos_count" 		=> $dichos_count,
-					"dichos_percentage" => number_format( ($dichos_count*100)/$count, 2 ),
 					"hechos" => array(
-										'verdadero' 					=> ($hechos['verdadero'] / $hechos_count) * 100,
-										'verdades_descontextualizadas'	=> ($hechos['verdades_descontextualizadas'] / $hechos_count) * 100,
-										'falso'							=> ($hechos['falso'] / $hechos_count) * 100
+										'verdadero' 					=> number_format( ($hechos['verdadero'] * 100 )/ $hechos_count ),
+										'falso'							=> number_format( ($hechos['falso'] * 100 )/ $hechos_count )
 									),
 					"hechos_count" 		=> $hechos_count,
-					"hechos_percentage" => number_format( ($hechos_count*100)/$count_3, 2 )
+					"hechos_percentage" => number_format( ($hechos_count*100)/$count, 2 ),
+					"dichos" => array(
+										'verdadero' 					=> number_format( ($dichos['verdadero'] / $dichos_count) * 100 ),
+										'verdades_descontextualizadas'	=> number_format( ($dichos['verdades_descontextualizadas'] / $dichos_count) * 100 ),
+										'falso'							=> number_format( ($dichos['falso'] / $dichos_count) * 100 )
+									),
+					"dichos_count" 		=> $dichos_count,
+					"dichos_percentage" => number_format( ($dichos_count*100)/$count_3, 2 )
 					);
 
 	}

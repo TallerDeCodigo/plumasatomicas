@@ -1,0 +1,649 @@
+Searching 48 files for "div-gpt-ad" (case sensitive)
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/header.php:
+   54  		<script type='text/javascript'>
+   55  		  googletag.cmd.push(function() {
+   56: 		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0').addService(googletag.pubads());
+   57: 		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0-a').addService(googletag.pubads());
+   58: 		    googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
+   59: 		    googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
+   60: 		    googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').addService(googletag.pubads());
+   61  		    googletag.pubads().enableSingleRequest();
+   62  		    googletag.enableServices();
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/page-home.php:
+   86  
+   87  		<!-- /9262827/plumasatomicas_728x90_sup -->
+   88: 		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
+   89  			<script type='text/javascript'>
+   90: 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+   91  			</script>
+   92  		</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/page.php:
+    6  	<div class="wrapper-special centrado">
+    7  		<!-- /9262827/plumasatomicas_728x90_sup -->
+    8: 	<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
+    9  		<script type='text/javascript'>
+   10: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+   11  		</script>
+   12  	</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/sidebar-breaking.php:
+    1  <aside id="sidebar-left">
+    2  	<!-- /9262827/plumasatomicas_300x250_int -->
+    3: 	<div class="ad_space" id='div-gpt-ad-1465487084939-2'>
+    4  		<script type='text/javascript'>
+    5: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
+    6  		</script>
+    7  	</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/sidebar-cards.php:
+    2  	<div class="filler"></div>
+    3  	<!-- /9262827/plumas_atomicas_300x600 -->
+    4: 	<div id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
+    5  		<script type='text/javascript'>
+    6: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+    7  		</script>
+    8  	</div>
+    .
+   20  	<!-- /9262827/plumasatomicas_300x250_int -->
+   21  	<br>
+   22: 	<div id='div-gpt-ad-1465487084939-2'>
+   23  		<script type='text/javascript'>
+   24: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
+   25  		</script>
+   26  	</div>
+   ..
+   50  	<br>
+   51  	<!-- /9262827/plumas_atomicas_300x600 -->
+   52: 	<div id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
+   53  		<script type='text/javascript'>
+   54: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+   55  		</script>
+   56  	</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/sidebar.php:
+    2  	<div class="filler"></div>
+    3  	<!-- /9262827/plumas_atomicas_300x600 -->
+    4: 	<div id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
+    5  		<script type='text/javascript'>
+    6: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+    7  		</script>
+    8  	</div>
+    .
+   18  		endforeach; ?>
+   19  	<!-- /9262827/plumasatomicas_300x250_int -->
+   20: 	<div id='div-gpt-ad-1465487084939-2'>
+   21  		<script type='text/javascript'>
+   22: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
+   23  		</script>
+   24  	</div>
+   ..
+   48  	
+   49  	<!-- /9262827/plumas_atomicas_300x600 -->
+   50: 	<div id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
+   51  		<script type='text/javascript'>
+   52: 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+   53  		</script>
+   54  	</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/single-wadafact.php:
+  152  			
+  153  			<!-- /9262827/plumasatomicas_728x90_sup -->
+  154: 			<div id='div-gpt-ad-1465487084939-3' style='height:250px; width:970px;'>
+  155  				<script type='text/javascript'>
+  156: 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+  157  				</script>
+  158  			</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/taxonomy-opinologo.php:
+  136  			<br>
+  137  			<!-- /9262827/plumasatomicas_728x90_sup -->
+  138: 			<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:100%;'>
+  139  				<script type='text/javascript'>
+  140: 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+  141  				</script>
+  142  			</div>
+
+27 matches across 8 files
+
+
+Searching 48 files for "nav" (case sensitive)
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/404.php:
+  150              </ul>
+  151              <script>
+  152:                 var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
+  153              </script>
+  154              <script src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/functions.php:
+  247  	 * @return string
+  248  	 */
+  249: 	function nav_is($compare = array(), $echo = TRUE){
+  250  
+  251  		$query = get_queried_object();
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/header.php:
+  100  		<header>
+  101  			<div class="wrapper normal">
+  102: 				<nav class="menu">
+  103: 					<div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
+  104  					<a href="<?php echo site_url(); ?>"><img id="header-logo" width="289" height="56" src="<?php echo THEMEPATH; ?>images/logo.svg"></a>
+  105: 				</nav>
+  106: 				<nav class="social">
+  107  					<div class="searchbar">
+  108  					<form action="<?php echo site_url(); ?>" method="GET">
+  ...
+  116  					<!-- <a class="socc" href="#" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/yt.png"></a> -->
+  117  					<a class="socc" href="https://www.instagram.com/plumasatomicas/" target="_blank"><img src="<?php echo THEMEPATH; ?>images/header/in.png"></a>
+  118: 				</nav>
+  119  			</div>
+  120  		</header>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/index.php:
+   29  
+   30  			<div class="separador"></div>
+   31: 				<!-- <nav class="archii">
+   32  					<a class="arrow leftside" href="#"><img src="images/arrow.svg"></a>
+   33  					<a class="arrow rightside" href="#"><img src="images/arrow.svg"></a>
+   ..
+   41  					<a href="#">8</a>
+   42  					<a href="#">9</a>
+   43: 				</nav> -->
+   44  		</div>
+   45  		<?php get_template_part("sidebar"); ?>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/page-card-stack.php:
+   10  	<div class="wrap-resp">
+   11  		<h1><?php echo $stack_info['stack_name']; ?></h1>
+   12: 		<nav>
+   13  			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+   14  			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+   15  			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+   16: 		</nav>
+   17  		<div id="list-resp">
+   18  			<ol>
+   ..
+   38  						<div class="cell">
+   39  							<h1><?php echo $stack_info['stack_name']; ?></h1>
+   40: 							<nav>
+   41  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+   42  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+   43  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+   44: 							</nav>
+   45  							<p><?php echo $stack_info['stack_description']; ?></p>
+   46  							<a id="start-btn" class="fp-controlArrow fp-next">EMPEZAR</a>
+   ..
+   59  						<div id="resp-main">
+   60  							<h1><?php echo $stack_info['name']; ?></h1>
+   61: 							<nav>
+   62  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+   63  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+   64  								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+   65: 							</nav>
+   66  							<p><?php echo $stack_info['stack_description']; ?></p>
+   67  							<div>
+   ..
+  108  						?>
+  109  						<?php echo $each_pool_object['content']; ?>
+  110: 						<nav>
+  111  							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+  112  							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+  113  							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+  114: 						</nav>
+  115  						<a class="mover fp-controlArrow fp-prev"><img src="<?php echo THEMEPATH; ?>images/left.png"></a>
+  116  						<a class="mover fp-controlArrow fp-next"><img src="<?php echo THEMEPATH; ?>images/right.png"></a>
+  ...
+  124  			<div class="single list" style="display:none">
+  125  				<h1><?php echo $stack_info['stack_name']; ?></h1>
+  126: 				<nav>
+  127  					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+  128  					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+  129  					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+  130: 				</nav>
+  131  				<div id="list-container">
+  132  					<ol class="fp-slidesNav">
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/page-card-stack_bakup.php:
+    2  <header>
+    3  		<div class="wrapper normal">
+    4: 			<nav class="menu">
+    5: 				<div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
+    6  				<a href="#"><img id="header-logo" width="289" height="56" src="../images/logo.svg"></a>
+    7: 			</nav>
+    8: 			<nav class="social">
+    9  				<div class="searchbar">
+   10  					<input type="text" value="Búsqueda" onfocus="if(this.value == 'Búsqueda') { this.value = ''; }">
+   ..
+   16  				<a class="socc" href="#"><img src="../images/header/yt.png"></a>
+   17  				<a class="socc" href="#"><img src="../images/header/in.png"></a>
+   18: 			</nav>
+   19  		</div>
+   20  	</header>
+   ..
+   23  	<div class="wrap-resp">
+   24  		<h1>Lorem ipsum dolor sit amet, conse ctetur adipiscing</h1>
+   25: 		<nav>
+   26  			<a href="#"><img src="../images/social/fb.png"></a>
+   27  			<a href="#"><img src="../images/social/tw.png"></a>
+   28  			<a href="#"><img src="../images/social/wp.png"></a>
+   29: 		</nav>
+   30  		<div id="list-resp">
+   31  			<ol>
+   ..
+   55  						<div class="cell">
+   56  							<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+   57: 							<nav>
+   58  								<a href="#"><img src="../images/social/fb.png"></a>
+   59  								<a href="#"><img src="../images/social/tw.png"></a>
+   60  								<a href="#"><img src="../images/social/wp.png"></a>
+   61: 							</nav>
+   62  							<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst.</p>
+   63  							<a id="start-btn" class="fp-controlArrow fp-next">EMPEZAR</a>
+   ..
+   80  						<div id="resp-main">
+   81  							<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+   82: 							<nav>
+   83  								<a href="#"><img src="../images/social/fb.png"></a>
+   84  								<a href="#"><img src="../images/social/tw.png"></a>
+   85  								<a href="#"><img src="../images/social/wp.png"></a>
+   86: 							</nav>
+   87  							<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst.</p>
+   88  							<div>
+   ..
+  121  						<img class="ilustracion" src="../images/3.png">
+  122  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  123: 						<nav>
+  124  							<a href="#"><img src="../images/social/fb.png"></a>
+  125  							<a href="#"><img src="../images/social/tw.png"></a>
+  126  							<a href="#"><img src="../images/social/wp.png"></a>
+  127: 						</nav>
+  128  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  129  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  148  						<img class="ilustracion" src="../images/3.png">
+  149  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  150: 						<nav>
+  151  							<a href="#"><img src="../images/social/fb.png"></a>
+  152  							<a href="#"><img src="../images/social/tw.png"></a>
+  153  							<a href="#"><img src="../images/social/wp.png"></a>
+  154: 						</nav>
+  155  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  156  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  175  						<img class="ilustracion" src="../images/3.png">
+  176  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  177: 						<nav>
+  178  							<a href="#"><img src="../images/social/fb.png"></a>
+  179  							<a href="#"><img src="../images/social/tw.png"></a>
+  180  							<a href="#"><img src="../images/social/wp.png"></a>
+  181: 						</nav>
+  182  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  183  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  202  						<img class="ilustracion" src="../images/3.png">
+  203  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  204: 						<nav>
+  205  							<a href="#"><img src="../images/social/fb.png"></a>
+  206  							<a href="#"><img src="../images/social/tw.png"></a>
+  207  							<a href="#"><img src="../images/social/wp.png"></a>
+  208: 						</nav>
+  209  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  210  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  229  						<img class="ilustracion" src="../images/3.png">
+  230  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  231: 						<nav>
+  232  							<a href="#"><img src="../images/social/fb.png"></a>
+  233  							<a href="#"><img src="../images/social/tw.png"></a>
+  234  							<a href="#"><img src="../images/social/wp.png"></a>
+  235: 						</nav>
+  236  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  237  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  256  						<img class="ilustracion" src="../images/3.png">
+  257  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  258: 						<nav>
+  259  							<a href="#"><img src="../images/social/fb.png"></a>
+  260  							<a href="#"><img src="../images/social/tw.png"></a>
+  261  							<a href="#"><img src="../images/social/wp.png"></a>
+  262: 						</nav>
+  263  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  264  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  283  						<img class="ilustracion" src="../images/3.png">
+  284  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  285: 						<nav>
+  286  							<a href="#"><img src="../images/social/fb.png"></a>
+  287  							<a href="#"><img src="../images/social/tw.png"></a>
+  288  							<a href="#"><img src="../images/social/wp.png"></a>
+  289: 						</nav>
+  290  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  291  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  310  						<img class="ilustracion" src="../images/3.png">
+  311  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  312: 						<nav>
+  313  							<a href="#"><img src="../images/social/fb.png"></a>
+  314  							<a href="#"><img src="../images/social/tw.png"></a>
+  315  							<a href="#"><img src="../images/social/wp.png"></a>
+  316: 						</nav>
+  317  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  318  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  337  						<img class="ilustracion" src="../images/3.png">
+  338  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  339: 						<nav>
+  340  							<a href="#"><img src="../images/social/fb.png"></a>
+  341  							<a href="#"><img src="../images/social/tw.png"></a>
+  342  							<a href="#"><img src="../images/social/wp.png"></a>
+  343: 						</nav>
+  344  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  345  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  364  						<img class="ilustracion" src="../images/3.png">
+  365  						<p>Quisque erat sem, pellentesque ut tellus sed, semper pharetra eros. Integer et rhoncus velit, quis commodo ipsum. Morbi odio mi, lacinia et massa eu, porta cursus enim. Quisque rhoncus, justo quis placerat ultrices, diam justo lobortis lectus, in sollicitudin neque lacus sit amet ipsum. Vivamus et auctor est. Mauris accumsan elit a odio placerat, vel ullamcorper nibh dapibus. Pellentesque sollicitudin adipiscing turpis et aliquet. In hac habitasse platea dictumst. Mauris interdum a turpis sit amet semper. Etiam eu porta quam. Integer vehicula sit amet odio sit amet rhoncus. Aliquam sit amet ipsum interdum, bibendum dui faucibus, sollicitudin arcu. Curabitur consequat nulla in sem mattis, et elementum leo bibendum. In convallis sed nibh a dapibus.</p>
+  366: 						<nav>
+  367  							<a href="#"><img src="../images/social/fb.png"></a>
+  368  							<a href="#"><img src="../images/social/tw.png"></a>
+  369  							<a href="#"><img src="../images/social/wp.png"></a>
+  370: 						</nav>
+  371  						<a class="mover fp-controlArrow fp-prev"><img src="../images/left.png"></a>
+  372  						<a class="mover fp-controlArrow fp-next"><img src="../images/right.png"></a>
+  ...
+  377  			<div class="single list" style="display:none">
+  378  				<h1>Lorem ipsum dolor sit amet, conse ctetur adipiscing</h1>
+  379: 				<nav>
+  380  					<a href="#"><img src="../images/social/fb.png"></a>
+  381  					<a href="#"><img src="../images/social/tw.png"></a>
+  382  					<a href="#"><img src="../images/social/wp.png"></a>
+  383: 				</nav>
+  384  				<div id="list-container">
+  385  					<ol class="fp-slidesNav">
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/single-wadafact-backup.php:
+   19  			<code>#HASHTAG</code><br>
+   20  			<h1><?php the_title(); ?></h1>
+   21: 			<nav>
+   22  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+   23  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+   ..
+   26  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+   27  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
+   28: 			</nav>
+   29  			<?php if(has_post_thumbnail($post->ID)){ ?>
+   30  				<div class="imagen-post">
+   ..
+   74  			
+   75  			
+   76: 			<nav>
+   77  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
+   78  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
+   ..
+   81  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
+   82  				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
+   83: 			</nav>
+   84  				
+   85  		</div>
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/style.css:
+   37  h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote,ul,ol,dl{margin:1em}ol,ul,dl{margin-left:2em}ol{list-style:decimal outside}ul{list-style:disc outside}dl dd{margin-left:1em}th,td{border:1px solid #000;padding:.5em}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}input[type=text],input[type=password],textarea{width:12.25em;*width:11.9em}
+   38  /*HTML5 element display*/
+   39: article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block;}
+   40  /*Figures*/
+   41  figure {margin: 0;}
+   ..
+  160  }
+  161  
+  162: nav img {
+  163  	margin:0px 2px;
+  164  }
+  ...
+ 1083  }
+ 1084  
+ 1085: .descrip nav {
+ 1086  	margin:10px 0px 25px;
+ 1087  }
+ ....
+ 1314  }
+ 1315  
+ 1316: #nav-icon3 {
+ 1317    width:20px;
+ 1318    height:32px;
+ ....
+ 1329  }
+ 1330  
+ 1331: #nav-icon3 span {
+ 1332    display: block;
+ 1333    position: absolute;
+ ....
+ 1348  }
+ 1349  
+ 1350: #nav-icon3 span:nth-child(1) {
+ 1351    top: 8px;
+ 1352  }
+ 1353  
+ 1354: #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+ 1355    top: 14px;
+ 1356  }
+ 1357  
+ 1358: #nav-icon3 span:nth-child(4) {
+ 1359    top: 20px;
+ 1360  }
+ 1361  
+ 1362: #nav-icon3.open span:nth-child(1) {
+ 1363    top: 18px;
+ 1364    width: 0%;
+ ....
+ 1366  }
+ 1367  
+ 1368: #nav-icon3.open span:nth-child(2) {
+ 1369    -webkit-transform: rotate(45deg);
+ 1370    -moz-transform: rotate(45deg);
+ ....
+ 1373  }
+ 1374  
+ 1375: #nav-icon3.open span:nth-child(3) {
+ 1376    -webkit-transform: rotate(-45deg);
+ 1377    -moz-transform: rotate(-45deg);
+ ....
+ 1380  }
+ 1381  
+ 1382: #nav-icon3.open span:nth-child(4) {
+ 1383    top: 18px;
+ 1384    width: 0%;
+ ....
+ 1911  .who-archive span:nth-of-type(2) {font-family:'Roboto Condensed', sans-serif; font-weight:400; color:#888; font-size:90%; margin-bottom:3px;}
+ 1912  .who-archive span:nth-of-type(3) {font-size:125%; color:#85AAA2; margin-top:15px;}
+ 1913: nav.archii {padding:5px 40px 0px; margin-top:20px;}
+ 1914  .arrow {position:absolute; top:5px;}
+ 1915  .leftside {left:5px;}
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/inc/taxonomies.php:
+   29  				'show_ui'           => true,
+   30  				'show_admin_column' => true,
+   31: 				'show_in_nav_menus' => true,
+   32  				'query_var'         => true,
+   33  				'rewrite'           => array( 'slug' => 'opinologos' ),
+   ..
+   57  				'show_ui'           => true,
+   58  				'show_admin_column' => true,
+   59: 				'show_in_nav_menus' => true,
+   60  				'query_var'         => true,
+   61  				'rewrite'           => array( 'slug' => 'stack' ),
+   ..
+   86  				'show_ui'           => true,
+   87  				'show_admin_column' => true,
+   88: 				'show_in_nav_menus' => true,
+   89  				'query_var'         => true,
+   90  				'rewrite'           => array( 'slug' => 'hashtag' ),
+   ..
+  114  				'show_ui'           => true,
+  115  				'show_admin_column' => false,
+  116: 				'show_in_nav_menus' => true,
+  117  				'query_var'         => true,
+  118  				'rewrite'           => array( 'slug' => 'tema' ),
+  ...
+  142  				'show_ui'           => true,
+  143  				'show_admin_column' => false,
+  144: 				'show_in_nav_menus' => true,
+  145  				'query_var'         => true,
+  146  				'rewrite'           => array( 'slug' => 'personaje' ),
+
+/Users/johm_tdc/Sites/plumasatomicas/wp-content/themes/plumasatomicas16/js/functions.js:
+  201  				});
+  202  
+  203: 				$('#nav-icon3').click(function(){
+  204: 						$("#nav-icon3").toggleClass('open');
+  205  						$("body").toggleClass('fixeddd');
+  206  						var anchohead1 = document.documentElement.clientWidth;
+  ...
+  232  
+  233  				$(".bkgpa").click(function(){
+  234: 						$("#nav-icon3").toggleClass('open');
+  235  						$(".menu1").animate({left:"-240px"}, 400);
+  236  						setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
+  ...
+  642  		var NORMAL_SCROLL_SEL =     '.fp-normal-scroll';
+  643  
+  644: 		// section nav
+  645: 		var SECTION_NAV =           'fp-nav';
+  646  		var SECTION_NAV_SEL =       '#' + SECTION_NAV;
+  647  		var SECTION_NAV_TOOLTIP =   'fp-tooltip';
+  ...
+  660  		var TABLE =                 'fp-table';
+  661  
+  662: 		// slide nav
+  663  		var SLIDES_NAV =            'fp-slidesNav';
+  664  		var SLIDES_NAV_SEL =        '.' + SLIDES_NAV;
+  ...
+  691  				// Create some defaults, extending them with any options that were provided
+  692  				options = $.extend({
+  693: 						//navigation
+  694  						menu: false,
+  695  						anchors:[],
+  696  						lockAnchors: false,
+  697: 						navigation: false,
+  698: 						navigationPosition: 'right',
+  699: 						navigationTooltips: [],
+  700  						showActiveTooltip: false,
+  701  						slidesNavigation: false,
+  ...
+ 1047  				var slideMoving = false;
+ 1048  
+ 1049: 				var isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
+ 1050: 				var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+ 1051  				var container = $(this);
+ 1052  				var windowsHeight = $window.height();
+ ....
+ 1057  				var canScroll = true;
+ 1058  				var scrollings = [];
+ 1059: 				var nav;
+ 1060  				var controlPressed;
+ 1061  				var isScrollAllowed = {};
+ ....
+ 1133  								.keyup(keyUpHandler)
+ 1134  
+ 1135: 								//Scrolls to the section when clicking the navigation bullet
+ 1136  								.on('click touchstart', SECTION_NAV_SEL + ' a', sectionBulletHandler)
+ 1137  
+ ....
+ 1172  
+ 1173  						//no tooltipos option? Checking for them in the DOM attributes
+ 1174: 						if(!options.navigationTooltips.length){
+ 1175: 								options.navigationTooltips = $(options.sectionSelector + '[data-tooltip]').map(function(){
+ 1176  										return $(this).data('tooltip').toString();
+ 1177  								}).get();
+ ....
+ 1223  						}
+ 1224  
+ 1225: 						//vertical centered of the navigation + active bullet
+ 1226: 						if(options.navigation){
+ 1227  								addVerticalNavigation();
+ 1228  						}
+ ....
+ 1313  				function styleMenu(section, index){
+ 1314  						if (typeof options.anchors[index] !== 'undefined') {
+ 1315: 								//activating the menu / nav element on load
+ 1316  								if(section.hasClass(ACTIVE)){
+ 1317  										activateMenuAndNav(options.anchors[index], index);
+ ....
+ 1356  
+ 1357  				/**
+ 1358: 				* Creates a vertical navigation bar.
+ 1359  				*/
+ 1360  				function addVerticalNavigation(){
+ 1361  						$body.append('<div id="' + SECTION_NAV + '"><ul></ul></div>');
+ 1362: 						var nav = $(SECTION_NAV_SEL);
+ 1363  
+ 1364: 						nav.addClass(function() {
+ 1365: 								return options.showActiveTooltip ? SHOW_ACTIVE_TOOLTIP + ' ' + options.navigationPosition : options.navigationPosition;
+ 1366  						});
+ 1367  
+ ....
+ 1375  
+ 1376  								// Only add tooltip if needed (defined by user)
+ 1377: 								var tooltip = options.navigationTooltips[i];
+ 1378  
+ 1379  								if (typeof tooltip !== 'undefined' && tooltip !== '') {
+ 1380: 										li += '<div class="' + SECTION_NAV_TOOLTIP + ' ' + options.navigationPosition + '">' + tooltip + '</div>';
+ 1381  								}
+ 1382  
+ 1383  								li += '</li>';
+ 1384  
+ 1385: 								nav.find('ul').append(li);
+ 1386  						}
+ 1387  
+ ....
+ 2040  				function continuousVerticalFixSectionOrder (v) {
+ 2041  						// If continuousVertical is in effect (and autoScrolling would also be in effect then),
+ 2042: 						// finish moving the elements around so the direct navigation will function more simply
+ 2043  						if (!v.wrapAroundElements || !v.wrapAroundElements.length) {
+ 2044  								return;
+ ....
+ 2257  				}
+ 2258  
+ 2259: 				//Scrolls to the section when clicking the navigation bullet
+ 2260  				function sectionBulletHandler(e){
+ 2261  						e.preventDefault();
+ ....
+ 2533  
+ 2534  				/**
+ 2535: 				 * Activating the website navigation dots according to the given slide name.
+ 2536  				 */
+ 2537  				function activateNavDots(name, sectionIndex){
+ 2538: 						if(options.navigation){
+ 2539  								$(SECTION_NAV_SEL).find(ACTIVE_SEL).removeClass(ACTIVE);
+ 2540  								if(name){
+ ....
+ 2557  
+ 2558  				/**
+ 2559: 				* Sets to active the current menu and vertical nav items.
+ 2560  				*/
+ 2561  				function activateMenuAndNav(anchor, index){
+ ....
+ 2746  
+ 2747  				/**
+ 2748: 				* Creates a landscape navigation bar with dots for horizontal sliders.
+ 2749  				*/
+ 2750  				function addSlidesNavigation(section, numSlides){
+ 2751  						section.append('<div class="' + SLIDES_NAV + '"><ul></ul></div>');
+ 2752: 						var nav = section.find(SLIDES_NAV_SEL);
+ 2753  
+ 2754  						//top or bottom
+ 2755: 						nav.addClass(options.slidesNavPosition);
+ 2756  
+ 2757  						for(var i=0; i< numSlides; i++){
+ 2758: 								nav.find('ul').append('<li><a href="#"><span></span></a></li>');
+ 2759  						}
+ 2760  
+ 2761  						//centering it
+ 2762: 						nav.css('margin-left', '-' + (nav.width()/2) + 'px');
+ 2763  
+ 2764: 						nav.find('li').first().find('a').addClass(ACTIVE);
+ 2765  				}
+ 2766  
+
+115 matches across 10 files

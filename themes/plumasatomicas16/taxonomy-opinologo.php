@@ -4,11 +4,7 @@
 	$opinologo = !empty($opinologo) ? $opinologo[0] : NULL;
 	$grade = get_profile_grade($opinologo->term_id);
 	$truthfulness = get_profile_truthfulness($opinologo->term_id);
-	file_put_contents(
-		'/logs/php.log',
-		var_export( $truthfulness, true ) . PHP_EOL,
-		FILE_APPEND
-	);
+
 	extract($truthfulness);
 
 
@@ -65,12 +61,12 @@
 					<section class="bar chart_container">
 						<div class="chart-col">
 							<div class="ch-item">
-								<?php echo $dichos['verdadero']."%"; ?> VERDADERO
-								<div class="ver1" style="width: <?php echo $dichos['verdadero']; ?>%!important"></div>
+								<?php echo $hechos['verdadero']."%"; ?> VERDADERO
+								<div class="ver1" style="width: <?php echo $hechos['verdadero']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								<?php echo $dichos['falso']."%"; ?> FALSO
-								<div class="fal1" style="width: <?php echo $dichos['falso']; ?>%!important"></div>
+								<?php echo $hechos['falso']."%"; ?> FALSO
+								<div class="fal1" style="width: <?php echo $hechos['falso']; ?>%!important"></div>
 							</div>
 							<div class="chart-anim green"></div>
 						</div>
@@ -83,16 +79,16 @@
 					<section class="bar chart_container">
 						<div class="chart-col">
 							<div class="ch-item">
-								<?php echo $hechos['verdadero']."%"; ?> VERDADERO
-								<div class="ver2" style="width: <?php echo $hechos['verdadero']; ?>%!important"></div>
+								<?php echo $dichos['verdadero']."%"; ?> VERDADERO
+								<div class="ver2" style="width: <?php echo $dichos['verdadero']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								<?php echo $hechos['verdades_descontextualizadas']."%"; ?> VERDADES DESCONTEXTUALIZADAS
-								<div class="verd2" style="width: <?php echo $hechos['verdades_descontextualizadas']; ?>%!important"></div>
+								<?php echo $dichos['verdades_descontextualizadas']."%"; ?> VERDADES DESCONTEXTUALIZADAS
+								<div class="verd2" style="width: <?php echo $dichos['verdades_descontextualizadas']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								<?php echo $hechos['falso']."%"; ?> FALSO
-								<div class="fal2" style="width: <?php echo $hechos['falso']; ?>%!important"></div>
+								<?php echo $dichos['falso']."%"; ?> FALSO
+								<div class="fal2" style="width: <?php echo $dichos['falso']; ?>%!important"></div>
 							</div>
 							<div class="chart-anim red"></div>
 						</div>
@@ -139,12 +135,13 @@ HTML;
 			<div class="addthis_sharing_toolbox center"></div>
 			<br>
 			<!-- /9262827/plumasatomicas_728x90_sup -->
-			<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:100%;'>
+			<div class="ad_space" id='div-gpt-ad-1465487084939-3' style='height:90px; width:100%;'>
 				<script type='text/javascript'>
 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
 				</script>
 			</div>
-			<br>
+			<br/>
+			<br/>
 			<div id="dissappear" class="mini-wrapper">
 			<?php 
 				$some_news = fetch_some_random_news();
