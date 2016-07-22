@@ -100,7 +100,7 @@
 			endif; 
 			$dicho_2 = get_post_meta($post->ID, 'argumento_cuatro', true);
 			$dicho_2_link = get_post_meta($post->ID, 'link_dicho_2', true);
-			$dicho_2_calificacion = get_post_meta($post->ID, 'calif_argumento_tres', true);
+			$dicho_2_calificacion = get_post_meta($post->ID, 'calif_argumento_cuatro', true);
 			if($dicho_2 !== ""): ?>
 				<blockquote class="quote quote_opinologo <?php echo $dicho_2_calificacion; ?>"><?php echo $dicho_2; ?>
 					<br>
@@ -117,14 +117,9 @@
 			</div> -->
 			
 			<hr class="divider"></hr>
-			<nav class="share_bar">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+
+			<div class="addthis_sharing_toolbox"></div>
+
 			<hr class="divider"></hr>
 			<div class="post-list">
 				<?php
@@ -143,14 +138,9 @@
 HTML;
 				endforeach; ?>
 			</div>
-			<nav class="share_bar">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+			
+			<div class="addthis_sharing_toolbox"></div>
+
 			<div class="comments">
 				<div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
 			</div>
