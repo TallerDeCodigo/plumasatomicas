@@ -6,20 +6,14 @@
 		$opinologo_ID 	= $opinologo_term->ID;
 		$opinologo_post_count 	= $opinologo_term->count;
 	}
-
-?>
+	?>
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido">
 			<h1><?php echo $opinologo_name; ?></h1>
-			<nav>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+			<!-- Share buttons -->
+			<div class="addthis_sharing_toolbox"></div>
+			<br>
 			<div class="imagen-post"><img src="<?php echo THEMEPATH; ?>images/1.png"></div>
 			<h2>Proin a felis ac nisi facilisis rhoncus. Donec ac elit et neque luctus hendrerit non non sem. Sed vel nisi urna.</h2>
 			<p>Aliquam erat volutpat. Morbi in leo tempus, pellentesque ligula at, porta sem. Maecenas dignissim, tellus a malesuada lacinia, nunc tortor accumsan dui, et rhoncus ipsum ante fermentum est. Donec sagittis facilisis ipsum, in consectetur lorem egestas vitae. Maecenas pharetra, lacus vel sodales maximus, magna massa lobortis augue, accumsan sagittis velit erat a purus. Proin erat nunc, convallis pellentesque convallis placerat, faucibus eget nunc. Morbi pellentesque nec ante non mattis. Maecenas eget facilisis nulla. Donec eu condimentum diam, ornare pharetra sapien. Donec pharetra sapien vel lectus tempor fringilla. Donec pharetra sapien vel lectus tempor fringilla.</p>
@@ -39,14 +33,9 @@
 			<p>Aliquam erat volutpat. Morbi in leo tempus, pellentesque ligula at, porta sem. Maecenas dignissim, tellus a malesuada lacinia, nunc tortor accumsan dui, et rhoncus ipsum ante fermentum est. Donec sagittis facilisis ipsum, in consectetur lorem egestas vitae.</p>
 			<div class="imagen-post"><img src="<?php echo THEMEPATH; ?>images/1.png"><span>FOTO: LOREM IPSUM DOLOR SIT AMET</span></div>
 			<p>Donec velit tellus, varius in viverra eu, pharetra ut lorem. Duis fringilla accumsan ultrices. Maecenas in sapien interdum, malesuada ex non, aliquet nunc. Proin nec est venenatis, aliquam orci rutrum, lobortis nibh. Ut tincidunt id nisi eget fermentum. Nam id tortor nec odio malesuada volutpat. Vestibulum porta id massa vitae convallis. Donec id euismod augue, nec auctor nunc. Suspendisse sed est vel nibh luctus rutrum. Integer erat tortor, pretium eu nibh sit amet, bibendum tincidunt nisl. Aenean quis dictum orci. Aliquam et facilisis dolor. Fusce malesuada elit a purus porta, ut imperdiet tellus blandit. Morbi id dapibus quam. Ut aliquet nulla et eros eleifend venenatis.</p>
-			<nav>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+			<!-- Share buttons -->
+			<div class="addthis_sharing_toolbox"></div>
+			<br>
 			<div class="question"><div class="question-filler"></div><div class="mini-wrapper"><span>¿Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Integer aliquam magna non erat semper?</span><br><a href="#">SI</a><a href="#">NO</a></div></div>
 			<div class="adver size3"></div>
 			<div class="comments"></div>

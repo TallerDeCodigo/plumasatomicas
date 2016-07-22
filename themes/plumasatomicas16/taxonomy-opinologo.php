@@ -4,7 +4,11 @@
 	$opinologo = !empty($opinologo) ? $opinologo[0] : NULL;
 	$grade = get_profile_grade($opinologo->term_id);
 	$truthfulness = get_profile_truthfulness($opinologo->term_id);
-
+	file_put_contents(
+		'/logs/php.log',
+		var_export( $truthfulness, true ) . PHP_EOL,
+		FILE_APPEND
+	);
 	extract($truthfulness);
 
 
@@ -47,8 +51,8 @@
 			
 			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 				<section id="global_chart" class="unit_chart drop_shadow radius_2 blue">
-					<p class="dichos">Dichos <span>75</span></p>
-					<p class="hechos">Hechos <span>25</span></p>
+					<p class="dichos">Dichos <span><?php echo $dichos_percentage; ?></span></p>
+					<p class="hechos">Hechos <span><?php echo $hechos_percentage; ?></span></p>
 					<p class="centered">Hechos <br>vs <br>Dichos</p>
 					<section class="pie chart_container">
 						<canvas id="actual_piechart" class="actual_piechart"></canvas>
@@ -56,17 +60,17 @@
 				</section>
 			</a>
 			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-				<section id="said_chart" class="unit_chart bar_right drop_shadow radius_2 green">
+				<section id="said_chart" class="unit_chart bar_right topt drop_shadow radius_2 green">
 					<p class="hechos">Hechos</p>
 					<section class="bar chart_container">
 						<div class="chart-col">
 							<div class="ch-item">
-								VERDADERO
-								<div class="ver1" style="width: <?php echo $verdadero; ?>%!important"></div>
+								<?php echo $dichos['verdadero']."%"; ?> VERDADERO
+								<div class="ver1" style="width: <?php echo $dichos['verdadero']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								FALSO
-								<div class="fal1" style="width: <?php echo $falso; ?>%!important"></div>
+								<?php echo $dichos['falso']."%"; ?> FALSO
+								<div class="fal1" style="width: <?php echo $dichos['falso']; ?>%!important"></div>
 							</div>
 							<div class="chart-anim green"></div>
 						</div>
@@ -79,16 +83,16 @@
 					<section class="bar chart_container">
 						<div class="chart-col">
 							<div class="ch-item">
-								VERDADERO
-								<div class="ver2" style="width: <?php echo $verdadero; ?>%!important"></div>
+								<?php echo $hechos['verdadero']."%"; ?> VERDADERO
+								<div class="ver2" style="width: <?php echo $hechos['verdadero']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								VERDADES DESCONTEXTUALIZADAS
-								<div class="verd2" style="width: <?php echo $verdadero; ?>%!important"></div>
+								<?php echo $hechos['verdades_descontextualizadas']."%"; ?> VERDADES DESCONTEXTUALIZADAS
+								<div class="verd2" style="width: <?php echo $hechos['verdades_descontextualizadas']; ?>%!important"></div>
 							</div>
 							<div class="ch-item">
-								FALSO
-								<div class="fal2" style="width: <?php echo $falso; ?>%!important"></div>
+								<?php echo $hechos['falso']."%"; ?> FALSO
+								<div class="fal2" style="width: <?php echo $hechos['falso']; ?>%!important"></div>
 							</div>
 							<div class="chart-anim red"></div>
 						</div>
@@ -112,14 +116,7 @@ HTML;
 
 			?>
 			</div>
-			<nav class="share_bar">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+
 			<hr class="divider"></hr>
 			<div class="post-list">
 			<?php
@@ -137,16 +134,17 @@ HTML;
 HTML;
 				endwhile; endif; ?>
 			</div>
-			<nav class="share_bar">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
 			
-			<div class="adver size3"></div>
+			<!-- Share buttons -->
+			<div class="addthis_sharing_toolbox center"></div>
+			<br>
+			<!-- /9262827/plumasatomicas_728x90_sup -->
+			<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:100%;'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+				</script>
+			</div>
+			<br>
 			<div id="dissappear" class="mini-wrapper">
 			<?php 
 				$some_news = fetch_some_random_news();

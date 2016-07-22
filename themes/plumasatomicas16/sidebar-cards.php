@@ -1,6 +1,12 @@
 <div class="sidebar">
 	<div class="filler"></div>
-	<div class="adver size1" style="margin-top:15px"></div>
+	<!-- /9262827/plumas_atomicas_300x600 -->
+	<div id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+		</script>
+	</div>
+	<br>
 	<?php
 		$card_stacks = fetch_stacks(3);
 		foreach ($card_stacks as $each_stack) :
@@ -11,7 +17,14 @@
 			</a>
 HTML;
 		endforeach; ?>
-	<div class="adver size2" style="margin-top:50px"></div>
+	<!-- /9262827/plumasatomicas_300x250_int -->
+	<br>
+	<div id='div-gpt-ad-1465487084939-2'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });
+		</script>
+	</div>
+	<br>
 	<?php 
 		$args = array(
 			'post_type' => 'post',
@@ -34,5 +47,11 @@ HTML;
 				<span><?php the_title_limit( 35, '...'); ?></span>
 			</a>
 	<?php endforeach; wp_reset_query(); ?>
-	<div class="adver size1" style="margin-top:20px"></div>
+	<br>
+	<!-- /9262827/plumas_atomicas_300x600 -->
+	<div id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
+		</script>
+	</div>
 </div>

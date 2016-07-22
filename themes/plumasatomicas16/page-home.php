@@ -83,7 +83,12 @@
 			
 		</div>
 		<div class="wrapper normal">
-			<div class="adver size4" style="margin:50px 0px -10px">
+		<br>
+		<!-- /9262827/plumasatomicas_728x90_sup -->
+		<div id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+			</script>
 		</div>
 
 		<?php

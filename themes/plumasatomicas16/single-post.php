@@ -15,26 +15,18 @@
 				endforeach; ?>
 			<br>
 			<h1><?php the_title(); ?></h1>
-			<nav>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+			<!-- Share buttons -->
+			<div class="addthis_sharing_toolbox"></div>
+
 			<div class="imagen-post">
 				<?php the_post_thumbnail('full'); ?>
 			</div>
 			<?php the_content(); ?>
-			<nav>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/gp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/pi.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/em.png"></a>
-			</nav>
+			<br>
+			<!-- Share buttons -->
+			<div class="addthis_sharing_toolbox"></div>
+			<br>
+
 		<!-- 	<div class="question"><div class="question-filler"></div><div class="mini-wrapper"><span>¿Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Integer aliquam magna non erat semper?</span><br><a href="#">SI</a><a href="#">NO</a></div></div>
 			<div class="adver size3"></div> -->
 			<div class="comments">

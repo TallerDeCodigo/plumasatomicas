@@ -346,8 +346,8 @@ function the_title_limit($length, $replacer = '...') {
 			$global[x] += $partial_grade[x]; 
 			$global[y] += $partial_grade[y]; 
 		}
-		$global[x] = $global[x]/count($posts);
-		$global[y] = $global[y]/count($posts);
+		$global[x] = ($global[x]/count($posts) > 0) ? $global[x]/count($posts) : 0;
+		$global[y] = ($global[y]/count($posts) > 0) ? $global[y]/count($posts) : 0;
 		return $global;
 	}
 
@@ -373,60 +373,92 @@ function the_title_limit($length, $replacer = '...') {
 				);
 
 		$posts = get_posts( $args );
-		
-		$verdadero 						= 0;
-		$mayoritariamente_verdadero 	= 0;
-		$verdades_descontextualizadas 	= 0;
-		$falso 							= 0;
-		$escandalosamente_falso 		= 0;
+
+		$dichos = array("verdadero" => 0, "falso" => 0);
+		$hechos = array("verdadero" => 0, "verdades-descontextualizadas" => 0, "falso" => 0);
+		$dichos_count = 0;
+		$hechos_count = 0;
 
 		foreach ($posts as $columna) {
 
-			$fact_uno = get_post_meta($columna->ID, 'calif_argumento_uno', true);
-			$fact_dos = get_post_meta($columna->ID, 'calif_argumento_dos', true);
-			if($fact_uno == 'verdadero'){
-				$verdadero ++;
-			}
-			if($fact_uno == 'mayoritariamente_verdadero'){
-				$mayoritariamente_verdadero ++;
-			}
-			if($fact_uno == 'verdades_descontextualizadas'){
-				$verdades_descontextualizadas ++;
-			}
-			if($fact_uno == 'falso'){
-				$falso ++;
-			}
-			if($fact_uno == 'escandalosamente_falso'){
-				$escandalosamente_falso ++;
+			$fact_uno 		= get_post_meta($columna->ID, 'argumento_uno', true);
+			$fact_uno_calif = get_post_meta($columna->ID, 'calif_argumento_uno', true);
+			$fact_dos 		= get_post_meta($columna->ID, 'argumento_dos', true);
+			$fact_dos_calif = get_post_meta($columna->ID, 'calif_argumento_dos', true);
+			$fact_tres 		= get_post_meta($columna->ID, 'argumento_tres', true);
+			$fact_tres_calif = get_post_meta($columna->ID, 'calif_argumento_tres', true);
+			$fact_cuatro 	   = get_post_meta($columna->ID, 'argumento_cuatro', true);
+			$fact_cuatro_calif = get_post_meta($columna->ID, 'calif_argumento_cuatro', true);
+			
+			/*** Dichos ***/
+			if($fact_uno !== ""){
+				if($fact_uno_calif == 'verdadero'){
+					$dichos['verdadero'] ++;
+					$dichos_count++;
+				}else if($fact_uno_calif == 'falso'){
+					$dichos['falso'] ++;
+					$dichos_count++;
+				}	
 			}
 
-			if($fact_dos == 'verdadero'){
-				$verdadero ++;
+			if($fact_dos !== ""){
+				if($fact_dos_calif == 'verdadero'){
+					$dichos['verdadero'] ++;
+					$dichos_count++;
+				}else if($fact_dos_calif == 'falso'){
+					$dichos['falso'] ++;
+					$dichos_count++;
+				}
 			}
-			if($fact_dos == 'mayoritariamente_verdadero'){
-				$mayoritariamente_verdadero ++;
+
+			/*** Hechos ***/
+			if($fact_tres !== ""){
+				if($fact_tres_calif == 'verdadero'){
+					$hechos['verdadero'] ++;
+					$hechos_count++;
+				}else if($fact_tres_calif == 'verdades-descontextualizadas'){
+					$hechos['verdades_descontextualizadas'] ++;
+					$hechos_count++;
+				}else if($fact_tres_calif == 'falso'){
+					$hechos['falso'] ++;
+					$hechos_count++;
+				}
 			}
-			if($fact_dos == 'verdades_descontextualizadas'){
-				$verdades_descontextualizadas ++;
+			
+			if($fact_cuatro !== ""){
+				if($fact_cuatro_calif == 'verdadero'){
+					$hechos['verdadero'] ++;
+					$hechos_count++;
+				}else if($fact_cuatro_calif == 'verdades-descontextualizadas'){
+					$hechos['verdades_descontextualizadas'] ++;
+					$hechos_count++;
+				}else if($fact_cuatro_calif == 'falso'){
+					$hechos['falso'] ++;
+					$hechos_count++;
+				}
 			}
-			if($fact_dos == 'falso'){
-				$falso ++;
-			}
-			if($fact_dos == 'escandalosamente_falso'){
-				$escandalosamente_falso ++;
-			}
+			
 		}
 
 		$count = count($posts) * 2;
-		//echo 'cova'.$verdadero;
+		$count_3 = count($posts) * 3;
 
 		return array(
-			'verdadero' 					=> ($verdadero / $count) * 100,
-			'mayoritariamente_verdadero' 	=> ($mayoritariamente_verdadero / $count) * 100,
-			'verdades_descontextualizadas' 	=> ($verdades_descontextualizadas / $count) * 100,
-			'falso'							=> ($falso / $count) * 100,
-			'escandalosamente_falso' 		=> ($escandalosamente_falso / $count) * 100,
-			);
+					"dichos" => array(
+										'verdadero' 					=> ($dichos['verdadero'] * 100 )/ $dichos_count,
+										'falso'							=> ($dichos['falso'] * 100 )/ $dichos_count
+									),
+					"dichos_count" 		=> $dichos_count,
+					"dichos_percentage" => number_format( ($dichos_count*100)/$count, 2 ),
+					"hechos" => array(
+										'verdadero' 					=> ($hechos['verdadero'] / $hechos_count) * 100,
+										'verdades_descontextualizadas'	=> ($hechos['verdades_descontextualizadas'] / $hechos_count) * 100,
+										'falso'							=> ($hechos['falso'] / $hechos_count) * 100
+									),
+					"hechos_count" 		=> $hechos_count,
+					"hechos_percentage" => number_format( ($hechos_count*100)/$count_3, 2 )
+					);
+
 	}
 
 

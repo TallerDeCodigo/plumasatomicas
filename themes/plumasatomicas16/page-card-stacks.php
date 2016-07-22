@@ -41,7 +41,6 @@
 	    		
 
 		?>
-			<a class="ficha-link" href="#"><div></div><span>Lorem ipsum dolor sit amet co</span><span>123 FICHAS</span></a>
 		<?php endforeach; ?>
 		</div>
 	</section>

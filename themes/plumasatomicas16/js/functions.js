@@ -92,8 +92,8 @@ $(window).on("load resize",function(){
 		var sidebar = $('.sidebar').height();
 		var content = $('.contenido').height();
 		content = content + 45;
-		$(".sidebar").css("height", content);
-		$(".filler").css("height", content);
+		$(".sidebar").css("height", content+620);
+		$(".filler").css("height", content+620);
 		$("#big-image").css("width", "101%");
 		$("#big-image").css("height", "auto");
 		var bigimageh = $('#big-image').height();

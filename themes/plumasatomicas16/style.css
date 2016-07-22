@@ -450,6 +450,10 @@ code {
 	width:93.5%;
 	max-width:650px;
 }
+.contenido strong,
+.contenido em{display: inline;}
+
+.addthis_sharing_toolbox.center{display: block; margin: auto; text-align: center;}
 
 .imagen-post {
 	width:93.5%;
@@ -1946,7 +1950,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .chart-anim {position:absolute;width:0%;height:100%;top:0px;left:-100%; margin-left:-1px;-webkit-animation:ungrow 2.5s linear 0s;-moz-animation:ungrow 2.5s linear 0s;animation:ungrow 2.5s linear 0s;}
 .chart-anim.green {background:#28d8b3;}
 .chart-anim.red {background:#fa6b5b;}
-.ch-item {width:100%;margin:10px 0px;text-align:left; padding-top:5px;}
+.ch-item {width:100%;margin: 10px 0px 5px 0;text-align:left; padding-top:5px;}
 .ch-item div {position:absolute; right:100%; top:0px; height:29px; margin-right:11px;}
 .ver1 {width:60%; background:#FFF;}
 .ver2 {width:80%; background:#ffffff;}
@@ -1957,7 +1961,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .fal1 {width:60%; background:#f9d713;}
 .fal2 {width:40%; background:#f69696;}
 */
-.unit_chart{width: 90%; min-width: 640px; margin: auto; display: block; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #b7b6b6;}
+.unit_chart{width: 90%; min-width: 640px; min-height: 188px; margin: auto; display: block; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #b7b6b6;}
 .unit_chart.last{margin-bottom: 5rem;}
 .unit_chart.blue{background-color: #64d4f9;}
 .unit_chart.green{background-color: #28d8b3;}
@@ -1965,6 +1969,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .unit_chart>p{width: 64px; font-family: "TradeGothic20"; letter-spacing: 0.6px; text-transform: uppercase; text-align: center!important; color: #FFF; }
 .unit_chart>p>span{display: block;}
 .unit_chart>p>span::after{content: "%";}
+.topt .chart_container{margin-top: 6%;}
 .chart_container.pie{width: 312px; height: 148px;}
 .chart_container.bar{width: 180px;}
 .actual_piechart{ width: 100%; height: 100%;}

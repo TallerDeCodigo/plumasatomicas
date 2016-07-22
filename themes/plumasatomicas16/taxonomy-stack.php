@@ -11,11 +11,8 @@
 	<div id="menu-resp">
 	<div class="wrap-resp">
 		<h1><?php echo $stack_info['stack_name']; ?></h1>
-		<nav>
-			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-			<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-		</nav>
+		<!-- Share buttons -->
+		<div class="addthis_sharing_toolbox"></div>
 		<div id="list-resp">
 			<ol>
 				<li style="display:none"><a>null</a></li>
@@ -39,11 +36,9 @@
 					<div id="elmenu" class="wrapper normal">
 						<div class="nuevocell">
 							<h1><?php echo $stack_info['stack_name']; ?></h1>
-							<nav>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-							</nav>
+							
+							<!-- Share buttons -->
+							<div class="addthis_sharing_toolbox"></div>
 							<p><?php echo $stack_info['stack_description']; ?></p>
 							<a id="start-btn" class="fp-controlArrow fp-next">EMPEZAR</a>
 						</div>
@@ -60,11 +55,9 @@
 						</div>
 						<div id="resp-main">
 							<h1><?php echo $stack_info['stack_name']; ?></h1>
-							<nav>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-								<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-							</nav>
+							
+							<!-- Share buttons -->
+							<div class="addthis_sharing_toolbox"></div>
 							<p><?php echo $stack_info['stack_description']; ?></p>
 							<div>
 								<ol class="fp-slidesNav">
@@ -109,11 +102,8 @@
 							 //agregar clase ilustración
 						?>
 						<?php echo $each_pool_object['content']; ?>
-						<nav>
-							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-							<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-						</nav>
+						<!-- Share buttons -->
+						<div class="addthis_sharing_toolbox"></div>
 						<a class="mover fp-controlArrow fp-prev"><img src="<?php echo THEMEPATH; ?>images/left.png"></a>
 						<a class="mover fp-controlArrow fp-next"><img src="<?php echo THEMEPATH; ?>images/right.png"></a>
 					</div>
@@ -125,11 +115,8 @@
 		   
 			<div class="single list" style="display:none">
 				<h1><a href="<?php echo $stack_info['permalink']; ?>"><?php echo $stack_info['stack_name']; ?></a></h1>
-				<nav>
-					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/fb.png"></a>
-					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/tw.png"></a>
-					<a href="#"><img src="<?php echo THEMEPATH; ?>images/social/wp.png"></a>
-				</nav>
+				<!-- Share buttons -->
+				<div class="addthis_sharing_toolbox"></div>
 				<div id="list-container">
 					<ol class="fp-slidesNav">
 						<li style="display:none"><a>null</a></li>

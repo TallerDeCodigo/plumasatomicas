@@ -23,7 +23,47 @@
 		  js = d.createElement(s); js.id = id;
 		  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=280268005468566";
 		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<script>
+	      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-65194329-1', 'auto');
+	      ga('send', 'pageview');
+	    </script>
+		<!-- HEADER -->
+
+		<script type='text/javascript'>
+		  var googletag = googletag || {};
+		  googletag.cmd = googletag.cmd || [];
+		  (function() {
+		    var gads = document.createElement('script');
+		    gads.async = true;
+		    gads.type = 'text/javascript';
+		    var useSSL = 'https:' == document.location.protocol;
+		    gads.src = (useSSL ? 'https:' : 'http:') +
+		      '//www.googletagservices.com/tag/js/gpt.js';
+		    var node = document.getElementsByTagName('script')[0];
+		    node.parentNode.insertBefore(gads, node);
+		  })();
+		</script>
+
+		<script type='text/javascript'>
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0').addService(googletag.pubads());
+		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0-a').addService(googletag.pubads());
+		    googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
+		    googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
+		    googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.enableServices();
+		  });
+		</script>
+
+		<!-- /HEADER -->
 		<div class="oversc">
 			<div class="bkgpa"></div>
 			<div class="menu1">
