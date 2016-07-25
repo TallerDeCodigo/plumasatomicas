@@ -431,7 +431,7 @@ code {
 .contenido {
 	width:65%;
 	vertical-align:top;
-	padding-top:45px;
+	
 	text-align:left;
 }
 
@@ -1830,7 +1830,7 @@ header {
 }
 
 #shower {
-	margin-top:69px;
+	margin-top:45px;
 	height:360px;
 }
 

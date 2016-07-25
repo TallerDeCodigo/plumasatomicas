@@ -37,8 +37,9 @@
 					$some_news = fetch_some_random_news();
 					foreach ($some_news as $random_news):
 						$random_thumb = (has_post_thumbnail($random_news->ID)) ? get_the_post_thumbnail($random_news->ID, "medium") : "";
+						$permalink = get_the_permalink($random_news->ID);
 					echo <<<HTML
-						<a class="post mini" href="#">
+						<a class="post mini" href=$permalink>
 							<div class="thumb_container">$random_thumb</div>
 							<span>$random_news->post_title</span>
 						</a>
