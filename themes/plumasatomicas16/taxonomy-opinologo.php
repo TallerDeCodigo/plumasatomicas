@@ -15,6 +15,9 @@
 	$x_axis_name = ($grade[x] >=  0.75) ? "Conservador" : $x_axis_name;
 	$y_axis_name = ($grade[y] >=  0.5) ? "Totalitario" : "Centro";
 	$y_axis_name = ($grade[y] <= -0.5) ? "Liberal"     : $y_axis_name;
+
+	if(isset($_GET['charts'])){ $charts = $_GET['charts']; }
+
 ?>
 
 <section id="post-sec">
@@ -44,58 +47,65 @@
 					</div><br>
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
+
+			<?php if($charts == 'true'){ ?>
 			
-			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-				<section id="global_chart" class="unit_chart drop_shadow radius_2 blue">
-					<p class="dichos">Dichos <span><?php echo $dichos_percentage; ?></span></p>
-					<p class="hechos">Hechos <span><?php echo $hechos_percentage; ?></span></p>
-					<p class="centered">Hechos <br>vs <br>Dichos</p>
-					<section class="pie chart_container">
-						<canvas id="actual_piechart" class="actual_piechart"></canvas>
+			<div class="charts">
+				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+					<section id="global_chart" class="unit_chart drop_shadow radius_2 blue">
+						<p class="dichos">Dichos <span><?php echo $dichos_percentage; ?></span></p>
+						<p class="hechos">Hechos <span><?php echo $hechos_percentage; ?></span></p>
+						<p class="centered">Hechos <br>vs <br>Dichos</p>
+						<section class="pie chart_container">
+							<canvas id="actual_piechart" class="actual_piechart"></canvas>
+						</section>
 					</section>
-				</section>
-			</a>
-			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-				<section id="said_chart" class="unit_chart bar_right topt drop_shadow radius_2 green">
-					<p class="hechos">Hechos</p>
-					<section class="bar chart_container">
-						<div class="chart-col">
-							<div class="ch-item">
-								<?php echo $hechos['verdadero']."%"; ?> VERDADERO
-								<div class="ver1" style="width: <?php echo $hechos['verdadero']; ?>%!important"></div>
+				</a>
+				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+					<section id="said_chart" class="unit_chart bar_right topt drop_shadow radius_2 green">
+						<p class="hechos">Hechos</p>
+						<section class="bar chart_container">
+							<div class="chart-col">
+								<div class="ch-item">
+									<?php echo $hechos['verdadero']."%"; ?> VERDADERO
+									<div class="ver1" style="width: <?php echo $hechos['verdadero']; ?>%!important"></div>
+								</div>
+								<div class="ch-item">
+									<?php echo $hechos['falso']."%"; ?> FALSO
+									<div class="fal1" style="width: <?php echo $hechos['falso']; ?>%!important"></div>
+								</div>
+								<div class="chart-anim green"></div>
 							</div>
-							<div class="ch-item">
-								<?php echo $hechos['falso']."%"; ?> FALSO
-								<div class="fal1" style="width: <?php echo $hechos['falso']; ?>%!important"></div>
-							</div>
-							<div class="chart-anim green"></div>
-						</div>
+						</section>
 					</section>
-				</section>
-			</a>
-			<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-				<section id="fact_chart" class="unit_chart last bar_right drop_shadow radius_2 red">
-					<p class="dichos">Dichos</p>
-					<section class="bar chart_container">
-						<div class="chart-col">
-							<div class="ch-item">
-								<?php echo $dichos['verdadero']."%"; ?> VERDADERO
-								<div class="ver2" style="width: <?php echo $dichos['verdadero']; ?>%!important"></div>
+				</a>
+				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+					<section id="fact_chart" class="unit_chart last bar_right drop_shadow radius_2 red">
+						<p class="dichos">Dichos</p>
+						<section class="bar chart_container">
+							<div class="chart-col">
+								<div class="ch-item">
+									<?php echo $dichos['verdadero']."%"; ?> VERDADERO
+									<div class="ver2" style="width: <?php echo $dichos['verdadero']; ?>%!important"></div>
+								</div>
+								<div class="ch-item">
+									<?php echo $dichos['verdades_descontextualizadas']."%"; ?> VERDADES DESCONTEXTUALIZADAS
+									<div class="verd2" style="width: <?php echo $dichos['verdades_descontextualizadas']; ?>%!important"></div>
+								</div>
+								<div class="ch-item">
+									<?php echo $dichos['falso']."%"; ?> FALSO
+									<div class="fal2" style="width: <?php echo $dichos['falso']; ?>%!important"></div>
+								</div>
+								<div class="chart-anim red"></div>
 							</div>
-							<div class="ch-item">
-								<?php echo $dichos['verdades_descontextualizadas']."%"; ?> VERDADES DESCONTEXTUALIZADAS
-								<div class="verd2" style="width: <?php echo $dichos['verdades_descontextualizadas']; ?>%!important"></div>
-							</div>
-							<div class="ch-item">
-								<?php echo $dichos['falso']."%"; ?> FALSO
-								<div class="fal2" style="width: <?php echo $dichos['falso']; ?>%!important"></div>
-							</div>
-							<div class="chart-anim red"></div>
-						</div>
+						</section>
 					</section>
-				</section>
-			</a>
-			
+				</a>
+			</div><!-- charts -->
+
+
+			<?php } ?>
+
 			<div id="ensayo-wadafact" class="mini-wrapper full_two">
 				<?php 
 					$some_essays = fetch_some_essays($opinologo->term_id, 4);
