@@ -23,6 +23,8 @@
 			</div>
 		<?php } ?>
 		<?php the_content(); ?>
+		<a class="link_nota_src" target="_blank" href="<?php echo get_post_meta($post->ID, 'source_url_columna', true); ?>">Link a la nota.</a>
+		<br /><br />
 			<div class="separador">
 				<span>PERFIL</span>
 			</div>
