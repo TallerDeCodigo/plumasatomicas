@@ -705,7 +705,7 @@ code {
 
 .postura_link:hover {
 	opacity: 1;
-	cursor: pointer;
+	cursor: help;
 }
 
 .postura>div{
