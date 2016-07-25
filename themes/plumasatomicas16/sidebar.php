@@ -42,15 +42,15 @@ HTML;
 						echo "<img src='{$thumb}'>";
 					} ?>
 				</div>
-				<span><?php the_title_limit( 35, '...'); ?></span>
+				<span><?php the_title_limit( 50, '...'); ?></span>
 			</a>
 	<?php endforeach; wp_reset_query(); ?>
 	
 	<!-- /9262827/plumas_atomicas_300x600 -->
-	<div class="ad_space" id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
+	<!-- <div class="ad_space" id='div-gpt-ad-1465487084939-0-a' style='height:600px; width:300px;'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });
 		</script>
-	</div>
+	</div> -->
 
 </div>

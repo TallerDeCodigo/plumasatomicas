@@ -87,6 +87,8 @@ h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
 
 /*** GENERAL ***/
 
+.comments {display: inline-block; width: 100%;}
+
 body {
 	background:#fafafa;
 	margin:0;
@@ -578,7 +580,7 @@ code {
 
 /*** WHAT THE FACT ***/
 
-.divider{width: 94.5%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
+.divider{width: 100%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
 .wadafact { width: 100%; margin: 0 4%;}
 .opinologo_columnista {width: 33%; display: inline-block; vertical-align: top;}
 .opinologo_columnista .who{margin-bottom: 0;}
@@ -607,6 +609,8 @@ code {
 .mini-wrapper.full_three .post:nth-of-type(3){margin-right: 0!important;}
 .mini-wrapper.full_two .post:nth-of-type(3){margin-right: 1.5rem!important;}
 .mini-wrapper.full_two .post:nth-of-type(2){margin-right: 0!important;}
+
+#ensayo-wadafact a.mini:last-of-type {margin-bottom: 0px!important;}
 
 .whatthefact blockquote {
 	color:#3F3F3F;

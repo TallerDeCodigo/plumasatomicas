@@ -106,6 +106,8 @@
 
 			<?php } ?>
 
+			<hr class="divider">
+
 			<div id="ensayo-wadafact" class="mini-wrapper full_two">
 				<?php 
 					$some_essays = fetch_some_essays($opinologo->term_id, 4);
@@ -128,10 +130,10 @@ HTML;
 			<?php
 				if(have_posts()): while(have_posts()):
 					the_post();
-					$permalink = get_the_permalink();
+					$permalink = get_the_permalink($post->ID);
 					$thumb_formatted = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, "medium") : "";
 					echo <<<HTML
-					<a class="post columna" href="$permalink">
+					<a class="post columna" href=$permalink>
 						<div class="thumb_container">
 							$thumb_formatted
 						</div>
@@ -142,7 +144,7 @@ HTML;
 			</div>
 			
 			<!-- Share buttons -->
-			<div class="addthis_sharing_toolbox center"></div>
+			<!-- <div class="addthis_sharing_toolbox center"></div> -->
 			<br>
 			<!-- /9262827/plumasatomicas_728x90_sup -->
 			<div class="ad_space" id='div-gpt-ad-1465487084939-3' style='height:90px; width:100%;'>
@@ -157,8 +159,9 @@ HTML;
 				$some_news = fetch_some_random_news();
 				foreach ($some_news as $random_news):
 					$random_thumb = (has_post_thumbnail($random_news->ID)) ? get_the_post_thumbnail($random_news->ID, "medium") : "";
+				$permalink = get_the_permalink($random_news->ID);
 				echo <<<HTML
-					<a class="post mini" href="#">
+					<a class="post mini" href=$permalink>
 						<div class="thumb_container">$random_thumb</div>
 						<span>$random_news->post_title</span>
 					</a>
