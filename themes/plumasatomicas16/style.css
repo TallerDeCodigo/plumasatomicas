@@ -1686,6 +1686,9 @@ footer span {
 
 @media (max-width:684px) {
 
+.ad_space {display: none!important;}
+p img {max-width: 100%; height: auto;} 
+
 .wrapper {
 	width:85%;
 }
