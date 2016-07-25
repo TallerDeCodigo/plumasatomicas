@@ -426,6 +426,8 @@ HTML;
 			update_post_meta($post_id, 'link_hecho_2', $_POST['link_hecho_2']);
 			update_post_meta($post_id, 'link_dicho_1', $_POST['link_dicho_1']);
 			update_post_meta($post_id, 'link_dicho_2', $_POST['link_dicho_2']);
+			update_post_meta($post_id, 'comentario_dicho_1', $_POST['comentario_dicho_1']);
+			update_post_meta($post_id, 'comentario_dicho_2', $_POST['comentario_dicho_2']);
 		}
 
 		if (isset($_POST['iter_tema_1']) AND check_admin_referer(__FILE__, 'iterations_nonce') ){
