@@ -132,7 +132,7 @@
 					<div class="thumb_container">
 					<?php
 						if(has_post_thumbnail($post->ID)){
-							$thumb = get_the_post_thumbnail_url($post->ID, "large");
+							$thumb = get_the_post_thumbnail_url($post->ID, "full");
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>
@@ -143,7 +143,7 @@
 					<div class="thumb_container">
 					<?php
 						if(has_post_thumbnail($post->ID)){
-							$thumb = get_the_post_thumbnail_url($post->ID, "large");
+							$thumb = get_the_post_thumbnail_url($post->ID, "full");
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>

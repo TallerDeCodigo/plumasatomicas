@@ -141,7 +141,7 @@
 			if(is_tax("opinologo")){
 				$query->set('post_type', 'wadafact');
 				$query->set('posts_per_page', 6);
-				$query->set('orderby', 'rand');
+				//$query->set('orderby', 'rand');
 			}
 		}
 		return $query;
