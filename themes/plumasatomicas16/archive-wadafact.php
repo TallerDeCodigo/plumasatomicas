@@ -52,7 +52,7 @@ HTML;
 					$some_essays = fetch_some_essays(NULL, 6);
 					foreach ($some_essays as $each_essay):
 						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
-						$permalink = get_permalink();
+						$permalink = get_the_permalink($each_essay->ID);
 					echo <<<HTML
 						<a class="post mini" href="$permalink">
 							<div class="thumb_container">$random_thumb</div>

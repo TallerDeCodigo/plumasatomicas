@@ -48,6 +48,8 @@
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 			</div></a>
 
+			<p>Columnas analizadas : <?php echo $opinologo->count;?></p>
+
 			<?php if($charts == 'true'){ ?>
 			
 			<div class="charts">
@@ -105,6 +107,56 @@
 
 
 			<?php } ?>
+
+			<hr class="divider">
+
+			<div class="tag_cloud">
+	
+				<?php 
+
+					//print_r($opinologo);
+					$args = array(
+							'post_type' => 'wadafact',
+							'tax_query' => array(
+									array(
+										'taxonomy' => 'opinologo',
+										'field' => 'term_id',
+										'terms' => $opinologo->term_id
+									),
+								),
+							'posts_per_page' => -1,
+							'post_status' => 'publish',
+						); 
+
+					$ids = get_posts($args);
+		
+					$ids_personajes = array();
+					foreach($ids as $id):
+						//$ids_posts[] = $id->ID;
+						if(get_post_meta($id->ID, 'iter_persona_1', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_persona_1', true);
+						}
+						if(get_post_meta($id->ID, 'iter_persona_2', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_persona_2', true);
+						}
+						if(get_post_meta($id->ID, 'iter_persona_3', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_persona_3', true);
+						}
+					endforeach;
+					//print_r($ids_personajes);
+					$ids_personajes_conteo = array_count_values($ids_personajes);
+					//print_r($ids_personajes_conteo);
+					$ids_finales = array_unique($ids_personajes);
+
+					foreach($ids_finales as $id_personaje):
+						$personaje = get_term_by('id', $id_personaje, 'personaje');
+					?>
+					
+					<code data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+
+					<?php endforeach;?>
+
+			</div>
 
 			<hr class="divider">
 
