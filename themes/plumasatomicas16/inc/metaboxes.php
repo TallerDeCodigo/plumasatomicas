@@ -113,7 +113,7 @@
 			<select name="calif_argumento_tres" id="calif_argumento_tres">
 				<option value="">Selecciona un valor</option>
 				<option value="verdadero" $sel_tres_verdadero>Verdadero</option>
-				<option value="verdades-descontextualizadas" $sel_cuatro_descontextualizadas>Verdades descontextualizadas</option>
+				<option value="verdades-descontextualizadas" $sel_tres_descontextualizadas>Verdades descontextualizadas</option>
 				<option value="falso" $sel_tres_falso>Falso</option>
 			</select>
 			<br/>
