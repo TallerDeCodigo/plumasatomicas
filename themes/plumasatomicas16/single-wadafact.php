@@ -102,7 +102,7 @@
 					<?php if($dicho_1_link):?>
 						<a href="<?php echo $dicho_1_link; ?>"><span class="link">prueba</span></a>
 					<?php endif; ?>
-					<p><?php echo get_post_meta($post->ID, 'comentario_dicho_1', true); ?></p>
+					<p>Comentario: <?php echo get_post_meta($post->ID, 'comentario_dicho_1', true); ?></p>
 				</blockquote>
 		<?php
 			endif; 
@@ -116,7 +116,7 @@
 					<?php if($dicho_2_link):?>
 						<a href="<?php echo $dicho_2_link; ?>"><span class="link">prueba</span></a>
 					<?php endif; ?>
-					<p><?php echo get_post_meta($post->ID, 'comentario_dicho_2', true); ?></p>
+					<p>Comentario: <?php echo get_post_meta($post->ID, 'comentario_dicho_2', true); ?></p>
 				</blockquote>
 		<?php
 			endif; ?>

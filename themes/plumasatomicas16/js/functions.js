@@ -3506,6 +3506,25 @@ $(document).ready(function() {
 			});
 		}
 
+		/*** TAG CLOUD ***/
+
+		var words = [];
+		  
+
+		$('.tag_cloud code').each(function(){
+			var peso = $(this).data('peso');
+			var pesopx = peso*80;
+			$(this).css('font-size', pesopx+'%');
+			words.push({text: $(this).text(), weight: peso});
+		});
+
+		
+		// $('.tag_cloud').jQCloud(words, {
+		//   shape: 'rectangular',
+		//   classPattern: null,
+  // 		  colors: ["#800026", "#bd0026", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"],
+		// });
+
 	});
 
 })(jQuery);
