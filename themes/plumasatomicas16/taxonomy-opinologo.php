@@ -152,6 +152,7 @@
 
 					foreach($ids_finales as $id_personaje):
 						$personaje = get_term_by('id', $id_personaje, 'personaje');
+						if(!$personaje) continue;
 					?>
 					
 					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
@@ -204,6 +205,7 @@
 
 					foreach($ids_finales as $id_personaje):
 						$personaje = get_term_by('id', $id_personaje, 'tema');
+						if(!$personaje) continue;
 					?>
 					
 					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
@@ -219,7 +221,7 @@
 					$some_essays = fetch_some_essays($opinologo->term_id, 4);
 					foreach ($some_essays as $each_essay):
 						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
-						$permalink = get_permalink();
+						$permalink = get_the_permalink($each_essay->ID);
 					echo <<<HTML
 						<a class="post mini" href="$permalink">
 							<div class="thumb_container">$random_thumb</div>
