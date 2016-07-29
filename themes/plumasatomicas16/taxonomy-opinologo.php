@@ -108,7 +108,9 @@
 
 			<?php } ?>
 
-			<hr class="divider">
+			<div class="separador">
+				<span>¿DE QUIÉNES HABLA MÁS?</span>
+			</div>
 
 			<div class="tag_cloud">
 	
@@ -152,7 +154,59 @@
 						$personaje = get_term_by('id', $id_personaje, 'personaje');
 					?>
 					
-					<code data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+
+					<?php endforeach;?>
+
+			</div>
+
+			<div class="separador">
+				<span>¿DE QUÉ TEMAS HABLA MÁS?</span>
+			</div>
+
+			<div class="tag_cloud">
+	
+				<?php 
+
+					//print_r($opinologo);
+					$args = array(
+							'post_type' => 'wadafact',
+							'tax_query' => array(
+									array(
+										'taxonomy' => 'opinologo',
+										'field' => 'term_id',
+										'terms' => $opinologo->term_id
+									),
+								),
+							'posts_per_page' => -1,
+							'post_status' => 'publish',
+						); 
+
+					$ids = get_posts($args);
+		
+					$ids_personajes = array();
+					foreach($ids as $id):
+						//$ids_posts[] = $id->ID;
+						if(get_post_meta($id->ID, 'iter_tema_1', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_tema_1', true);
+						}
+						if(get_post_meta($id->ID, 'iter_tema_2', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_tema_2', true);
+						}
+						if(get_post_meta($id->ID, 'iter_tema_3', true)){
+							$ids_personajes[] = get_post_meta($id->ID, 'iter_tema_3', true);
+						}
+					endforeach;
+					//print_r($ids_personajes);
+					$ids_personajes_conteo = array_count_values($ids_personajes);
+					//print_r($ids_personajes_conteo);
+					$ids_finales = array_unique($ids_personajes);
+
+					foreach($ids_finales as $id_personaje):
+						$personaje = get_term_by('id', $id_personaje, 'tema');
+					?>
+					
+					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 

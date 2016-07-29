@@ -3514,11 +3514,17 @@ $(document).ready(function() {
 		$('.tag_cloud code').each(function(){
 			var peso = $(this).data('peso');
 			var pesopx = peso*80;
-			$(this).css('font-size', pesopx+'%');
-			words.push({text: $(this).text(), weight: peso});
+			if(pesopx > 500){
+				$(this).css('font-size', 500+'%');
+			} else {
+				$(this).css('font-size', pesopx+'%');
+			}
+
+			//words.push({text: $(this).text(), weight: peso});
+
 		});
 
-		
+
 		// $('.tag_cloud').jQCloud(words, {
 		//   shape: 'rectangular',
 		//   classPattern: null,
