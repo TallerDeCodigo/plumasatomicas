@@ -122,7 +122,7 @@
 			endif; ?>
 
 		<div class="separador">
-				<span><span>¿DE QUIÉNES HABLA MÁS?</span></span>
+				<span>¿DE QUIÉNES HABLA MÁS?</span>
 			</div>
 
 			<div class="tag_cloud">
@@ -165,9 +165,10 @@
 
 					foreach($ids_finales as $id_personaje):
 						$personaje = get_term_by('id', $id_personaje, 'personaje');
+						if(!$personaje) continue;
 					?>
 					
-					<code data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 
@@ -217,9 +218,10 @@
 
 					foreach($ids_finales as $id_personaje):
 						$personaje = get_term_by('id', $id_personaje, 'tema');
+						if(!$personaje) continue;
 					?>
 					
-					<code data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 
