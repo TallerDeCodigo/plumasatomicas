@@ -78,7 +78,7 @@
 			if($hecho_2 !== ""): ?>
 				<blockquote class="quote quote_opinologo fact <?php echo $hecho_1_calificacion; ?>"><?php echo $hecho_2; ?>
 					<br>
-					<span class="<?php echo "btn_".$hecho_1_calificacion; ?>"><?php echo $hecho_2_calificacion ?></span>
+					<span class="<?php echo "btn_".$hecho_2_calificacion; ?>"><?php echo $hecho_2_calificacion ?></span>
 					<?php if($hecho_2_link):?>
 						<a href="<?php echo $hecho_2_link; ?>"><span class="link">prueba</span></a>
 					<?php endif; ?>
