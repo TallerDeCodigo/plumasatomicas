@@ -245,6 +245,7 @@ footer a {
 	height:480px;
 	overflow:hidden;
 	margin-bottom:-8px;
+	background: #000;
 }
 
 #shower span {text-transform: uppercase;}
@@ -258,6 +259,8 @@ footer a {
     left:-9999px;
     right:-9999px;
     margin:auto;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 .big, .news-container {
