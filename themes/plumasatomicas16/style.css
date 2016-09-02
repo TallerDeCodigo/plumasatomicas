@@ -182,7 +182,7 @@ footer {
 	height:64px;
 	line-height:1.2em;
 	overflow:hidden;
-	margin-bottom:-8px;
+	margin-bottom:-30px;
 	font-family:'Roboto Condensed', sans-serif;
 	font-weight:400;
 	font-size:90%;
@@ -254,10 +254,10 @@ footer a {
 
 #shower img {
 	position:absolute;
-    top:-9999px;
-    bottom:-9999px;
-    left:-9999px;
-    right:-9999px;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
     margin:auto;
     opacity: 0.5;
     filter: alpha(opacity=50);
