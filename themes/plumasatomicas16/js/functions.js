@@ -7,6 +7,9 @@
 
 		console.log('hello from functions.js');
 
+		$("#big-image").css("width", "101%");
+		$("#big-image").css("height", "auto");
+
 
 		/**
 		 * Validación de emails
@@ -94,10 +97,12 @@ $(window).on("load resize",function(){
 		content = content + 45;
 		$(".sidebar").css("height", content+620);
 		$(".filler").css("height", content+620);
-		$("#big-image").css("width", "101%");
-		$("#big-image").css("height", "auto");
+		// $("#big-image").css("width", "101%");
+		// $("#big-image").css("height", "auto");
 		var bigimageh = $('#big-image').height();
 		var bigimagew = $('#big-image').width();
+
+		console.log(bigimageh +"< . >"+ bigimagew);
 		if (bigimageh < 480 ) {
 				$("#big-image").css("height", "101%");
 				$("#big-image").css("width", "auto");
