@@ -245,12 +245,15 @@ footer a {
 	height:480px;
 	overflow:hidden;
 	margin-bottom:-8px;
-	background: #000;
+	background: url(https://plumasatomicas.com/wp-content/uploads/2016/09/secretario-1.jpg;);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 #shower span {text-transform: uppercase;}
 #shower span a {text-decoration: none; color: inherit;}
 .new span a {text-decoration: none; color: inherit; margin: 0px!important; text-transform: uppercase;}
+
 
 #shower img {
 	position:absolute;
@@ -261,6 +264,8 @@ footer a {
     margin:auto;
     opacity: 0.5;
     filter: alpha(opacity=50);
+    width:100%;
+    height: auto;
 }
 
 .big, .news-container {

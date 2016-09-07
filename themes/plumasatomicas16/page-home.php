@@ -11,7 +11,7 @@
 			foreach($shower as $post): setup_postdata($post);
 			
 		?>
-		<?php the_post_thumbnail('header_img', array('id' => 'big-image')); ?>
+		<?php //the_post_thumbnail('header_img', array('id' => 'big-image')); ?>
 		<div class="wrapper wide">
 			<div class="new big">
 				<?php

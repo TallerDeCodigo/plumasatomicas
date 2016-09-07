@@ -7,10 +7,6 @@
 
 		console.log('hello from functions.js');
 
-		$("#big-image").css("width", "101%");
-		$("#big-image").css("height", "auto");
-
-
 		/**
 		 * Validación de emails
 		 */
@@ -97,12 +93,13 @@ $(window).on("load resize",function(){
 		content = content + 45;
 		$(".sidebar").css("height", content+620);
 		$(".filler").css("height", content+620);
-		// $("#big-image").css("width", "101%");
-		// $("#big-image").css("height", "auto");
+		$("#big-image").css("width", "101%");
+		$("#big-image").css("height", "auto");
 		var bigimageh = $('#big-image').height();
 		var bigimagew = $('#big-image').width();
 
-		console.log(bigimageh +"< . >"+ bigimagew);
+		/*INSERTAR PRELOADER*/
+
 		if (bigimageh < 480 ) {
 				$("#big-image").css("height", "101%");
 				$("#big-image").css("width", "auto");
@@ -172,7 +169,7 @@ $(window).on("load resize",function(){
 		if (proporcionb > imagenb ) {
 			
 		}
-});
+}); //END WINDOW LOAD RESIZE
 
 $(window).on("resize",function(){
 		// if ($("body").is("#cardss")) {
@@ -182,7 +179,7 @@ $(window).on("resize",function(){
 		//         keyCode: 37
 		//     });
 		// }
-});
+});	//END WINDOW RESIZE
 
 
 $(window).load(function(){
@@ -289,8 +286,7 @@ $(window).load(function(){
 				});
 
 		});
-
-});
+}); //END LOAD FUNCTION
 
 
 $(document).mouseup(function (e){
@@ -304,7 +300,7 @@ $(document).mouseup(function (e){
 						$(".socc").animate({opacity:"1"}, 200); 
 				}, 250);
 		}
-});
+});//END MOUSEUP
 
 window.Swipe = function(element, options) {
 
@@ -347,8 +343,7 @@ window.Swipe = function(element, options) {
 		this.element.addEventListener('transitionend', this, false);
 		window.addEventListener('resize', this, false);
 	}
-
-};
+};//END SWIPE
 
 Swipe.prototype = {
 
@@ -590,8 +585,7 @@ Swipe.prototype = {
 		
 		e.stopPropagation();
 	}
-
-};
+}; //END SWIPE PROTOTYPE
 
 new Swipe(document.getElementById('wrapper'));
 var slider = new Swipe(document.getElementById('wrapper'));
@@ -3390,7 +3384,6 @@ var slider = new Swipe(document.getElementById('wrapper'));
 		};
 
 		defaultScrollHandler = slimScrollHandler;
-
 });
 
 $(document).ready(function() {
@@ -3456,7 +3449,6 @@ $(document).ready(function() {
 					// FP.moveSlideLeft();
 				}
 		});
-
 });
 		
 		$(".descrip").fitVids();
