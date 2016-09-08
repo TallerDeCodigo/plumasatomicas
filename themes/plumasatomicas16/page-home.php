@@ -85,7 +85,7 @@
 		<div class="wrapper normal">
 
 		<!-- /9262827/plumasatomicas_728x90_sup -->
-		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
+		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px; margin-top: 40px'>
 			<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
 			</script>

@@ -99,7 +99,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'taxonomies'         => array( 'opinologo' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor', 'thumbnail','excerpt' )
 		);
 		register_post_type( 'ensayo', $args );
 

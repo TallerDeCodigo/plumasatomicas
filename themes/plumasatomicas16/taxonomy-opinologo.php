@@ -23,7 +23,7 @@
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido opinologo">
-			<h1><?php echo $opinologo->name; ?></h1>
+			<h1><?php // echo $opinologo->name; ?></h1>
 			<div class="who">
 				<div>
 					<?php 
@@ -37,17 +37,23 @@
 						}
 					?>
 				</div><br>
-				<!-- <span><?php echo $opinologo->name; ?></span> -->
+				
+				<span><?php echo $opinologo->name; ?></span>
 				<span><?php echo $opinologo->description; ?></span>
+				
 			</div>
-			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>"><div class="postura">
+			<div>
+			<h3>"Postura política vertida en esta columna"</h3>
+			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+				<div class="postura">
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
 					</div><br>
-					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
-			</div></a>
-
+				<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
+				</div>
+			</a>
+			
 			<p>Columnas analizadas : <?php echo $opinologo->count;?></p>
 
 			<?php if($charts == 'true'){ ?>
@@ -155,7 +161,7 @@
 						if(!$personaje) continue;
 					?>
 					
-					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+						<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> <?php echo $ids_personajes_conteo[$id_personaje]; ?></code>
 
 					<?php endforeach;?>
 
@@ -285,7 +291,7 @@ HTML;
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 			</div> -->
 		</div>
-		<?php get_template_part("sidebar", "cards"); ?>
+		<?php // get_template_part("sidebar", "cards"); ?>
 	</div>
 
 </section>

@@ -3512,9 +3512,9 @@ $(document).ready(function() {
 			var peso = $(this).data('peso');
 			var pesopx = peso*80;
 			if(pesopx > 500){
-				$(this).css('font-size', 500+'%');
+				// $(this).css('font-size', 500+'%');
 			} else {
-				$(this).css('font-size', pesopx+'%');
+				// $(this).css('font-size', pesopx+'%');
 			}
 
 			//words.push({text: $(this).text(), weight: peso});

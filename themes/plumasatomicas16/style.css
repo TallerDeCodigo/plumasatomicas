@@ -252,7 +252,7 @@ footer a {
 
 #shower span {text-transform: uppercase;}
 #shower span a {text-decoration: none; color: inherit;}
-.new span a {text-decoration: none; color: inherit; margin: 0px!important; text-transform: uppercase;}
+.new span a {text-decoration: none; color: inherit; margin: 0px!important; text-transform: initial;}
 
 
 #shower img {
@@ -277,7 +277,7 @@ footer a {
 }
 
 .big {
-	font-size:235%;
+	font-size:200%;
 }
 
 .news-container {
@@ -291,7 +291,7 @@ code {
 	padding:6px 6px 0px;
 	border-radius:4px;
 	font-size:20px;
-	margin:15px 5px 8px 0px;
+	margin:0px 0px 0px 0px;
 }
 
 .new span {
@@ -484,6 +484,7 @@ code {
 	font-size:250%;
 	width:93.5%;
 	max-width:650px;
+	line-height: 50px;
 }
 .contenido strong,
 .contenido em{display: inline;}
@@ -617,6 +618,7 @@ code {
 .wadafact .logo_wada {width: 100%; margin-bottom: 20px;}
 .wadafact .logo_wada img{float: left;}
 .wadafact .logo_wada h3{float: left; font-size: 26px; margin-top: 20px; font-weight: normal; text-transform: uppercase; color:#3f3f3f;}
+.intro { text-align: left !important; } 
 
 .titulo_post_opinologo {font-size: 65%; margin-left: 330px!important;}
 
@@ -640,6 +642,7 @@ code {
 .mini-wrapper.full_two .post:nth-of-type(2){margin-right: 0!important;}
 
 #ensayo-wadafact a.mini:last-of-type {margin-bottom: 0px!important;}
+#ensayo-wadafact p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
 
 .whatthefact blockquote {
 	color:#3F3F3F;
@@ -680,6 +683,8 @@ code {
     font-weight: bolder;
     color: #d43b33;
 }
+
+
 
 .quote_opinologo .btn_verdadero,
 .quote_opinologo .btn_verdades-descontextualizadas,
@@ -2071,7 +2076,7 @@ p strong {color: #606060;}
 }
 
 .opinologo h1 {text-align:center;}
-
+.opinologo { width: 100%;}
 
 .list h1 a {color:inherit;}
 
