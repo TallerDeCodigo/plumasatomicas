@@ -6,11 +6,12 @@
 					'post_type' => 'post',
 					'posts_per_page' => 1
 				);
-
 			$shower = get_posts($args);
+
 			foreach($shower as $post): setup_postdata($post);
-			
+
 		?>
+		<img src="<?php echo the_post_thumbnail_url(); ?>">
 		<?php //the_post_thumbnail('header_img', array('id' => 'big-image')); ?>
 		<div class="wrapper wide">
 			<div class="new big">
