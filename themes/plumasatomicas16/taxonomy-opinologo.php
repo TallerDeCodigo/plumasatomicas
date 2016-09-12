@@ -23,7 +23,7 @@
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido opinologo">
-			<h1><?php // echo $opinologo->name; ?></h1>
+			<h1><?php echo $opinologo->name; ?></h1>
 			<div class="who">
 				<div>
 					<?php 
@@ -37,28 +37,22 @@
 						}
 					?>
 				</div><br>
-				
-				<span><?php echo $opinologo->name; ?></span>
+				<!-- <span><?php echo $opinologo->name; ?></span> -->
 				<span><?php echo $opinologo->description; ?></span>
-				
 			</div>
-			<div>
-			<h3>"Postura política vertida en esta columna"</h3>
-			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
-				<div class="postura">
+			<h3>"Postura política vertida en esta columna" </h3>
+			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>"><div class="postura">
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
 					</div><br>
-				<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
-				</div>
-			</a>
-			
-			<p>Columnas analizadas : <?php echo $opinologo->count;?></p>
+					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
+			</div></a>
 
-			<?php if($charts == 'true'){ ?>
+			<!-- <p>Columnas analizadas : <?php echo $opinologo->count;?></p> -->
 			
 			<div class="charts">
+				<h3 style="text-align:left;">"De las columnas analizadas (<?php echo $opinologo->count;?>) de este autor, estas son las veces que ha utilizado dichos (opiniones) vs. hechos (cifras) en sus argumentos."</h3>
 				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 					<section id="global_chart" class="unit_chart drop_shadow radius_2 blue">
 						<p class="dichos">Dichos <span><?php echo $dichos_percentage; ?></span></p>
@@ -69,6 +63,7 @@
 						</section>
 					</section>
 				</a>
+				<h3 style="text-align:left;">"Estas son las veces que los hechos (cifras) utilizados por el columnista han resultado verdaderos o falsos."</h3>
 				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 					<section id="said_chart" class="unit_chart bar_right topt drop_shadow radius_2 green">
 						<p class="hechos">Hechos</p>
@@ -87,6 +82,7 @@
 						</section>
 					</section>
 				</a>
+				<h3 style="text-align:left;">"Estas son las veces que los dichos (opiniones) utilizados por el columnista han resultado verdaderos, falsos, o verdades descontextualizadas."</h3>
 				<a class="chart_checker" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 					<section id="fact_chart" class="unit_chart last bar_right drop_shadow radius_2 red">
 						<p class="dichos">Dichos</p>
@@ -110,9 +106,6 @@
 					</section>
 				</a>
 			</div><!-- charts -->
-
-
-			<?php } ?>
 
 			<div class="separador">
 				<span>¿DE QUIÉNES HABLA MÁS?</span>
@@ -161,7 +154,7 @@
 						if(!$personaje) continue;
 					?>
 					
-						<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> <?php echo $ids_personajes_conteo[$id_personaje]; ?></code>
+					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 
@@ -291,7 +284,7 @@ HTML;
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 			</div> -->
 		</div>
-		<?php // get_template_part("sidebar", "cards"); ?>
+		<?php //get_template_part("sidebar", "cards"); ?>
 	</div>
 
 </section>

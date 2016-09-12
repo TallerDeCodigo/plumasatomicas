@@ -29,6 +29,7 @@
 			} ?>
 		</div>
 		<span><?php the_title_limit( 60, '...'); ?></span>
+		<span><?php  $post->post_date; ?></span>
 	</a>
 	<?php endforeach; wp_reset_query(); ?>
 </aside>

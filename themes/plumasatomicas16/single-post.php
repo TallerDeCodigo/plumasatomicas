@@ -42,6 +42,7 @@
 						<a class="post mini" href=$permalink>
 							<div class="thumb_container">$random_thumb</div>
 							<span>$random_news->post_title</span>
+							<p class="excerpt">$random_news->post_excerpt</p>
 						</a>
 HTML;
 					endforeach; ?>

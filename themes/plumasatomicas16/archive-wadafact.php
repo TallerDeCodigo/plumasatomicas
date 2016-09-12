@@ -11,13 +11,15 @@
 			<p class="intro">En Plumas Atómicas nos dimos a la tarea de crear una herramienta de análisis de las columnas de opinión política mexicanas. Wadafact es esa herramienta que te dejará ver claramente, hacia dónde se inclina un columnista y puedas entender mejor el panorama en los medios.</p>
 
 			<p class="intro">¿Qué analizamos de las columnas? Simple: Si los argumentos se basan en Dichos o Hechos La postura política del columnista expresada en ese espacio Qué temas tocan más, qué temas evaden De qué personajes prefieren no hablar </p>
+
+			<p>TOTAL DE COLUMNAS ANALIZADAS: </p>
+
 			<section class="columnists_slider">
 			
 		<?php
 			$columnists = fetch_columnists();
 			echo "<section class='slider_page'>";
-			foreach ($columnists as $each_columnist):
-				$render_row = ( $count % 6 == 0 ) 	? TRUE 	: FALSE; ?>
+			foreach ($columnists as $each_columnist): ?>
 
 				<article class="opinologo_columnista">
 				<?php

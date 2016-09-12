@@ -705,7 +705,7 @@ if (is_admin()){
 	 * @param Integer $limit
 	 * @return Array $randomness
 	 */
-	function fetch_some_random_news( $limit = 4){
+	function fetch_some_random_news( $limit = 8){
 
 		$args = array(
 					"post_type" 	=> 	"post",

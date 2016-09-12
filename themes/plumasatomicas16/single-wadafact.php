@@ -23,7 +23,7 @@
 			</div>
 		<?php } ?>
 		<?php the_content(); ?>
-		<a class="link_nota_src" target="_blank" href="<?php echo get_post_meta($post->ID, 'source_url_columna', true); ?>">Link a la nota.</a>
+		<a class="link_nota_src" target="_blank" href="<?php echo get_post_meta($post->ID, 'source_url_columna', true); ?>">Enlace a la columna.</a>
 		<br /><br />
 			<div class="separador">
 				<span>PERFIL</span>
@@ -121,7 +121,7 @@
 		<?php
 			endif; ?>
 
-		<div class="separador">
+		<!-- <div class="separador">
 				<span>¿DE QUIÉNES HABLA MÁS?</span>
 			</div>
 
@@ -225,13 +225,19 @@
 
 					<?php endforeach;?>
 
+			</div> -->
+
+			<div class="addthis_sharing_toolbox left"></div>
+
+			<div class="comments">
+				<div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
 			</div>
 			
-			<hr class="divider"></hr>
+			<!-- <hr class="divider"></hr> -->
 
-			<div class="addthis_sharing_toolbox center"></div>
+			
 
-			<hr class="divider"></hr>
+			<!-- <hr class="divider"></hr> -->
 			<div class="post-list">
 				<?php
 				$by_same_guy = fetch_by_same_columnist($opinologo->term_id, 3, array($post->ID));
@@ -245,23 +251,14 @@
 							$same_thumb
 						</div>
 						<span class="titulo_post_opinologo">$each_column->post_title</span>
+						<p>$each_column->post_excerpt</p>
 					</a>
 HTML;
 				endforeach; ?>
 			</div>
-			
-			<div class="addthis_sharing_toolbox center"></div>
 
-			<div class="comments">
-				<div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
-			</div>
-			
-			<!-- /9262827/plumasatomicas_728x90_sup -->
-			<div class="ad_space" id='div-gpt-ad-1465487084939-3' style='height:250px; width:970px;'>
-				<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
-				</script>
-			</div>
+			<hr class="divider"></hr>
+
 			<div id="dissappear" class="mini-wrapper">
 				<?php 
 				$some_news = fetch_some_random_news();
@@ -272,6 +269,7 @@ HTML;
 					<a class="post mini" href="$permalink">
 						<div class="thumb_container">$random_thumb</div>
 						<span>$random_news->post_title</span>
+						<p class="excerpt">$random_news->post_excerpt</p>
 					</a>
 HTML;
 				endforeach;
@@ -286,7 +284,7 @@ HTML;
 			</div> -->
 		</div>
 
-		<?php get_template_part("sidebar", "cards" ); ?>
+		<?php // get_template_part("sidebar", "cards" ); ?>
 
 	</div>
 </section>

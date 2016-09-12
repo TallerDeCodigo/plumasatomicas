@@ -30,7 +30,7 @@
 				<?php 
 					$args = array(
 							'post_type' => 'post',
-							'posts_per_page' => 3,
+							'posts_per_page' => 2,
 							'offset' => 1
 						);
 
@@ -84,31 +84,13 @@
 		</div>
 		<div class="wrapper normal">
 
-		<!-- /9262827/plumasatomicas_728x90_sup -->
-		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px; margin-top: 40px'>
-			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
-			</script>
-		</div>
+			<!-- /9262827/plumasatomicas_728x90_sup -->
+			<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:100%; width:100%; margin-top: 40px'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+				</script>
+			</div>
 
-		<?php
-			$stacks = fetch_stacks(3);
-
-			foreach ($stacks as $each_stack) : ?>
-			 
-				<a class="ficha-link" href="<?php echo $each_stack->permalink; ?>">
-					<div class="thumb_container">
-					<?php if($each_stack->thumb): ?>
-						<img src="<?php echo $each_stack->thumb; ?>" alt="<?php $each_stack->name; ?>">
-					<?php else: ?>
-						<img src="<?php echo THEMEPATH; ?>images/placeholder_stack.png" alt="Image not available">
-					<?php endif; ?>
-					</div>
-					<span><?php echo $each_stack->name; ?></span><br>
-					<span><?php echo $each_stack->card_count; ?> FICHAS</span>
-				</a>
-		<?php
-			endforeach; ?>
 		</div>
 	</section>
 	<section>
@@ -144,7 +126,7 @@
 					<?php
 						if(has_post_thumbnail($post->ID)){
 							$thumb = get_the_post_thumbnail_url($post->ID, "full");
-							echo "<img src='{$thumb}'>";
+							echo "<img alt='plumas atomicas' src='{$thumb}'>";
 						} ?>
 					</div>
 					<span><?php the_title(); ?></span>
@@ -162,6 +144,26 @@
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 			</div> -->
+			<div class="wrapper normal" style="margin-bottom: 50px;">
+			<?php
+				$stacks = fetch_stacks(3);
+
+				foreach ($stacks as $each_stack) : ?>
+				 
+					<a class="ficha-link" href="<?php echo $each_stack->permalink; ?>">
+						<div class="thumb_container">
+						<?php if($each_stack->thumb): ?>
+							<img src="<?php echo $each_stack->thumb; ?>" alt="<?php $each_stack->name; ?>">
+						<?php else: ?>
+							<img src="<?php echo THEMEPATH; ?>images/placeholder_stack.png" alt="Image not available">
+						<?php endif; ?>
+						</div>
+						<span><?php echo $each_stack->name; ?></span><br>
+						<span><?php echo $each_stack->card_count; ?> FICHAS</span>
+					</a>
+			<?php
+				endforeach; ?>	
+			</div>	
 		</div>
 		<div class="clearfix"></div>
 		<!-- /9262827/plumas_atomicas_970x90 -->

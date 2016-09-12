@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title><?php print_title(); ?></title>
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="description" content="Plumas Atómicas te explica el contexto de las noticias, la política y la cultura que impactan a tu generación, a través de productos libres y contestatarios: somos armas de discusión masiva.">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1, height=device-height">
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' rel='stylesheet' type='text/css'>
@@ -35,35 +35,34 @@
 	      ga('send', 'pageview');
 	    </script>
 		<!-- HEADER -->
-
 		<script type='text/javascript'>
-		  var googletag = googletag || {};
-		  googletag.cmd = googletag.cmd || [];
-		  (function() {
-		    var gads = document.createElement('script');
-		    gads.async = true;
-		    gads.type = 'text/javascript';
-		    var useSSL = 'https:' == document.location.protocol;
-		    gads.src = (useSSL ? 'https:' : 'http:') +
-		      '//www.googletagservices.com/tag/js/gpt.js';
-		    var node = document.getElementsByTagName('script')[0];
-		    node.parentNode.insertBefore(gads, node);
-		  })();
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+			})();
 		</script>
 
 		<script type='text/javascript'>
-		  googletag.cmd.push(function() {
-		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0').addService(googletag.pubads());
-		    googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0-a').addService(googletag.pubads());
-		    googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
-		    googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
-		    googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').addService(googletag.pubads());
-		    googletag.defineSlot('/9262827/plumasatomicas_970250_sup', [970, 250], 'div-gpt-ad-1465487084939-4').addService(googletag.pubads());
-		    googletag.pubads().enableSingleRequest();
-		    googletag.enableServices();
-		  });
+			googletag.cmd.push(function() {
+				var mapping = googletag.sizeMapping().addSize([320,60],[320,50]).addSize([448,60],[320,50]).addSize([655,70],[300,250]).addSize([1024,100],[970,250]).build();
+				googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0').addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0-a').addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').defineSizeMapping(mapping).addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumasatomicas_970250_sup', [970, 250], 'div-gpt-ad-1465487084939-4').defineSizeMapping(mapping).addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
 		</script>
-
 		<!-- /HEADER -->
 		<div class="oversc">
 			<div class="bkgpa"></div>
