@@ -56,6 +56,10 @@
 		</div>
 		
 	</section>
+
+	<!--
+		ARTICLES
+				-->
 	<section id="articles">
 		<div id="news-out" class="wrapper wide">
 			<?php 
@@ -85,7 +89,10 @@
 		</div>
 		<div class="wrapper normal">
 
-			<!-- /9262827/plumasatomicas_728x90_sup -->
+			<!-- /9262827/plumasatomicas_728x90_sup
+					ESPACIO PARA EL BANNER DEL COMERCIAL BANNER TOP
+			 -->
+
 			<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:100%; width:100%; margin-top: 40px'>
 				<script type='text/javascript'>
 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
@@ -94,6 +101,7 @@
 
 		</div>
 	</section>
+
 	<section>
 		<div class="wrapper normal">
 			<?php get_template_part("sidebar", "breaking"); ?>
@@ -167,7 +175,11 @@
 			</div>	
 		</div>
 		<div class="clearfix"></div>
-		<!-- /9262827/plumas_atomicas_970x90 -->
+		<!-- 
+			/9262827/plumas_atomicas_970x90 
+			ESPACIO PARA EL BANNER COMERCIAL DEL FOOTER
+		-->
+
 		<div class="ad_space"  id='div-gpt-ad-1465487084939-4' style='height:250px; width:970px;'>
 			<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-4'); });

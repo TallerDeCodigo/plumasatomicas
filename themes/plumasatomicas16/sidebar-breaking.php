@@ -1,5 +1,9 @@
 <aside id="sidebar-left">
 	<!-- /9262827/plumasatomicas_300x250_int -->
+
+	<!--
+		ESPACIO PARA EL COMERCIAL EN EL SIDEBAR
+		-->
 	<div class="ad_space" id='div-gpt-ad-1465487084939-2'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-2'); });

@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 

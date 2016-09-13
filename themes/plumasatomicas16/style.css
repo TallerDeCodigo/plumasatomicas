@@ -300,18 +300,9 @@ code {
 	text-shadow:1px 1px 3px #000;
 }
 
-#articles {
-	/*background:#3F3F3F;*/
-}
-
-#articles .wrapper {
-	text-align:center;
-}
-
-#articles a {
-	width:32%;
-	min-width:295px;
-}
+#articles {/*background:#3F3F3F;*/}
+#articles .wrapper {text-align:center;}
+#articles a {width:32%;min-width:295px;}
 
 .ficha-link {
 	height:auto;
@@ -413,6 +404,7 @@ code {
 .ad_space{
 	display: block;
     margin: 1rem auto;
+    height:250px!important;
 }
 
 .ad_space.top{
@@ -609,8 +601,8 @@ code {
 .contenido blockquote.quote p {color:#3f3f3f; text-align: left!important; font-size: 90%; font-style: normal;}
 
 /*** WHAT THE FACT ***/
-
-.tag_cloud code {opacity: 1}
+.tag_cloud{-webkit-column-count:3;-moz-column-count:3;column-count:3;}
+.tag_cloud code {opacity: 1;margin-top:5px;}
 
 .divider{width: 100%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
 .wadafact { width: 100%; margin: 0 4%;}
@@ -1707,20 +1699,14 @@ footer span {
 #news-out {
 	display:none;
 }
-
-#resp-main {
-	display:none;
-}
-
-.searchbar {
-	left:1px;
-}
+#resp-main {display:none;}
+.searchbar {left:1px;}
 
 }
 
 @media (max-width:684px) {
 
-.ad_space {display: none!important;}
+/*.ad_space {display: none!important;}*/
 p img {max-width: 100%; height: auto;} 
 
 .wrapper {
@@ -1908,28 +1894,13 @@ header {
 	width:100%;
 	max-width:1000px;
 }
+.sidebar {display:none;}
+#dissappear {display:none;}
+.contenido h1 {font-size:195%;}
+.contenido h2 {font-size:140%;}
+.searchbar {right:1px;}
 
-.sidebar {
-	display:none;
-}
-
-#dissappear {
-	display:none;
-}
-
-.contenido h1 {
-	font-size:195%;
-}
-
-.contenido h2 {
-	font-size:140%;
-}
-
-.searchbar {
-	right:1px;
-}
-
-/*** WADAFACT MÓVIL ***/ 
+/*** WADAFACT MÓVIL ** 
 
 .opinologo_columnista {width: 100%!important; float:none!important; min-height: 220px!important;}
 .opinologo_columnista .bio_columnista {display: none!important;}
@@ -2051,23 +2022,25 @@ p strong {color: #606060;}
 
 #cardss {font-size:20px!important;}
 
-@media (max-width:999px) {
-	.list {display:none;}
-	#ficha-icon {display:block;}
-}
-
 @media (min-width:1000px) {
 	.list {display:block;}
 	#ficha-icon {display:none;}
 }
 
+@media (max-width:999px) {
+	.list {display:none;}
+	#ficha-icon {display:block;}
+}
+
+
 /* OPINOLOGOS */
 
-@media (max-width: 684px) {
+
+@media (min-width: 685px) {
 	.who, .postura_link {width:100%;}
 }
 
-@media (min-width: 685px) {
+@media (max-width: 684px) {
 	.who, .postura_link {width:100%;}
 }
 

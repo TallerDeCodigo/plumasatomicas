@@ -1,6 +1,10 @@
 <div class="sidebar">
 	<div class="filler"></div>
-	<!-- /9262827/plumas_atomicas_300x600 -->
+	<!-- 
+	/9262827/plumas_atomicas_300x600 
+		ESPACIO PARA EL BANNER COMERCIAL 
+	-->
+
 	<div class="ad_space top center" id='div-gpt-ad-1465487084939-0' style='height:600px; width:300px;'>
 		<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-0'); });

@@ -39,6 +39,13 @@
 });
 
 $(window).on("load resize",function(){
+
+		var ancho_screen = $(window).width();
+
+		if(ancho_screen < 1000){
+			console.log(ancho_screen);
+		}
+
 		var ancho = document.documentElement.clientWidth;
 		var alto = document.documentElement.clientHeight;
 		if (alto < 783) {
