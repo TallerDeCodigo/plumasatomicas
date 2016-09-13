@@ -611,12 +611,9 @@ code {
 .contenido blockquote.quote p {color:#3f3f3f; text-align: left!important; font-size: 90%; font-style: normal;}
 
 /*** WHAT THE FACT ***/
-.tag_cloud{
-	-moz-column-count:3;
-	-webkit-column-count:3;
-	column-count:3;
-}
-.tag_cloud code {opacity: 1}
+.tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;}
+.tag_cloud code {opacity:1;margin-top:5px;}
+.tamano_fuente{font-size:100%!important;}
 
 .divider{width: 100%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
 .wadafact { width: 100%; margin: 0 4%;}

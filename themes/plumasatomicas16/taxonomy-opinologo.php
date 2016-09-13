@@ -156,7 +156,7 @@
 						if(!$personaje) continue;
 					?>
 					
-					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 

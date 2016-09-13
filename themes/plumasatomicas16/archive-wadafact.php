@@ -12,7 +12,7 @@
 
 			<p class="intro">¿Qué analizamos de las columnas? Simple: Si los argumentos se basan en Dichos o Hechos La postura política del columnista expresada en ese espacio Qué temas tocan más, qué temas evaden De qué personajes prefieren no hablar </p>
 
-			<p>TOTAL DE COLUMNAS ANALIZADAS: </p>
+			<p>TOTAL DE COLUMNAS ANALIZADAS:  </p>
 
 			<section class="columnists_slider">
 			
