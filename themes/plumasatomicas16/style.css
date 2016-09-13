@@ -295,7 +295,7 @@ code {
 }
 
 #articles {
-	background:#3F3F3F;
+	background:none;
 }
 
 #articles .wrapper {
@@ -316,6 +316,7 @@ code {
 	overflow:hidden;
 	box-shadow:0 3px 3px -3px #000;
 	vertical-align:top;
+	width:33%;
 }
 
 .ficha-link div {
