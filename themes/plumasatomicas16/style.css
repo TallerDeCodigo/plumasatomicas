@@ -313,7 +313,7 @@ code {
 	overflow:hidden;
 	box-shadow:0 3px 3px -3px #000;
 	vertical-align:top;
-	width: 33%;
+	width: 32.85%;
 }
 
 .ficha-link div {
@@ -404,9 +404,14 @@ code {
 .ad_space{
 	display: block;
     margin: 1rem auto;
-    height:250px!important;
+    width:100%!important;
+    height:auto!important;
 }
 
+.ad_space div{width:100%!important;}
+.ad_space iframe{width:100%!important;}
+
+#sm_player{margin:0 auto;}
 .ad_space.top{
 	margin-top: 0!important;
 }
@@ -1705,6 +1710,18 @@ footer span {
 }
 
 @media (max-width:684px) {
+	.ficha-link {
+		height:auto;
+		background:#FFF;
+		border:1px solid #cbcaca;
+		border-radius:5px;
+		text-align:left;
+		overflow:hidden;
+		box-shadow:0 3px 3px -3px #000;
+		vertical-align:top;
+		width: 100%;
+		margin:10px auto;
+	}
 
 /*.ad_space {display: none!important;}*/
 p img {max-width: 100%; height: auto;} 
@@ -2042,6 +2059,7 @@ p strong {color: #606060;}
 
 @media (max-width: 684px) {
 	.who, .postura_link {width:100%;}
+
 }
 
 .opinologo h1 {text-align:center;}

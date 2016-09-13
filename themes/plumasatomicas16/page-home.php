@@ -92,12 +92,13 @@
 			<!-- /9262827/plumasatomicas_728x90_sup
 					ESPACIO PARA EL BANNER DEL COMERCIAL BANNER TOP
 			 -->
-
-			<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:100%; width:100%; margin-top: 40px'>
-				<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
-				</script>
-			</div>
+			 <div style="margin:0 auto;">
+				<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:100%; width:100%; margin-top: 40px'>
+					<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-3'); });
+					</script>
+				</div>
+			 </div>
 
 		</div>
 	</section>
@@ -179,11 +180,12 @@
 			/9262827/plumas_atomicas_970x90 
 			ESPACIO PARA EL BANNER COMERCIAL DEL FOOTER
 		-->
-
-		<div class="ad_space"  id='div-gpt-ad-1465487084939-4' style='height:250px; width:970px;'>
-			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-4'); });
-			</script>
+		<div style="margin:0 auto;">
+			<div class="ad_space"  id='div-gpt-ad-1465487084939-4' style='height:250px; width:970px;'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465487084939-4'); });
+				</script>
+			</div>
 		</div>
 
 	</section>

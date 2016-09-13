@@ -38,13 +38,11 @@
 		}, 1000);
 });
 
+$(document).ready(function(){
+	 //console.log( $('.ad_space').html() );
+});
+
 $(window).on("load resize",function(){
-
-		var ancho_screen = $(window).width();
-
-		if(ancho_screen < 1000){
-			console.log(ancho_screen);
-		}
 
 		var ancho = document.documentElement.clientWidth;
 		var alto = document.documentElement.clientHeight;

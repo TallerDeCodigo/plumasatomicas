@@ -57,7 +57,7 @@
 				googletag.defineSlot('/9262827/plumas_atomicas_300x600', [300, 600], 'div-gpt-ad-1465487084939-0-a').addService(googletag.pubads());
 				googletag.defineSlot('/9262827/plumas_atomicas_970x90', [[468, 60], [320, 250], [970, 250]], 'div-gpt-ad-1465487084939-1').addService(googletag.pubads());
 				googletag.defineSlot('/9262827/plumasatomicas_300x250_int', [[300, 250], [300, 100]], 'div-gpt-ad-1465487084939-2').addService(googletag.pubads());
-				googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 90], 'div-gpt-ad-1465487084939-3').defineSizeMapping(mapping).addService(googletag.pubads());
+				googletag.defineSlot('/9262827/plumasatomicas_728x90_sup', [728, 250], 'div-gpt-ad-1465487084939-3').defineSizeMapping(mapping).addService(googletag.pubads());
 				googletag.defineSlot('/9262827/plumasatomicas_970250_sup', [970, 250], 'div-gpt-ad-1465487084939-4').defineSizeMapping(mapping).addService(googletag.pubads());
 				googletag.pubads().enableSingleRequest();
 				googletag.enableServices();
