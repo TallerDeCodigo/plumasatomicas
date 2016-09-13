@@ -41,13 +41,15 @@
 				<span><?php echo $opinologo->description; ?></span>
 			</div>
 			<h3>"Postura política vertida en esta columna" </h3>
-			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>"><div class="postura">
+			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
+				<div class="postura">
 					<div>
 						<img src="<?php echo THEMEPATH; ?>images/postura.svg">
 						<div class="pointer" style="<?php echo 'left: '.($res_x-5).'%;'.'top: '.($res_y-5).'%;'; ?>"></div>
 					</div><br>
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
-			</div></a>
+				</div>
+			</a>
 
 			<!-- <p>Columnas analizadas : <?php echo $opinologo->count;?></p> -->
 			
