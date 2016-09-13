@@ -1,7 +1,4 @@
-<?php
- 	get_header();
- 	the_post(); ?>
-
+<?php get_header(); the_post(); ?>
 <section id="post-sec">
 	<div class="wrapper-special">
 		<div class="contenido">
