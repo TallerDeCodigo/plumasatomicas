@@ -16,6 +16,8 @@
 	$y_axis_name = ($grade[y] >=  0.5) ? "Totalitario" : "Centro";
 	$y_axis_name = ($grade[y] <= -0.5) ? "Liberal"     : $y_axis_name;
 
+	$n_opinologo = $opinologo->name;;
+
 	if(isset($_GET['charts'])){ $charts = $_GET['charts']; }
 
 ?>
@@ -40,6 +42,8 @@
 				<!-- <span><?php echo $opinologo->name; ?></span> -->
 				<span><?php echo $opinologo->description; ?></span>
 			</div>
+			<p>Número de entregas de esta columna analizados: <?php echo $opinologo->count;?></p>
+
 			<h3>"Postura política vertida en esta columna" </h3>
 			<a class="postura_link" href="<?php echo site_url('como-medimos-el-discurso-politico'); ?>">
 				<div class="postura">
@@ -51,7 +55,7 @@
 				</div>
 			</a>
 
-			<!-- <p>Columnas analizadas : <?php echo $opinologo->count;?></p> -->
+			
 			
 			<div class="charts">
 				<h3 style="text-align:left;">"De las columnas analizadas (<?php echo $opinologo->count;?>) de este autor, estas son las veces que ha utilizado dichos (opiniones) vs. hechos (cifras) en sus argumentos."</h3>
@@ -156,7 +160,7 @@
 						if(!$personaje) continue;
 					?>
 					
-					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> (<?php echo $ids_personajes_conteo[$id_personaje]; ?>)</code>
 
 					<?php endforeach;?>
 
@@ -209,7 +213,7 @@
 						if(!$personaje) continue;
 					?>
 					
-					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> (<?php echo $ids_personajes_conteo[$id_personaje]; ?>)</code>
 
 					<?php endforeach;?>
 
@@ -217,6 +221,7 @@
 
 			<hr class="divider">
 
+			<h3>Más entregas de columna de <?php echo $n_opinologo; ?></h3>
 			<div class="post-list">
 			<?php
 				if(have_posts()): while(have_posts()):
@@ -228,14 +233,14 @@
 						<div class="thumb_container">
 							$thumb_formatted
 						</div>
-						<span class="titulo_post_opinologo">$post->post_title</span>
+						<span class="titulo_post_opinologo">Análisis de la entrega de columna: $post->post_title</span>
 					</a>
 HTML;
 				endwhile; endif; ?>
 			</div>
 
 			<hr class="divider"></hr>
-			
+			<h3>El color de las plumas</h3>
 			<div id="ensayo-wadafact" class="mini-wrapper full_two">
 				<?php 
 					$some_essays = fetch_some_essays($opinologo->term_id, 4);
