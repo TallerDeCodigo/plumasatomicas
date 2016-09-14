@@ -3479,12 +3479,12 @@ $(document).ready(function() {
 								{
 									data: [data_dichos, data_hechos],
 									backgroundColor: [
-										"#fa6b5b",
-										"#28d8b3" //C0EFFB
+										"#FFA399",
+										"#83DECB" //C0EFFB
 									],
 									hoverBackgroundColor: [
-										"#fe7f6f",
-										"#2fdfb9"
+										"#fa6b5b",
+										"#28d8b3"
 									],
 									borderWidth: 0
 								}]
