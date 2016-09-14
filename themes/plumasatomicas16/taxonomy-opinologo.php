@@ -209,7 +209,7 @@
 						if(!$personaje) continue;
 					?>
 					
-					<code data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
+					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?></code>
 
 					<?php endforeach;?>
 
@@ -217,24 +217,6 @@
 
 			<hr class="divider">
 
-			<div id="ensayo-wadafact" class="mini-wrapper full_two">
-				<?php 
-					$some_essays = fetch_some_essays($opinologo->term_id, 4);
-					foreach ($some_essays as $each_essay):
-						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
-						$permalink = get_the_permalink($each_essay->ID);
-					echo <<<HTML
-						<a class="post mini" href="$permalink">
-							<div class="thumb_container">$random_thumb</div>
-							<span>$each_essay->post_title</span>
-						</a>
-HTML;
-					endforeach;
-
-			?>
-			</div>
-
-			<hr class="divider"></hr>
 			<div class="post-list">
 			<?php
 				if(have_posts()): while(have_posts()):
@@ -251,7 +233,25 @@ HTML;
 HTML;
 				endwhile; endif; ?>
 			</div>
+
+			<hr class="divider"></hr>
 			
+			<div id="ensayo-wadafact" class="mini-wrapper full_two">
+				<?php 
+					$some_essays = fetch_some_essays($opinologo->term_id, 4);
+					foreach ($some_essays as $each_essay):
+						$random_thumb = (has_post_thumbnail($each_essay->ID)) ? get_the_post_thumbnail($each_essay->ID, "medium") : "";
+						$permalink = get_the_permalink($each_essay->ID);
+					echo <<<HTML
+						<a class="post mini" href="$permalink">
+							<div class="thumb_container">$random_thumb</div>
+							<span>$each_essay->post_title</span>
+						</a>
+HTML;
+					endforeach;
+
+			?>
+			</div>
 			<!-- Share buttons -->
 			<!-- <div class="addthis_sharing_toolbox center"></div> -->
 			<br>
