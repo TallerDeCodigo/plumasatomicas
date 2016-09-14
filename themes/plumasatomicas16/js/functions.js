@@ -3479,8 +3479,8 @@ $(document).ready(function() {
 								{
 									data: [data_dichos, data_hechos],
 									backgroundColor: [
-										"#FEFEFE",
-										"#C0EFFB"
+										"#fa6b5b",
+										"#28d8b3" //C0EFFB
 									],
 									hoverBackgroundColor: [
 										"#FEFEFE",
