@@ -3483,8 +3483,8 @@ $(document).ready(function() {
 										"#28d8b3" //C0EFFB
 									],
 									hoverBackgroundColor: [
-										"#FEFEFE",
-										"#C0EFFB"
+										"#fe7f6f",
+										"#2fdfb9"
 									],
 									borderWidth: 0
 								}]
