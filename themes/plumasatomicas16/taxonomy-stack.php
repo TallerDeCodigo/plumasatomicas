@@ -64,7 +64,6 @@
 									<li style="display:none"><a>null</a></li>
 								<?php
 									foreach ($stack_info['index'] as $index_elements) { ?>
-										
 										<li><a data-id="<?php echo $index_elements['index']; ?>	"><?php echo $index_elements['name']; ?></a></li>
 									<?php
 									} ?>

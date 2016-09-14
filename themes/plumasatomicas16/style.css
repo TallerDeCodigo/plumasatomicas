@@ -414,7 +414,7 @@ code {
 .ad_space{
 	display: block;
     margin: 1rem auto;
-    height:250px!important;
+    height:auto!important;
 }
 
 .ad_space.top{
@@ -611,7 +611,7 @@ code {
 .contenido blockquote.quote p {color:#3f3f3f; text-align: left!important; font-size: 90%; font-style: normal;}
 
 /*** WHAT THE FACT ***/
-.tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;}
+.tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;width:100%!important;}
 .tag_cloud code {opacity:1;margin-top:5px;}
 .tamano_fuente{font-size:100%!important;}
 
@@ -1976,6 +1976,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 }
 
 @media (max-width:684px) {
+	.ficha-link{width:100%;margin-bottom:40px;}
 	.columna {width:100%;}
 	.columna div {width:100%; height:170px; background:#DCDCDC; overflow:hidden;}
 }
@@ -1988,7 +1989,10 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .longr p:first-of-type {margin-top:60px;}
 .longr p strong {color:#000;}
 @media (max-width: 999px) and (min-width: 685px){
+	.ficha-link{width:47%;margin-bottom:40px;}
 	.longr {width: 100%; max-width:710px;}
+	.ficha-link:nth-of-type(even) {
+    margin-left: 4%;}
 }
 
 /* EMBEDED INSTA, TWITTER Y YOUTUBE */
@@ -2017,7 +2021,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .fal1 {width:60%; background:#f9d713;}
 .fal2 {width:40%; background:#f69696;}
 */
-.unit_chart{width: 90%; min-width: 640px; min-height: 188px; margin: auto; display: block; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #b7b6b6;}
+.unit_chart{width: 90%; min-width: 320px; min-height: 188px; margin: auto; display: block; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #b7b6b6;}
 .unit_chart.last{margin-bottom: 5rem;}
 .unit_chart.blue{background-color: #64d4f9;}
 .unit_chart.green{background-color: #28d8b3;}
@@ -2051,7 +2055,7 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 
 .twitter-tweet {margin: 0 auto!important;}
 
-a.chart_checker {opacity: 0.7}
+a.chart_checker {opacity: 0.7;width:100%;}
 a.chart_checker:hover {opacity: 1}
 
 p strong {color: #606060;}
@@ -2072,6 +2076,8 @@ p strong {color: #606060;}
 
 @media (max-width: 684px) {
 	.who, .postura_link {width:100%;}
+	.unit_chart.bar_right .hechos, .unit_chart.bar_right .dichos{font-size: 3rem; top: 66%; left: 5%;}
+	.unit_chart{width:100%;}
 }
 
 @media (min-width: 685px) {

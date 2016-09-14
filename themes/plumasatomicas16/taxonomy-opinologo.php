@@ -268,8 +268,8 @@ HTML;
 			</div>
 			<br/>
 			<br/>
-			<div id="dissappear" class="mini-wrapper">
-			<?php 
+			<!-- <div id="dissappear" class="mini-wrapper">
+			<?php /*
 				$some_news = fetch_some_random_news();
 				foreach ($some_news as $random_news):
 					$random_thumb = (has_post_thumbnail($random_news->ID)) ? get_the_post_thumbnail($random_news->ID, "medium") : "";
@@ -281,9 +281,9 @@ HTML;
 					</a>
 HTML;
 				endforeach;
-
+*/
 		?>
-			</div>
+			</div> -->
 			<!-- <div id="bottombar" style="margin-top:10px">
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>

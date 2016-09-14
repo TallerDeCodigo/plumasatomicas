@@ -154,7 +154,7 @@
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 				<a class="side-link" href="#"><div></div><span>Lorem ipsum dolor sit amet, consectetur adipis</span></a>
 			</div> -->
-			<div class="wrapper normal" style="margin-bottom: 50px;">
+			<div style="margin-bottom: 50px;">
 			<?php
 				$stacks = fetch_stacks(3);
 
