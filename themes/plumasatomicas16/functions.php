@@ -197,7 +197,7 @@ function the_title_limit($length, $replacer = '...') {
 		global $page, $paged;
 
 		wp_title( '|', true, 'right' );
-		bloginfo( 'name' );
+		//bloginfo( 'name' );
 
 		// Add a page number if necessary
 		if ( $paged >= 2 || $page >= 2 ){
