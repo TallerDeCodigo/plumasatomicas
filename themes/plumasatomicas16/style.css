@@ -613,7 +613,7 @@ code {
 /*** WHAT THE FACT ***/
 .tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;width:100%!important;}
 .tag_cloud code {opacity:1;margin-top:5px;}
-.tamano_fuente{font-size:100%!important;}
+.tamano_fuente{font-size:100%!important;margin:0px 3px}
 
 .divider{width: 100%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
 .wadafact { width: 100%; margin: 0 4%;}
