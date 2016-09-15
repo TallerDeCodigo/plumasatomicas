@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title><?php print_title(); ?></title>
@@ -10,6 +10,9 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta http-equiv="cleartype" content="on">
+		<meta name="geo.region" content="MX-DIF" />
+		<meta name="geo.position" content="23.634501;-102.552784" />
+		<meta name="ICBM" content="23.634501, -102.552784" />
 		<?php wp_head(); ?>
 	</head>
 
