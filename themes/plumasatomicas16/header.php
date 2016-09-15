@@ -91,13 +91,13 @@
 			<div class="menu2">
 				<h4>SECCIONES</h4><br>
 				<div class="menu-column">
-					<a href="#">MEGALÓPOLIS</a>
-					<a href="#">EXPLICATIVOS</a>
+					<a href="https://plumasatomicas.com/category/mexico">MEGALÓPOLIS</a>
+					<a href="<?php echo site_url("card-stacks"); ?>">EXPLICATIVOS</a>
 					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> INFOGRAFÍAS</a>
-					<a href="#">ESTADOS</a>
-					<a href="#">OPINOLOGÍA</a>
-					<a href="https://medium.com/@plumasatomicas"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
-					<a href="#">INTERNACIONAL</a>
+					<a href="https://plumasatomicas.com/category/estados/">ESTADOS</a>
+					<a href="<?php echo site_url("wadafact"); ?>">OPINOLOGÍA</a>
+					<a href="https://longreads.plumasatomicas.com/" target="new"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
+					<a href="https://plumasatomicas.com/category/internacional/">INTERNACIONAL</a>
 					<a href="https://www.facebook.com/Plumasatomicas/videos"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> VIDEOS</a>
 				</div>
 				<div class="bottom1">
