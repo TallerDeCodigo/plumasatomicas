@@ -96,9 +96,9 @@
 					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> INFOGRAFÍAS</a>
 					<a href="#">ESTADOS</a>
 					<a href="#">OPINOLOGÍA</a>
-					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
+					<a href="https://medium.com/@plumasatomicas"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
 					<a href="#">INTERNACIONAL</a>
-					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> VIDEOS</a>
+					<a href="https://www.facebook.com/Plumasatomicas/videos"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> VIDEOS</a>
 				</div>
 				<div class="bottom1">
 					<a href="#"><b>ACERCA DEL PROYECTO</b></a>
