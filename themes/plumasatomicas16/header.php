@@ -66,27 +66,48 @@
 		<!-- /HEADER -->
 		<div class="oversc">
 			<div class="bkgpa"></div>
-			<div class="menu1">
-				<a href="<?php echo site_url('archive'); ?>">EXTRA EXTRA!</a>
+			<!-- <div class="menu1">
+				<a href="#">MEGALÓPOLIS</a>
+				<a href="#">ESTADOS</a>
+				<a href="#">INTERNACIONAL</a>
+				<a href="#">EXPLICATIVOS</a>
+				<a href="#">OPINOLOGÍA</a>
+				<a href="#">VIDEOS</a>
+				<a href="#">INFOGRAFÍAS</a>
+				<a href="#">LONGREADS</a>
+				<a href="<?php //echo site_url('archive'); ?>">EXTRA EXTRA!</a>
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a>
-				<a href="<?php echo site_url("wadafact"); ?>">WADAFACT</a>
-				<a href="<?php echo site_url("card-stacks"); ?>">CARD STACK</a>
+				<a href="<?php //echo site_url("wadafact"); ?>">WADAFACT</a>
+				<a href="<?php //echo site_url("card-stacks"); ?>">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom">
 					<a href="#">PLUMAS</a>
 					<a href="#">MANIFIESTO</a>
 					<a href="#">CONTACTO</a>
 					<a href="#">ANÚNCIATE</a>
-				</div>
-			</div>
+				</div> 
+			</div>-->
 			<div class="menu2">
 				<h4>SECCIONES</h4><br>
-				<a href="<?php echo site_url('archive'); ?>">EXTRA EXTRA!</a>
+				<div class="menu-column">
+					<a href="#">MEGALÓPOLIS</a>
+					<a href="#">EXPLICATIVOS</a>
+					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> INFOGRAFÍAS</a>
+					<a href="#">ESTADOS</a>
+					<a href="#">OPINOLOGÍA</a>
+					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
+					<a href="#">INTERNACIONAL</a>
+					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> VIDEOS</a>
+				</div>
+				<div class="bottom1">
+					<a href="#"><b>ACERCA DEL PROYECTO</b></a>
+				</div>
+				<!-- <a href="<?php //echo site_url('archive'); ?>">EXTRA EXTRA!</a>
 				<a href="https://www.facebook.com/Plumasatomicas/photos" target="_blank">PANFLETOS</a>
 				<a href="https://medium.com/@plumasatomicas" target="_blank">ARTILLERÍA PESADA</a><br>
-				<a href="<?php echo site_url("wadafact"); ?>">WADAFACT</a>
-				<a href="<?php echo site_url("card-stacks"); ?>">CARD STACK</a>
+				<a href="<?php //echo site_url("wadafact"); ?>">WADAFACT</a>
+				<a href="<?php //echo site_url("card-stacks"); ?>">CARD STACK</a>
 				<a href="https://www.facebook.com/Plumasatomicas/videos" target="_blank">VIDEO</a>
 				<div class="bottom1">
 					<h4>ACERCA DE</h4><br>
@@ -94,7 +115,7 @@
 					<a href="#">MANIFIESTO</a>
 					<a href="#">CONTACTO</a>
 					<a href="#">ANÚNCIATE</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<header>
