@@ -8,6 +8,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1, height=device-height">
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta http-equiv="cleartype" content="on">
 		<?php wp_head(); ?>
 	</head>
