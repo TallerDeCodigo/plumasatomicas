@@ -210,18 +210,18 @@ $(window).load(function(){
 				$('#nav-icon3').click(function(){
 						$("#nav-icon3").toggleClass('open');
 						$("body").toggleClass('fixeddd');
-						var anchohead1 = document.documentElement.clientWidth;
-						if (anchohead1 < 900 ) {
-								if ($('.oversc').css('display') != 'none') {
-										$(".menu1").animate({left:"-240px"}, 400);
-										setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
-										setTimeout(function() { $(".oversc").hide() }, 450);
-								} else {
-										$(".oversc").show();
-										$(".oversc").animate({opacity:"1"}, 150);
-										$(".menu1").animate({left:"0px"}, 400);
-								}
-						} else {
+						// var anchohead1 = document.documentElement.clientWidth;
+						// if (anchohead1 < 900 ) {
+						// 		if ($('.oversc').css('display') != 'none') {
+						// 				$(".menu1").animate({left:"-240px"}, 400);
+						// 				setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
+						// 				setTimeout(function() { $(".oversc").hide() }, 450);
+						// 		} else {
+						// 				$(".oversc").show();
+						// 				$(".oversc").animate({opacity:"1"}, 150);
+						// 				$(".menu1").animate({left:"0px"}, 400);
+						// 		}
+						// } else {
 								if ($('.oversc').css('display') != 'none') {
 										$(".menu2 a").animate({opacity:"0",fontSize:"100%"}, 400);
 										setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
@@ -233,15 +233,15 @@ $(window).load(function(){
 										setTimeout(function() { $(".menu2 a").animate({opacity:"1",fontSize:"90%"}, 500) }, 300);
 										
 								}
-						}
+						// }
 
 				});
 
 				$(".bkgpa").click(function(){
 						$("#nav-icon3").toggleClass('open');
-						$(".menu1").animate({left:"-240px"}, 400);
-						setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
-						setTimeout(function() { $(".oversc").hide() }, 450);
+						// $(".menu1").animate({left:"-240px"}, 400);
+						// setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
+						// setTimeout(function() { $(".oversc").hide() }, 450);
 						$(".menu2 a").animate({opacity:"0",fontSize:"100%"}, 400);
 						setTimeout(function() { $(".oversc").animate({opacity:"0"}, 150) }, 300);
 						setTimeout(function() { $(".oversc").hide() }, 450);
