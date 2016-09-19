@@ -2149,3 +2149,5 @@ p strong {color: #606060;}
 	.bottom1 {margin-top:10px;}
 	.menu-column a img {height:12px;margin-right:1px;}
 }
+.mejs-inner{position:static!important;}
+.mejs-overlay-button{display:none}
