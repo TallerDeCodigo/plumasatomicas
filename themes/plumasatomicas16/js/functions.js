@@ -37,9 +37,15 @@
 				$("#cardss").animate({opacity: 1 }, 300);
 		}, 1000);
 });
-
+$('.overscreen').hide();
 $(document).ready(function(){
-	 //console.log( $('.ad_space').html() );
+	$('.postura_link').mouseenter(function(){
+		$('.overscreen').fadeIn('slow');
+	});
+
+	$('.postura_link').mouseleave(function(){
+		$('.overscreen').fadeOut('slow');
+	});
 });
 
 $(window).on("load resize",function(){

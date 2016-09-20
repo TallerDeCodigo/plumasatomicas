@@ -53,12 +53,12 @@
 					</div><br>
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 				</div>
+				<div class="overscreen">
+					<p>
+						¿Qué es esto? Wadafact analiza los postulados de los columnistas en sus espacios y ubica la posición política correspondiente. Usamos el gráfico de Nolan para mostrar los resultados.
+					</p>
+				</div>		
 			</a>
-			<div class="overscreen">
-				<p>
-					¿Qué es esto? Wadafakt
-				</p>
-			</div>		
 
 			
 			

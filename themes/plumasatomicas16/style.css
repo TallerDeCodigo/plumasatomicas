@@ -611,6 +611,8 @@ code {
 .contenido blockquote.quote p {color:#3f3f3f; text-align: left!important; font-size: 90%; font-style: normal;}
 
 /*** WHAT THE FACT ***/
+
+
 .tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;width:100%!important;float:left;}
 .tag_cloud code {opacity:1;margin-top:5px;}
 .tamano_fuente{font-size:100%!important;margin:0px 3px}
@@ -751,6 +753,7 @@ p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
 	opacity: 1;
 	cursor: help;
 }
+.overscreen{background:rgba(0,0,0,0.9);position:absolute;top:0%;left:5%;bottom:0%;right:5%;padding:12% 2%;}
 
 .postura>div{
 	position: relative!important;
