@@ -175,7 +175,7 @@
 				endforeach; ?>	
 			</div>	
 		</div>
-		<div class="clearfix"></div>
+		<div class="clearfix"></div><br>
 		<!-- 
 			/9262827/plumas_atomicas_970x90 
 			ESPACIO PARA EL BANNER COMERCIAL DEL FOOTER
