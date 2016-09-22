@@ -128,7 +128,10 @@
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>
-					<span><?php the_title(); ?></span>
+					<span>
+						<?php the_title(); ?>
+					</span>
+					<span><?php the_date(); ?></span>
 				</a>
 				<?php } else { ?>
 				<a class="post mini" href="<?php the_permalink(); ?>">

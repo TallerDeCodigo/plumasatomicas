@@ -403,6 +403,7 @@ code {
     letter-spacing: 0.6px;
     text-decoration: none;
 }
+.post.mini p.excerpt{text-align:left!important}
 
 #home-content a.mini:nth-of-type(odd)  {
 	margin-left:-5px;
@@ -651,6 +652,7 @@ code {
 #ensayo-wadafact a.mini:last-of-type {margin-bottom: 0px!important;margin-right: 0px!important;}
 #ensayo-wadafact p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
 p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
+.post p.excerpt{text-align: left}
 
 .whatthefact blockquote {
 	color:#3F3F3F;
