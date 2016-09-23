@@ -1,6 +1,6 @@
 <?php 
 	get_header(); ?>
-<section style="margin:120px 0px 15px 0px;">
+<section class="ifempty" style="margin:120px 0px 15px 0px;">
 	<div class="wrapper-special">
 		<!-- /9262827/plumasatomicas_728x90_sup -->
 		<div class="ad_space"  id='div-gpt-ad-1465487084939-3' style='height:90px; width:728px;'>
@@ -25,6 +25,7 @@
 					<div class="thumb_container">
 						$thumb_formatted
 					</div>
+					<span>$post->post_date</span>
 					<span>$post->post_title</span>
 				</a>
 HTML;

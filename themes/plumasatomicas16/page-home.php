@@ -113,10 +113,13 @@
 						'posts_per_page' => 5,
 						'offset' => 4
 					);
-
 					$posts = get_posts($args);
+
 					$count = 0;
 					foreach($posts as $post): setup_postdata($post);
+					// echo "<pre>";
+					// 	print_r(the_title() . " ".get_the_date() );
+					// echo "</pre>";
 					$count ++; ?>
 
 				<?php if($count == 1){ ?>
@@ -128,6 +131,7 @@
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>
+					<span><?php echo get_the_date(); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } else { ?>
@@ -139,6 +143,7 @@
 							echo "<img alt='plumas atomicas' src='{$thumb}'>";
 						} ?>
 					</div>
+					<span class="fecha"><?php echo get_the_date(); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } endforeach; wp_reset_query(); ?>
@@ -175,7 +180,7 @@
 				endforeach; ?>	
 			</div>	
 		</div>
-		<div class="clearfix"></div>
+		<div class="clearfix"></div><br>
 		<!-- 
 			/9262827/plumas_atomicas_970x90 
 			ESPACIO PARA EL BANNER COMERCIAL DEL FOOTER

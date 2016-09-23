@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title><?php print_title(); ?></title>
@@ -8,7 +8,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1, height=device-height">
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta http-equiv="cleartype" content="on">
+		<meta name="geo.region" content="MX-DIF" />
+		<meta name="geo.position" content="23.634501;-102.552784" />
+		<meta name="ICBM" content="23.634501, -102.552784" />
 		<?php wp_head(); ?>
 	</head>
 
@@ -91,13 +95,13 @@
 			<div class="menu2">
 				<h4>SECCIONES</h4><br>
 				<div class="menu-column">
-					<a href="#">MEGALÓPOLIS</a>
-					<a href="#">EXPLICATIVOS</a>
+					<a href="https://plumasatomicas.com/category/mexico">MEGALÓPOLIS</a>
+					<a href="<?php echo site_url("card-stacks"); ?>">EXPLICATIVOS</a>
 					<a href="#"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> INFOGRAFÍAS</a>
-					<a href="#">ESTADOS</a>
-					<a href="#">OPINOLOGÍA</a>
-					<a href="https://medium.com/@plumasatomicas"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
-					<a href="#">INTERNACIONAL</a>
+					<a href="https://plumasatomicas.com/category/estados/">ESTADOS</a>
+					<a href="<?php echo site_url("wadafact"); ?>">OPINOLOGÍA</a>
+					<a href="https://longreads.plumasatomicas.com/" target="new"><img src="<?php echo THEMEPATH; ?>images/header/md.png"> LONGREADS</a>
+					<a href="https://plumasatomicas.com/category/internacional/">INTERNACIONAL</a>
 					<a href="https://www.facebook.com/Plumasatomicas/videos"><img src="<?php echo THEMEPATH; ?>images/header/fb.png"> VIDEOS</a>
 				</div>
 				<div class="bottom1">
@@ -139,4 +143,3 @@
 				</nav>
 			</div>
 		</header>
-		

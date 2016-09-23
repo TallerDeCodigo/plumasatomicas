@@ -37,9 +37,15 @@
 				$("#cardss").animate({opacity: 1 }, 300);
 		}, 1000);
 });
-
+$('.overscreen').hide();
 $(document).ready(function(){
-	 //console.log( $('.ad_space').html() );
+	$('.postura_link').mouseenter(function(){
+		$('.overscreen').fadeIn('slow');
+	});
+
+	$('.postura_link').mouseleave(function(){
+		$('.overscreen').fadeOut('slow');
+	});
 });
 
 $(window).on("load resize",function(){
@@ -56,11 +62,11 @@ $(window).on("load resize",function(){
 		if (ancho <= 685) {
 				$(".oversc").css("top", "69px");
 				var altover = alto-69 + "px";
-				$(".oversc").css("height", altover);
+				// $(".oversc").css("height", altover);
 		} else {
 				$(".oversc").css("top", "99px");
 				var altover = alto-99 + "px";
-				$(".oversc").css("height", altover);
+				// $(".oversc").css("height", altover);
 		}
 		var fixed = (ancho-950)/2;
 		fixed = fixed + "px";
@@ -209,7 +215,7 @@ $(window).load(function(){
 
 				$('#nav-icon3').click(function(){
 						$("#nav-icon3").toggleClass('open');
-						$("body").toggleClass('fixeddd');
+						//$("body").toggleClass('fixeddd');
 						// var anchohead1 = document.documentElement.clientWidth;
 						// if (anchohead1 < 900 ) {
 						// 		if ($('.oversc').css('display') != 'none') {
@@ -3454,7 +3460,17 @@ $(document).ready(function() {
 					// FP.moveSlideLeft();
 				}
 		});
+
+		/*
+			FOOTER
+		*/
+		
+		var screen_height = $(window).height();
+		var content_height = $('.ifempty').height();
+		console.log(content_height);
+
 });
+
 		
 		$(".descrip").fitVids();
 		/*** Cycle columnists slider ***/

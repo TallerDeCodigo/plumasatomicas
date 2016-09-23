@@ -386,7 +386,7 @@ code {
 .side-link span {
 	margin-left:80px;
 	font-size:0.8em;
-	padding:5px 0px;
+	padding:0px;
 }
 
 .post {
@@ -396,13 +396,14 @@ code {
 }
 
 .post span {
-	margin-top:5px;
+	margin-top:0px;
 }
 .post.mini span {
 	font-size: 2rem;
     letter-spacing: 0.6px;
     text-decoration: none;
 }
+.post.mini p.excerpt{text-align:left!important}
 
 #home-content a.mini:nth-of-type(odd)  {
 	margin-left:-5px;
@@ -475,12 +476,14 @@ code {
 	margin-left:-5px;
 	text-align:right;
 	padding-top:45px;
+	/*height: 100%!important;*/
 }
 
 .filler {
 	position:absolute;
 	top:0px;
 	background:#EEEEEE;
+	height:100%!important;
 }
 
 .contenido h1 {
@@ -490,6 +493,7 @@ code {
 	max-width:100%;
 	line-height: 50px;
 }
+.contenido h3{width:93.5%;}
 .contenido strong,
 .contenido em{display: inline;}
 
@@ -611,9 +615,11 @@ code {
 .contenido blockquote.quote p {color:#3f3f3f; text-align: left!important; font-size: 90%; font-style: normal;}
 
 /*** WHAT THE FACT ***/
-.tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;width:100%!important;}
+
+
+.tag_cloud{-moz-column-count:3;-webkit-column-count:3;column-count:3;width:100%!important;float:left;}
 .tag_cloud code {opacity:1;margin-top:5px;}
-.tamano_fuente{font-size:100%!important;}
+.tamano_fuente{font-size:100%!important;margin:0px 3px}
 
 .divider{width: 100%; clear: both; display: block; margin: 1rem auto 2.5rem auto; border: 1px solid #adadad;}
 .wadafact { width: 100%; margin: 0 4%;}
@@ -649,6 +655,7 @@ code {
 #ensayo-wadafact a.mini:last-of-type {margin-bottom: 0px!important;margin-right: 0px!important;}
 #ensayo-wadafact p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
 p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
+.post p.excerpt{text-align: left}
 
 .whatthefact blockquote {
 	color:#3F3F3F;
@@ -751,6 +758,7 @@ p.excerpt {font-size: 14px;text-align: left;color: #bfbfbf;line-height: 20px;}
 	opacity: 1;
 	cursor: help;
 }
+.overscreen{background:rgba(0,0,0,0.9);position:absolute;top:0%;left:5%;bottom:0%;right:5%;padding:12% 2%;}
 
 .postura>div{
 	position: relative!important;
@@ -1439,7 +1447,7 @@ ol li a {
 	font-size:150%;
 	text-align:center;
 	vertical-align:top;
-	height:100%;
+	/*height:100%;*/
 	display:none;
 	border-top:2px solid #757575;
 	overflow-y:scroll;
@@ -1950,8 +1958,8 @@ header {
 }
 
 
-.archivo { text-align:center!important; margin-bottom:20px;}
-.archivo.half {width:65%; text-align:center!important; margin-bottom:20px; padding-top:0;}
+.archivo { text-align:center!important; margin-bottom:0px;}
+.archivo.half {width:65%; text-align:center!important; margin-bottom:0px; padding-top:0;}
 .archivo.news h1{text-align:left;font-size:3rem;}
 .archivo.news .post>span{font-size:2.6rem;text-align:left;}
 .archivo.news .post>.excerpt{font-size:1.4rem;text-align:left; width: auto;}
@@ -1968,12 +1976,12 @@ nav.archii {padding:5px 40px 0px; margin-top:20px;}
 .rightside {right:0px; -webkit-transform:rotateY(180deg);}
 .archii a:not(.arrow) {margin:0px 4px;}
 .post-list {margin-top:25px;}
+.post-list a.post.columna{text-align: left;line-height: 30px}
 
 @media (min-width:685px) {
 	.columna {width:93.5%; height:170px;}
 	.columna div {position:absolute; left:0px; top:0px; width:300px; height:170px; background:#DCDCDC; overflow:hidden;}
-	.columna span,
-	.columna .excerpt {margin-left:310px;}
+	.columna span, .columna .excerpt {margin-left:330px;}
 }
 
 @media (max-width:684px) {
@@ -2149,3 +2157,8 @@ p strong {color: #606060;}
 	.bottom1 {margin-top:10px;}
 	.menu-column a img {height:12px;margin-right:1px;}
 }
+.mejs-inner{position:static!important;}
+.mejs-overlay-button{display:none}
+
+.fecha{font-size: 55%!important;color:#888;line-height: 5px!important;}
+.fecha2{color:#888;line-height: 5px!important;}

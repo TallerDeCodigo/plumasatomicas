@@ -22,7 +22,6 @@
 		
 		foreach($side_posts as $post): setup_postdata($post);
 		
-		
 	?>
 	<a class="side-link" href="<?php the_permalink(); ?>">
 		<div class="thumb_container">
@@ -32,8 +31,8 @@
 				echo "<img src='{$thumb}'>";
 			} ?>
 		</div>
+		<span class="fecha2"><?php  echo get_the_date(); ?></span>
 		<span><?php the_title_limit( 60, '...'); ?></span>
-		<span><?php  $post->post_date; ?></span>
 	</a>
 	<?php endforeach; wp_reset_query(); ?>
 </aside>

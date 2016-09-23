@@ -1,6 +1,6 @@
 <?php 
 	get_header(); ?>
-<section style="margin:120px 0px 15px 0px;">
+<section class="ifempty" style="margin:120px 0px 15px 0px;">
 	<div class="wrapper normal">
 		<div class="archivo wadafact clearfix">
 
@@ -13,7 +13,8 @@
 			<p class="intro">¿Qué analizamos de las columnas? Simple: Si los argumentos se basan en Dichos o Hechos La postura política del columnista expresada en ese espacio Qué temas tocan más, qué temas evaden De qué personajes prefieren no hablar </p>
 
 			<?php
-			$nColumnas = 512;
+			$nColumnas 	= 0;
+
 			$columnists = fetch_columnists();
 			
 			foreach ($columnists as $each_columnist):
@@ -71,7 +72,7 @@ HTML;
 						<a class="post mini" href="$permalink">
 							<div class="thumb_container">$random_thumb</div>
 							<span>$each_essay->post_title</span>
-							<p class="excerpt">$each_essay->post_excerpt</p>
+							<p class="excerpt algo">$each_essay->post_excerpt</p>
 						</a>
 HTML;
 					endforeach;

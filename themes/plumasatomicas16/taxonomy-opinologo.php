@@ -53,6 +53,11 @@
 					</div><br>
 					<!-- <span><?php echo $x_axis_name."-".$y_axis_name; ?></span> -->
 				</div>
+				<div class="overscreen">
+					<p>
+						¿Qué es esto? Wadafact analiza los postulados de los columnistas en sus espacios y ubica la posición política correspondiente. Usamos el gráfico de Nolan para mostrar los resultados.
+					</p>
+				</div>		
 			</a>
 
 			
@@ -150,19 +155,16 @@
 							$ids_personajes[] = get_post_meta($id->ID, 'iter_persona_3', true);
 						}
 					endforeach;
-					//print_r($ids_personajes);
 					$ids_personajes_conteo = array_count_values($ids_personajes);
-					//print_r($ids_personajes_conteo);
-					$ids_finales = array_unique($ids_personajes);
 
-					foreach($ids_finales as $id_personaje):
-						$personaje = get_term_by('id', $id_personaje, 'personaje');
-						if(!$personaje) continue;
-					?>
-					
-					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> (<?php echo $ids_personajes_conteo[$id_personaje]; ?>)</code>
+					arsort($ids_personajes_conteo);
 
-					<?php endforeach;?>
+					foreach($ids_personajes_conteo as $x => $x_value) {
+						$personaje = get_term_by('id', $x, 'personaje');
+
+					    echo '<code class="tamano_fuente" data-id="' . $personaje->term_id . '" data-peso="' .$x_value. '">#'. $personaje->name . '<br> ('. $x_value. ')</code>';
+					}	
+				?>
 
 			</div>
 
@@ -203,19 +205,17 @@
 							$ids_personajes[] = get_post_meta($id->ID, 'iter_tema_3', true);
 						}
 					endforeach;
+
 					//print_r($ids_personajes);
 					$ids_personajes_conteo = array_count_values($ids_personajes);
-					//print_r($ids_personajes_conteo);
-					$ids_finales = array_unique($ids_personajes);
+					arsort($ids_personajes_conteo);
 
-					foreach($ids_finales as $id_personaje):
-						$personaje = get_term_by('id', $id_personaje, 'tema');
-						if(!$personaje) continue;
+					foreach($ids_personajes_conteo as $x => $x_value) {
+						$personaje = get_term_by('id', $x, 'tema');
+
+					    echo '<code class="tamano_fuente" data-id="' . $personaje->term_id . '" data-peso="' .$x_value. '">#'. $personaje->name . ' <br>('. $x_value. ')</code>';
+					}
 					?>
-					
-					<code class="tamano_fuente" data-id="<?php echo $personaje->term_id; ?>" data-peso="<?php echo $ids_personajes_conteo[$id_personaje]; ?>">#<?php echo $personaje->name; ?> (<?php echo $ids_personajes_conteo[$id_personaje]; ?>)</code>
-
-					<?php endforeach;?>
 
 			</div>
 
@@ -226,6 +226,8 @@
 			<?php
 				if(have_posts()): while(have_posts()):
 					the_post();
+					$fecha = $post->post_date;
+					$fecha = date('d/m/Y');
 					$permalink = get_the_permalink($post->ID);
 					$thumb_formatted = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, "medium") : "";
 					echo <<<HTML
@@ -233,6 +235,7 @@
 						<div class="thumb_container">
 							$thumb_formatted
 						</div>
+						<span class="fecha"> $fecha </span>
 						<span class="titulo_post_opinologo">Análisis de la entrega de columna: $post->post_title</span>
 					</a>
 HTML;
