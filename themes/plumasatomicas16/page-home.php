@@ -113,10 +113,13 @@
 						'posts_per_page' => 5,
 						'offset' => 4
 					);
-
 					$posts = get_posts($args);
+
 					$count = 0;
 					foreach($posts as $post): setup_postdata($post);
+					// echo "<pre>";
+					// 	print_r(the_title() . " ".get_the_date() );
+					// echo "</pre>";
 					$count ++; ?>
 
 				<?php if($count == 1){ ?>
@@ -128,10 +131,8 @@
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>
-					<span>
-						<?php the_title(); ?>
-					</span>
-					<span><?php the_date(); ?></span>
+					<span><?php echo get_the_date(); ?></span>
+					<span><?php the_title(); ?></span>
 				</a>
 				<?php } else { ?>
 				<a class="post mini" href="<?php the_permalink(); ?>">
@@ -142,6 +143,7 @@
 							echo "<img alt='plumas atomicas' src='{$thumb}'>";
 						} ?>
 					</div>
+					<span><?php echo get_the_date(); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } endforeach; wp_reset_query(); ?>

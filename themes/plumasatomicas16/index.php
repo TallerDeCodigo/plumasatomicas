@@ -1,6 +1,6 @@
 <?php 
 	get_header(); ?>
-<section style="margin:120px 0px 15px 0px;">
+<section class="ifempty" style="margin:120px 0px 15px 0px;">
 	<div class="wrapper-special">
 		<div class="archivo half news contenido">
 			<h1>ARCHIVO</h1>

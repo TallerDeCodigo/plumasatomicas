@@ -3460,7 +3460,17 @@ $(document).ready(function() {
 					// FP.moveSlideLeft();
 				}
 		});
+
+		/*
+			FOOTER
+		*/
+		
+		screen_height = $(window).height();
+		content_height = $('.ifempty').height();
+		console.log(content_height);
+
 });
+
 		
 		$(".descrip").fitVids();
 		/*** Cycle columnists slider ***/
