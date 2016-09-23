@@ -72,7 +72,7 @@ HTML;
 						<a class="post mini" href="$permalink">
 							<div class="thumb_container">$random_thumb</div>
 							<span>$each_essay->post_title</span>
-							<p class="excerpt">$each_essay->post_excerpt</p>
+							<p class="excerpt algo">$each_essay->post_excerpt</p>
 						</a>
 HTML;
 					endforeach;

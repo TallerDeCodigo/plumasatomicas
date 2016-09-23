@@ -226,6 +226,8 @@
 			<?php
 				if(have_posts()): while(have_posts()):
 					the_post();
+					$fecha = $post->post_date;
+					$fecha = date('d/m/Y');
 					$permalink = get_the_permalink($post->ID);
 					$thumb_formatted = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, "medium") : "";
 					echo <<<HTML
@@ -233,6 +235,7 @@
 						<div class="thumb_container">
 							$thumb_formatted
 						</div>
+						<span class="fecha"> $fecha </span>
 						<span class="titulo_post_opinologo">Análisis de la entrega de columna: $post->post_title</span>
 					</a>
 HTML;

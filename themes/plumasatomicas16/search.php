@@ -25,6 +25,7 @@
 					<div class="thumb_container">
 						$thumb_formatted
 					</div>
+					<span>$post->post_date</span>
 					<span>$post->post_title</span>
 				</a>
 HTML;

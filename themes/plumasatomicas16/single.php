@@ -14,6 +14,7 @@
 			<?php  
 				endforeach; ?>
 			<br>
+			<span><?php echo get_the_date(); ?></span>
 			<h1><?php the_title(); ?></h1>
 			<!-- Share buttons -->
 			<div class="addthis_sharing_toolbox"></div>

@@ -3465,8 +3465,8 @@ $(document).ready(function() {
 			FOOTER
 		*/
 		
-		screen_height = $(window).height();
-		content_height = $('.ifempty').height();
+		var screen_height = $(window).height();
+		var content_height = $('.ifempty').height();
 		console.log(content_height);
 
 });

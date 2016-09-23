@@ -143,7 +143,7 @@
 							echo "<img alt='plumas atomicas' src='{$thumb}'>";
 						} ?>
 					</div>
-					<span><?php echo get_the_date(); ?></span>
+					<span class="fecha"><?php echo get_the_date(); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } endforeach; wp_reset_query(); ?>
