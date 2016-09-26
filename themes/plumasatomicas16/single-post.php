@@ -1,7 +1,7 @@
 <?php get_header(); the_post(); ?>
 <section id="post-sec">
 	<div class="wrapper-special">
-		<div class="contenido">
+		<div class="contenido single-post">
 			<?php
 				$hash = wp_get_post_terms($post->ID, "hashtag");
 				if(!empty($hash))
