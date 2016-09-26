@@ -1,14 +1,18 @@
 <?php 
-	get_header(); ?>
+	get_header(); 
+	echo "<pre>";
+		// print_r($post);
+	echo "</pre>";
+	?>
 <section class="ifempty" style="margin:77px 0px 0px 0px;">
 	<div class="wrapper-special">
 		<div class="archivo half news contenido">
 			<h1>ARCHIVO</h1>
-
 			<section class="post-list">
 			<?php
 			if(have_posts()): while(have_posts()):
 				the_post();
+				// print_r($post);
 				$thumb_formatted = (has_post_thumbnail($post->ID)) ? "<img src='".get_the_post_thumbnail_url($post->ID, "medium")."'>" : "";
 				$permalink 	= get_permalink($post->ID);
 				$excerpt = wpautop($post->post_excerpt);
