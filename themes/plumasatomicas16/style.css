@@ -476,7 +476,7 @@ code {
 	margin-left:-5px;
 	text-align:right;
 	padding-top:45px;
-	/*height: 100%!important;*/
+	height: 100%!important;
 }
 
 .filler {
@@ -1832,6 +1832,7 @@ p img {max-width: 100%; height: auto;}
 
 #articles {
 	padding-bottom:60px;
+	background-color: #3f3f3f;
 }
 
 #sidebar-left {
