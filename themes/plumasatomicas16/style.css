@@ -134,8 +134,8 @@ header {
 	position:fixed!important;
 	top:0px;
 	left:0px;
-	background:#000;
-	height:100px;
+	background:#444745;
+	height:75px;
 	z-index:2000;
 }
 
@@ -246,8 +246,9 @@ footer a {
 	height:480px;
 	overflow:hidden;
 	margin-bottom:-8px;
+	margin-top: 51px;
 	/*background: url(https://plumasatomicas.com/wp-content/uploads/2016/09/secretario-1.jpg;);*/
-	background-color: #000;
+	background-color: #1b1b1b;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
@@ -1575,7 +1576,7 @@ ol li a {
 }
 
 @media (max-width:999px) and (min-width:685px) {
-	.contenido p img{margin-left:16%!important;}
+	/*.contenido p img{margin-left:16%!important;}*/
 
 .wrapper {
 	width:90%;
@@ -1701,17 +1702,18 @@ footer span {
 }
 
 .menu {
-	top:9px;
+	top:0px;
 }
 
 .social {
-	top:33px;
+	top:20px;
 }
 
-#shower, #post-sec, #fichas-men {
+#post-sec, #fichas-men {
 	margin-top:76px;
 
 }
+
 
 #fichas-men img{
 	position: absolute;
@@ -1961,7 +1963,7 @@ header {
 
 .archivo { text-align:center!important; margin-bottom:0px;}
 .archivo.half {width:65%; text-align:center!important; margin-bottom:0px; padding-top:0;}
-.archivo.news h1{text-align:left;font-size:3rem;}
+.archivo.news h1{text-align:left;font-size:3rem;text-transform: uppercase;}
 .archivo.news .post>span{font-size:2.6rem;text-align:left;}
 .archivo.news .post>.excerpt{font-size:1.4rem;text-align:left; width: auto;}
 
@@ -2163,3 +2165,8 @@ p strong {color: #606060;}
 
 .fecha{font-size: 55%!important;color:#888;line-height: 5px!important;}
 .fecha2{color:#888;line-height: 5px!important;}
+
+ul.page-numbers {width:100%;}
+ul.page-numbers li {list-style:none;display:inline-block;margin:0px 4px;}
+
+.contenido img{width:100%!important;height:auto!important;}

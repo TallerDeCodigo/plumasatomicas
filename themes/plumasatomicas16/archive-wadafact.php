@@ -18,12 +18,9 @@
 			$columnists = fetch_columnists();
 			
 			foreach ($columnists as $each_columnist):
-
-				$opinologo = get_the_terms($each_columnist->ID, 'opinologo');
+				$opinologo = get_the_terms($post->ID, 'opinologo');
 				$opinologo = !empty($opinologo) ? $opinologo[0] : NULL;
-							
-				$nColumnas+= $opinologo->count;
-					
+				$nColumnas += $opinologo->count;
 			endforeach;
 			?>
 			<p>TOTAL DE COLUMNAS ANALIZADAS: <?php echo $nColumnas; ?>  </p>
