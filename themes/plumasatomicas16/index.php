@@ -1,13 +1,11 @@
 <?php 
-	get_header(); 
-	echo "<pre>";
-		// print_r($post);
-	echo "</pre>";
+	get_header();
+	$cat = get_the_category();
 	?>
 <section class="ifempty" style="margin:77px 0px 0px 0px;">
 	<div class="wrapper-special">
 		<div class="archivo half news contenido">
-			<h1>ARCHIVO</h1>
+			<h1><?php echo $cat[0]->name?></h1>
 			<section class="post-list">
 			<?php
 			if(have_posts()): while(have_posts()):

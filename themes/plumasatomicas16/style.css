@@ -1961,7 +1961,7 @@ header {
 
 .archivo { text-align:center!important; margin-bottom:0px;}
 .archivo.half {width:65%; text-align:center!important; margin-bottom:0px; padding-top:0;}
-.archivo.news h1{text-align:left;font-size:3rem;}
+.archivo.news h1{text-align:left;font-size:3rem;text-transform: uppercase;}
 .archivo.news .post>span{font-size:2.6rem;text-align:left;}
 .archivo.news .post>.excerpt{font-size:1.4rem;text-align:left; width: auto;}
 
