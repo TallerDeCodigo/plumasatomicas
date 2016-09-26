@@ -2163,3 +2163,6 @@ p strong {color: #606060;}
 
 .fecha{font-size: 55%!important;color:#888;line-height: 5px!important;}
 .fecha2{color:#888;line-height: 5px!important;}
+
+ul.page-numbers {width:100%;}
+ul.page-numbers li {list-style:none;display:inline-block;margin:0px 4px;}

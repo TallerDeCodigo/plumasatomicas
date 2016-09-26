@@ -14,9 +14,10 @@
 			<h1><?php echo $cat[0]->name?></h1>
 			<section class="post-list">
 			<?php
+			$todo = array();
 			if(have_posts()): while(have_posts()):
 				the_post();
-				 // print_r($post);
+				array_push($todo, $post);
 				$thumb_formatted = (has_post_thumbnail($post->ID)) ? "<img src='".get_the_post_thumbnail_url($post->ID, "medium")."'>" : "";
 				$permalink 	= get_permalink($post->ID);
 				$excerpt = wpautop($post->post_excerpt);
@@ -33,7 +34,32 @@
 					<span>$post->post_title</span>
 				</a>
 HTML;
-			endwhile; endif; ?>
+			endwhile; endif;
+			global $wp_query;
+			$total = $wp_query->max_num_pages;
+			// print_r(count($total));
+			// solo seguimos con el resto si tenemos más de una página
+			if ( $total > 1 )  {
+				$name = get_the_category();
+				// echo $name[0]->name;
+			     // obtenemos la página actual
+			     if ( !$current_page = get_query_var('paged') )
+			          $current_page = 1;
+			     // la estructura de “format” depende de si usamos enlaces permanentes "humanos"
+			     $format = empty( get_option('permalink_structure') ) ? '&page=%#%' : 'page/%#%/';
+			     echo paginate_links(array(
+			          'base' => get_pagenum_link(1) . '%_%',
+			          'format' => $format,
+			          'current' => $current_page,
+			          'prev_next' => True,
+			          'prev_text' => __('&laquo; Anterior'),
+			          'next_text' => __('Siguiente &raquo;'),
+			          'total' => $total,
+			          'mid_size' => 4,
+			          'type' => 'list'
+			     ));
+			}
+			?>
 			</section>
 
 			<!-- <div class="separador"></div> -->
