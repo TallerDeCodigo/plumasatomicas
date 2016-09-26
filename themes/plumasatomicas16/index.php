@@ -33,7 +33,28 @@
 					<span>$post->post_title</span>
 				</a>
 HTML;
-			endwhile; endif; 
+			endwhile; endif;
+
+			global $wp_query;
+
+			$total = $wp_query->max_num_pages;
+			if ( $total > 1 )  {
+				if ( !$current_page = get_query_var('paged') ){
+			          $current_page = 1;
+			      	}
+				//$format = empty( get_option('permalink_structure') ) ? '&page=%#%' : 'page/%#%/';
+				echo paginate_links(array(
+			          'base' => get_pagenum_link(1) . '%_%',
+			          // 'format' => $format,
+			          'current' => $current_page,
+			          'prev_next' => True,
+			          'prev_text' => __('&laquo; Anterior'),
+			          'next_text' => __('Siguiente &raquo;'),
+			          'total' => $total,
+			          'mid_size' => 4,
+			          'type' => 'list'
+			     ));
+			}
 
 			?>
 			</section>

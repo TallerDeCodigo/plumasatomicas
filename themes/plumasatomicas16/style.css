@@ -1575,7 +1575,7 @@ ol li a {
 }
 
 @media (max-width:999px) and (min-width:685px) {
-	.contenido p img{margin-left:16%!important;}
+	/*.contenido p img{margin-left:16%!important;}*/
 
 .wrapper {
 	width:90%;
@@ -2167,4 +2167,4 @@ p strong {color: #606060;}
 ul.page-numbers {width:100%;}
 ul.page-numbers li {list-style:none;display:inline-block;margin:0px 4px;}
 
-img.size-full{width:100%!important;height:auto!important;max-width: 577px}
+.contenido img{width:100%!important;height:auto!important;}
