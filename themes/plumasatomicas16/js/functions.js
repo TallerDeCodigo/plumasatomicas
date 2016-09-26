@@ -64,9 +64,13 @@ $(window).on("load resize",function(){
 				var altover = alto-69 + "px";
 				// $(".oversc").css("height", altover);
 		} else {
-				$(".oversc").css("top", "99px");
-				var altover = alto-99 + "px";
-				// $(".oversc").css("height", altover);
+				$(".oversc").css("top", "75px");
+				var altover = alto-75 + "px";
+				if(alto < 540){
+					$(".menu2").css("height", altover);
+				}else{
+					$(".menu2").css("height", 'auto');
+				}
 		}
 		var fixed = (ancho-950)/2;
 		fixed = fixed + "px";
