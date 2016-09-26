@@ -1,6 +1,12 @@
 <?php 
 	get_header();
+
+
 	$cat = get_the_category();
+
+
+
+
 	?>
 <section class="ifempty" style="margin:77px 0px 0px 0px;">
 	<div class="wrapper-special">
@@ -10,7 +16,7 @@
 			<?php
 			if(have_posts()): while(have_posts()):
 				the_post();
-				// print_r($post);
+				 // print_r($post);
 				$thumb_formatted = (has_post_thumbnail($post->ID)) ? "<img src='".get_the_post_thumbnail_url($post->ID, "medium")."'>" : "";
 				$permalink 	= get_permalink($post->ID);
 				$excerpt = wpautop($post->post_excerpt);
