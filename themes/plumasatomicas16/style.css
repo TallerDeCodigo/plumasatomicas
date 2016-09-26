@@ -2169,4 +2169,4 @@ p strong {color: #606060;}
 ul.page-numbers {width:100%;}
 ul.page-numbers li {list-style:none;display:inline-block;margin:0px 4px;}
 
-.contenido img{width:100%!important;height:auto!important;}
+.single-post.contenido img{width:100%!important;height:auto!important;}
