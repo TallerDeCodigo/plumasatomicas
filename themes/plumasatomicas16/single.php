@@ -14,7 +14,7 @@
 			<?php  
 				endforeach; ?>
 			<br>
-			<span><?php echo get_the_date(); ?></span>
+			<span><?php the_time( get_option('date_format') ); ?></span>
 			<h1><?php the_title(); ?></h1>
 			<!-- Share buttons -->
 			<div class="addthis_sharing_toolbox"></div>

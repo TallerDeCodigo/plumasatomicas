@@ -11,7 +11,7 @@
 			</script>
 		</div>
 		<div class="contenido longr">
-			<span><?php echo get_the_date(); ?></span>
+			<span><?php the_time( get_option('date_format') ); ?></span>
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 		</div>

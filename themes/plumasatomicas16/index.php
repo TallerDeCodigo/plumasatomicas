@@ -16,12 +16,12 @@
 			<?php
 			if(have_posts()): while(have_posts()):
 				the_post();
-				 // print_r($post);
+				// print_r($post->post_date);
 				$thumb_formatted = (has_post_thumbnail($post->ID)) ? "<img src='".get_the_post_thumbnail_url($post->ID, "medium")."'>" : "";
 				$permalink 	= get_permalink($post->ID);
 				$excerpt = wpautop($post->post_excerpt);
 				$date = $post->post_date;
-				$date = date('d/m/Y');
+				$date = substr($date,0,10);
 
 				echo <<<HTML
 

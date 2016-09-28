@@ -46,7 +46,7 @@ HTML;
 						echo "<img src='{$thumb}'>";
 					} ?>
 				</div>
-				<span class="fecha2"><?php echo get_the_date(); ?></span>
+				<span class="fecha2"><?php the_time( get_option('date_format') ); ?></span>
 				<span><?php the_title_limit( 50, '...'); ?></span>
 			</a>
 	<?php endforeach; wp_reset_query(); ?>

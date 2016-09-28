@@ -118,7 +118,7 @@
 					$count = 0;
 					foreach($posts as $post): setup_postdata($post);
 					// echo "<pre>";
-					// 	print_r(the_title() . " ".get_the_date() );
+					// 	print_r( $post );
 					// echo "</pre>";
 					$count ++; ?>
 
@@ -131,7 +131,7 @@
 							echo "<img src='{$thumb}'>";
 						} ?>
 					</div>
-					<span><?php echo get_the_date(); ?></span>
+					<span><?php the_time( get_option('date_format') ); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } else { ?>
@@ -143,7 +143,7 @@
 							echo "<img alt='plumas atomicas' src='{$thumb}'>";
 						} ?>
 					</div>
-					<span class="fecha"><?php echo get_the_date(); ?></span>
+					<span class="fecha"><?php the_time( get_option('date_format') ); ?></span>
 					<span><?php the_title(); ?></span>
 				</a>
 				<?php } endforeach; wp_reset_query(); ?>
